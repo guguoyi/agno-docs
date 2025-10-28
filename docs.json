@@ -541,7 +541,7 @@
                   {
                     "group": "MCP",
                     "pages": [
-                      "concepts/tools/mcp/mcp",
+                      "concepts/tools/mcp/overview",
                       "concepts/tools/mcp/mcp-toolbox",
                       "concepts/tools/mcp/multiple-servers",
                       {
