@@ -1864,7 +1864,6 @@
                       "examples/concepts/db/mongodb/async_mongodb_for_agent",
                       "examples/concepts/db/mongodb/async_mongodb_for_team",
                       "examples/concepts/db/mongodb/async_mongodb_for_workflow"
-
                     ]
                   },
                   {
@@ -1876,7 +1875,6 @@
                       "examples/concepts/db/postgres/async_postgres_for_agent",
                       "examples/concepts/db/postgres/async_postgres_for_team",
                       "examples/concepts/db/postgres/async_postgres_for_workflow"
-
                     ]
                   },
                   {
@@ -2884,8 +2882,22 @@
           {
             "group": "Templates",
             "pages": [
-              "templates/agent-infra-docker/introduction",
-              "templates/agent-infra-aws/introduction"
+              {
+                "group": "Docker Template",
+                "pages": [
+                  "templates/agent-infra-docker/introduction",
+                  "templates/agent-infra-docker/run_local",
+                  "templates/agent-infra-docker/run_prd"
+                ]
+              },
+              {
+                "group": "AWS Template",
+                "pages": [
+                  "templates/agent-infra-aws/introduction",
+                  "templates/agent-infra-aws/run_local",
+                  "templates/agent-infra-aws/run_aws"
+                ]
+              }
             ]
           },
           {
@@ -2984,9 +2996,7 @@
               },
               {
                 "group": "Sessions",
-                "pages": [
-                  "reference/session/summary_manager"
-                ]
+                "pages": ["reference/session/summary_manager"]
               },
               {
                 "group": "Knowledge",
