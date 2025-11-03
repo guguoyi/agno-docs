@@ -48,6 +48,10 @@ Along with this, in using Steps with custom functions, you can access this histo
 ]
 ```
 
+<Note>
+A database is required to use Workflow history. Runs across different executions will be persisted there.
+</Note>
+
 Example-
 ```python
 def custom_function(step_input: StepInput) -> StepOutput:

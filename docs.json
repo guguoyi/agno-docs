@@ -164,6 +164,7 @@
                   "concepts/workflows/workflow_session_state",
                   "concepts/workflows/additional-data",
                   "concepts/workflows/workflow_with_history",
+                  "concepts/workflows/conversational-workflows",
                   "concepts/workflows/access-previous-steps",
                   "concepts/workflows/early-stop",
                   "concepts/workflows/cancel-workflow",
@@ -175,6 +176,7 @@
                 "group": "Models",
                 "pages": [
                   "concepts/models/overview",
+                  "concepts/models/model-as-string",
                   "concepts/models/compatibility",
                   "concepts/models/cache-response",
                   {
@@ -519,6 +521,7 @@
                           "concepts/tools/toolkits/others/mlx_transcribe",
                           "concepts/tools/toolkits/others/models_labs",
                           "concepts/tools/toolkits/others/moviepy",
+                          "concepts/tools/toolkits/others/notion",
                           "concepts/tools/toolkits/others/opencv",
                           "concepts/tools/toolkits/others/openbb",
                           "concepts/tools/toolkits/others/openweather",
@@ -730,7 +733,8 @@
                   "agent-os/customize/config",
                   "agent-os/customize/os/attributes",
                   "agent-os/customize/os/override_routes",
-                  "agent-os/customize/os/lifespan"
+                  "agent-os/customize/os/lifespan",
+                  "agent-os/customize/os/manage_knowledge"
                 ]
               },
               {
@@ -1042,7 +1046,8 @@
                   "examples/use-cases/workflows/blog-post-generator",
                   "examples/use-cases/workflows/employee-recruiter",
                   "examples/use-cases/workflows/investment-report-generator",
-                  "examples/use-cases/workflows/startup-idea-validator"
+                  "examples/use-cases/workflows/startup-idea-validator",
+                  "examples/use-cases/workflows/notion-knowledge-manager"
                 ]
               }
             ]
@@ -1428,8 +1433,7 @@
                       "examples/concepts/teams/other/few_shot_learning",
                       "examples/concepts/teams/other/run_as_cli",
                       "examples/concepts/teams/other/team_cancel_a_run",
-                      "examples/concepts/teams/other/team_exponential_backoff",
-                      "examples/concepts/teams/other/team_model_inheritance"
+                      "examples/concepts/teams/other/team_exponential_backoff"
                     ]
                   }
                 ]
@@ -1482,6 +1486,24 @@
                     ]
                   },
                   {
+                    "group": "Workflow History",
+                    "pages": [
+                      "examples/concepts/workflows/06_workflows_advanced_concepts/workflow_history/01_single_step_continuous_execution_workflow",
+                      "examples/concepts/workflows/06_workflows_advanced_concepts/workflow_history/02_workflow_with_history_enabled_for_steps",
+                      "examples/concepts/workflows/06_workflows_advanced_concepts/workflow_history/03_enable_history_for_step",
+                      "examples/concepts/workflows/06_workflows_advanced_concepts/workflow_history/04_get_history_in_function",
+                      "examples/concepts/workflows/06_workflows_advanced_concepts/workflow_history/05_multi_purpose_cli",
+                      "examples/concepts/workflows/06_workflows_advanced_concepts/workflow_history/06_intent_routing_with_history"
+                    ]
+                  },
+                  {
+                    "group": "Conversational Workflows",
+                    "pages": [
+                      "examples/concepts/workflows/06_workflows_advanced_concepts/conversational_workflows/basic_workflow_agent",
+                      "examples/concepts/workflows/06_workflows_advanced_concepts/conversational_workflows/conversational_workflow_with_conditional_step"
+                    ]
+                  },
+                  {
                     "group": "Advanced Concepts",
                     "pages": [
                       "examples/concepts/workflows/06_workflows_advanced_concepts/early_stop_workflow",
@@ -1493,18 +1515,7 @@
                       "examples/concepts/workflows/06_workflows_advanced_concepts/workflow_cancellation",
                       "examples/concepts/workflows/06_workflows_advanced_concepts/access_session_state_in_custom_python_function_step",
                       "examples/concepts/workflows/06_workflows_advanced_concepts/access_session_state_in_condition_evaluator_function",
-                      "examples/concepts/workflows/06_workflows_advanced_concepts/access_session_state_in_router_selector_function",
-                      {
-                        "group": "Workflow History",
-                        "pages": [
-                          "examples/concepts/workflows/06_workflows_advanced_concepts/workflow_history/01_single_step_continuous_execution_workflow",
-                          "examples/concepts/workflows/06_workflows_advanced_concepts/workflow_history/02_workflow_with_history_enabled_for_steps",
-                          "examples/concepts/workflows/06_workflows_advanced_concepts/workflow_history/03_enable_history_for_step",
-                          "examples/concepts/workflows/06_workflows_advanced_concepts/workflow_history/04_get_history_in_function",
-                          "examples/concepts/workflows/06_workflows_advanced_concepts/workflow_history/05_multi_purpose_cli",
-                          "examples/concepts/workflows/06_workflows_advanced_concepts/workflow_history/06_intent_routing_with_history"
-                        ]
-                      }
+                      "examples/concepts/workflows/06_workflows_advanced_concepts/access_session_state_in_router_selector_function"
                     ]
                   }
                 ]
@@ -1864,7 +1875,6 @@
                       "examples/concepts/db/mongodb/async_mongodb_for_agent",
                       "examples/concepts/db/mongodb/async_mongodb_for_team",
                       "examples/concepts/db/mongodb/async_mongodb_for_workflow"
-
                     ]
                   },
                   {
@@ -1876,7 +1886,6 @@
                       "examples/concepts/db/postgres/async_postgres_for_agent",
                       "examples/concepts/db/postgres/async_postgres_for_team",
                       "examples/concepts/db/postgres/async_postgres_for_workflow"
-
                     ]
                   },
                   {
@@ -2884,8 +2893,22 @@
           {
             "group": "Templates",
             "pages": [
-              "templates/agent-infra-docker/introduction",
-              "templates/agent-infra-aws/introduction"
+              {
+                "group": "Docker Template",
+                "pages": [
+                  "templates/agent-infra-docker/introduction",
+                  "templates/agent-infra-docker/run_local",
+                  "templates/agent-infra-docker/run_prd"
+                ]
+              },
+              {
+                "group": "AWS Template",
+                "pages": [
+                  "templates/agent-infra-aws/introduction",
+                  "templates/agent-infra-aws/run_local",
+                  "templates/agent-infra-aws/run_aws"
+                ]
+              }
             ]
           },
           {
@@ -2984,9 +3007,7 @@
               },
               {
                 "group": "Sessions",
-                "pages": [
-                  "reference/session/summary_manager"
-                ]
+                "pages": ["reference/session/summary_manager"]
               },
               {
                 "group": "Knowledge",
