@@ -236,16 +236,6 @@
                   "concepts/tools/caching",
                   "concepts/tools/attaching-tools"
                 ]
-              },
-              {
-                "group": "Memory",
-                "pages": [
-                  "concepts/memory/overview",
-                  "concepts/memory/working-with-memories",
-                  "concepts/memory/agent",
-                  "concepts/memory/team",
-                  "concepts/memory/production-best-practices"
-                ]
               }
             ]
           },
@@ -276,6 +266,16 @@
                   "concepts/state/agent",
                   "concepts/state/team",
                   "concepts/state/workflow"
+                ]
+              },
+              {
+                "group": "Memory",
+                "pages": [
+                  "concepts/memory/overview",
+                  "concepts/memory/working-with-memories",
+                  "concepts/memory/agent",
+                  "concepts/memory/team",
+                  "concepts/memory/production-best-practices"
                 ]
               },
               {
@@ -384,7 +384,7 @@
             "group": "Execution Control",
             "pages": [
               {
-                "group": "Hook",
+                "group": "Hooks",
                 "pages": [
                   "concepts/hooks/overview",
                   "concepts/agents/pre-hooks-and-post-hooks",
