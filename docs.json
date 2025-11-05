@@ -133,20 +133,66 @@
               {
                 "group": "Input & Output",
                 "pages": [
-                  "concepts/input-output/overview",
-                  "concepts/input-output/type-safety",
-                  "concepts/input-output/agents",
-                  "concepts/input-output/teams",
-                  "concepts/input-output/workflows"
+                  "concepts/input_output/overview",
+                  "concepts/input_output/agent",
+                  "concepts/input_output/team",
+                  "concepts/input_output/workflow"
+                ]
+              },
+              {
+                "group": "Sessions",
+                "pages": [
+                  "concepts/sessions/overview",
+                  "concepts/sessions/agent",
+                  "concepts/sessions/team",
+                  "concepts/sessions/workflow",
+                  {
+                    "group": "Metrics",
+                    "pages": [
+                      "concepts/sessions/metrics/overview",
+                      "concepts/sessions/metrics/agent",
+                      "concepts/sessions/metrics/team",
+                      "concepts/sessions/metrics/workflow"
+                    ]
+                  }
                 ]
               },
               {
                 "group": "Database",
                 "pages": [
-                  "concepts/database/overview",
-                  "concepts/database/agents",
-                  "concepts/database/teams",
-                  "concepts/database/workflows"
+                  "concepts/db/overview",
+                  "concepts/agents/storage",
+                  "concepts/teams/storage",
+                  {
+                    "group": "Storage Providers",
+                    "pages": [
+                      "concepts/db/postgres",
+                      "concepts/db/async_postgres",
+                      "concepts/db/mysql",
+                      "concepts/db/sqlite",
+                      "concepts/db/async_sqlite",
+                      "concepts/db/in_memory",
+                      "concepts/db/dynamodb",
+                      "concepts/db/mongodb",
+                      "concepts/db/async_mongo",
+                      "concepts/db/json",
+                      "concepts/db/singlestore",
+                      "concepts/db/redis",
+                      "concepts/db/gcs",
+                      "concepts/db/firestore",
+                      "concepts/db/supabase",
+                      "concepts/db/neon"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Models",
+                "pages": [
+                  "concepts/models/overview",
+                  "concepts/models/model-as-string",
+                  "concepts/models/compatibility",
+                  "concepts/models/cache-response"
                 ]
               },
               {
@@ -177,10 +223,10 @@
                   {
                     "group": "Reasoning Tools",
                     "pages": [
-                      "concepts/tools/reasoning-tools/reasoning-tools",
-                      "concepts/tools/reasoning-tools/workflow-tools",
-                      "concepts/tools/reasoning-tools/knowledge-tools",
-                      "concepts/tools/reasoning-tools/memory-tools"
+                      "concepts/tools/reasoning_tools/reasoning-tools",
+                      "concepts/tools/reasoning_tools/workflow-tools",
+                      "concepts/tools/reasoning_tools/knowledge-tools",
+                      "concepts/tools/reasoning_tools/memory-tools"
                     ]
                   },
                   "concepts/tools/async-tools",
@@ -192,12 +238,13 @@
                 ]
               },
               {
-                "group": "Models",
+                "group": "Memory",
                 "pages": [
-                  "concepts/models/overview",
-                  "concepts/models/model-as-string",
-                  "concepts/models/compatibility",
-                  "concepts/models/cache-response"
+                  "concepts/memory/overview",
+                  "concepts/memory/working-with-memories",
+                  "concepts/memory/agent",
+                  "concepts/memory/team",
+                  "concepts/memory/production-best-practices"
                 ]
               }
             ]
@@ -208,55 +255,11 @@
               {
                 "group": "Overview",
                 "pages": [
-                  "concepts/context-engineering/overview",
-                  "concepts/context-engineering/agents",
-                  "concepts/context-engineering/teams",
-                  "concepts/context-engineering/workflows"
+                  "concepts/context/overview",
+                  "concepts/context/agent",
+                  "concepts/context/team"
                 ]
               },
-              {
-                "group": "Sessions",
-                "pages": [
-                  "concepts/sessions/overview",
-                  "concepts/sessions/agent",
-                  "concepts/sessions/team",
-                  "concepts/sessions/workflow",
-                  {
-                    "group": "Metrics",
-                    "pages": [
-                      "concepts/sessions/metrics/overview",
-                      "concepts/sessions/metrics/agent",
-                      "concepts/sessions/metrics/team",
-                      "concepts/sessions/metrics/workflow"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Memory",
-                "pages": [
-                  "concepts/memory/overview",
-                  "concepts/memory/working-with-memories",
-                  "concepts/memory/agent",
-                  "concepts/memory/team",
-                  "concepts/memory/production-best-practices"
-                ]
-              },
-              {
-                "group": "Knowledge",
-                "pages": [
-                  "concepts/knowledge/overview",
-                  "concepts/knowledge/how-it-works",
-                  "concepts/knowledge/getting-started",
-                  "concepts/knowledge/agent",
-                  "concepts/knowledge/team"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Learn",
-            "pages": [
               {
                 "group": "Chat History",
                 "pages": [
@@ -264,23 +267,6 @@
                   "concepts/chat_history/agent",
                   "concepts/chat_history/team",
                   "concepts/chat_history/workflow"
-                ]
-              },
-              {
-                "group": "Structured Input & Output",
-                "pages": [
-                  "concepts/input_output/overview",
-                  "concepts/input_output/agent",
-                  "concepts/input_output/team",
-                  "concepts/input_output/workflow"
-                ]
-              },
-              {
-                "group": "Context Engineering",
-                "pages": [
-                  "concepts/context/overview",
-                  "concepts/context/agent",
-                  "concepts/context/team"
                 ]
               },
               {
@@ -293,17 +279,13 @@
                 ]
               },
               {
-                "group": "Reasoning",
+                "group": "Knowledge",
                 "pages": [
-                  "concepts/reasoning/overview",
-                  "concepts/reasoning/reasoning-models",
-                  "concepts/reasoning/reasoning-tools",
-                  "concepts/reasoning/reasoning-agents"
-                ]
-              },
-              {
-                "group": "Knowledge Concepts",
-                "pages": [
+                  "concepts/knowledge/overview",
+                  "concepts/knowledge/how-it-works",
+                  "concepts/knowledge/getting-started",
+                  "concepts/knowledge/agent",
+                  "concepts/knowledge/team",
                   "concepts/knowledge/terminology",
                   "concepts/knowledge/knowledge-bases",
                   "concepts/knowledge/content_types",
@@ -384,31 +366,6 @@
                 ]
               },
               {
-                "group": "Session State",
-                "pages": [
-                  "concepts/session-state/overview",
-                  "concepts/session-state/agents",
-                  "concepts/session-state/teams",
-                  "concepts/session-state/workflows"
-                ]
-              },
-              {
-                "group": "Session Summary",
-                "pages": [
-                  "concepts/session-summary/overview",
-                  "concepts/session-summary/agents",
-                  "concepts/session-summary/teams",
-                  "concepts/session-summary/workflows"
-                ]
-              },
-              {
-                "group": "Context Compression",
-                "pages": [
-                  "concepts/context-compression/forget-tool-calls",
-                  "concepts/context-compression/summary-plus-history"
-                ]
-              },
-              {
                 "group": "Dependency Injection",
                 "pages": [
                   "concepts/dependencies/overview",
@@ -417,9 +374,8 @@
                 ]
               },
               {
-                "group": "Culture",
+                "group": "Context Compression",
                 "pages": [
-                  "concepts/culture/overview"
                 ]
               }
             ]
@@ -428,41 +384,93 @@
             "group": "Execution Control",
             "pages": [
               {
-                "group": "Hooks",
+                "group": "Hook",
                 "pages": [
                   "concepts/hooks/overview",
-                  "concepts/hooks/agents",
-                  "concepts/hooks/teams",
-                  "concepts/hooks/workflows",
-                  "concepts/hooks/tools"
+                  "concepts/agents/pre-hooks-and-post-hooks",
+                  "concepts/teams/pre-hooks-and-post-hooks"
                 ]
               },
               {
                 "group": "Guardrails",
                 "pages": [
-                  {
-                    "group": "Agent Guardrails",
-                    "pages": [
-                      "concepts/guardrails/agents",
-                      "concepts/guardrails/agents/prompt-injection",
-                      "concepts/guardrails/agents/pii",
-                      "concepts/guardrails/agents/openai-moderation"
-                    ]
-                  },
-                  {
-                    "group": "Team Guardrails",
-                    "pages": [
-                      "concepts/guardrails/teams"
-                    ]
-                  }
+                  "concepts/guardrails/overview",
+                  "concepts/agents/guardrails",
+                  "concepts/teams/guardrails",
+                  "concepts/agents/guardrails/prompt-injection",
+                  "concepts/agents/guardrails/pii",
+                  "concepts/agents/guardrails/openai-moderation"
                 ]
               },
               {
                 "group": "Human-in-the-Loop",
                 "pages": ["concepts/hitl/overview"]
               },
-              "concepts/pause-and-resume-run",
-              "concepts/cancel-run"
+              "concepts/run-cancellation"
+            ]
+          },
+          {
+            "group": "Other",
+            "pages": [
+              {
+                "group": "Reasoning",
+                "pages": [
+                  "concepts/reasoning/overview",
+                  "concepts/reasoning/reasoning-models",
+                  "concepts/reasoning/reasoning-tools",
+                  "concepts/reasoning/reasoning-agents"
+                ]
+              },
+              {
+                "group": "Multimodal",
+                "pages": [
+                  "concepts/multimodal/overview",
+                  "concepts/agents/multimodal",
+                  "concepts/teams/multimodal",
+                  {
+                    "group": "Images",
+                    "pages": [
+                      "concepts/multimodal/images/image_input",
+                      "concepts/multimodal/images/image_output",
+                      "concepts/multimodal/images/image_generation"
+                    ]
+                  },
+                  {
+                    "group": "Audio",
+                    "pages": [
+                      "concepts/multimodal/audio/audio_input",
+                      "concepts/multimodal/audio/audio_generation",
+                      "concepts/multimodal/audio/audio_output",
+                      "concepts/multimodal/audio/speech-to-text"
+                    ]
+                  },
+                  {
+                    "group": "Video",
+                    "pages": [
+                      "concepts/multimodal/video/video_input",
+                      "concepts/multimodal/video/video_generation"
+                    ]
+                  },
+                  {
+                    "group": "Files",
+                    "pages": [
+                      "concepts/multimodal/files/file_input",
+                      "concepts/multimodal/files/file_generation"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Evals",
+                "pages": [
+                  "concepts/evals/overview",
+                  "concepts/evals/accuracy",
+                  "concepts/evals/performance",
+                  "concepts/evals/reliability"
+                ]
+              },
+              "concepts/custom-logging",
+              "concepts/telemetry"
             ]
           },
           {
@@ -743,72 +751,7 @@
             ]
           },
           {
-            "group": "Other",
-            "pages": [
-              {
-                "group": "Reasoning",
-                "pages": [
-                  "concepts/reasoning/overview",
-                  "concepts/agents/reasoning",
-                  "concepts/teams/reasoning",
-                  "concepts/reasoning/reasoning-models",
-                  "concepts/reasoning/reasoning-tools",
-                  "concepts/reasoning/reasoning-agents"
-                ]
-              },
-              {
-                "group": "Multimodal",
-                "pages": [
-                  "concepts/multimodal/overview",
-                  "concepts/agents/multimodal",
-                  "concepts/teams/multimodal",
-                  {
-                    "group": "Images",
-                    "pages": [
-                      "concepts/multimodal/images/image_input",
-                      "concepts/multimodal/images/image_output",
-                      "concepts/multimodal/images/image_generation"
-                    ]
-                  },
-                  {
-                    "group": "Audio",
-                    "pages": [
-                      "concepts/multimodal/audio/audio_input",
-                      "concepts/multimodal/audio/audio_generation",
-                      "concepts/multimodal/audio/audio_output",
-                      "concepts/multimodal/audio/speech-to-text"
-                    ]
-                  },
-                  {
-                    "group": "Video",
-                    "pages": [
-                      "concepts/multimodal/video/video_input",
-                      "concepts/multimodal/video/video_generation"
-                    ]
-                  },
-                  {
-                    "group": "Files",
-                    "pages": [
-                      "concepts/multimodal/files/file_input",
-                      "concepts/multimodal/files/file_generation"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Evals",
-                "pages": [
-                  "concepts/evals/overview",
-                  "concepts/evals/accuracy",
-                  "concepts/evals/performance",
-                  "concepts/evals/reliability"
-                ]
-              },
-              "concepts/telemetry"
-            ]
-          },
-          {
-            "group": "How To",
+            "group": "Help",
             "pages": [
               "how-to/install",
               "how-to/v2-changelog",
