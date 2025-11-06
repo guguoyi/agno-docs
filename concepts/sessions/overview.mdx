@@ -16,7 +16,7 @@ Here are the core concepts:
 - **Session:** A session is collection of consecutive runs like a multi-turn conversation between a user and an Agent/Team/Workflow. Sessions are identified by a `session_id` and house all runs, metrics, state and other data that belong to the session.
 - **Run:** Every interaction (i.e. chat or turn) with an Agent/Team/Workflow is called a **run**. Runs are identified by a `run_id` and `Agent.run()`, `Team.run()` or `Workflow.run()` creates a new `run_id` when called.
 
-See [Session Storage](/concepts/storage/overview) for more details on how sessions are stored.
+See [Session Storage](/concepts/db/overview) for more details on how sessions are stored.
 
 
 ## Single session
@@ -89,7 +89,7 @@ agent.print_response(
 ```
 <Note>
   For session history and management, you need to have a database assigned to
-  the agent. See [Storage](/concepts/storage/overview) for more details.
+  the agent. See [Storage](/concepts/db/overview) for more details.
 </Note>
 
 <Check>

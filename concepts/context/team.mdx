@@ -134,11 +134,11 @@ The Team creates a default system message that can be customized using the follo
 | `add_location_to_context`        | `bool`      | `False` | If True, add the location of the team to the context. This allows for location-aware responses and local context.                                                         |
 | `timezone_identifier`            | `str`       | `None`  | Allows for custom timezone for datetime instructions following the TZ Database format (e.g. "Etc/UTC")                                                                  |
 | `add_member_tools_to_context`    | `bool`      | `True`  | If True, add the tools available to team members to the context.                                                                                                          |
-| `add_session_summary_to_context` | `bool`      | `False` | If True, add the session summary to the context. See [sessions](/concepts/teams/sessions) for more information.                                                           |
-| `add_memories_to_context`        | `bool`      | `False` | If True, add the user memories to the context. See [memory](/concepts/teams/memory) for more information.                                                                 |
-| `add_dependencies_to_context`    | `bool`      | `False` | If True, add the dependencies to the context. See [dependencies](/concepts/teams/dependencies) for more information.                                                      |
-| `add_session_state_to_context`   | `bool`      | `False` | If True, add the session state to the context. See [state](/concepts/teams/state) for more information.                                                                   |
-| `add_knowledge_to_context`       | `bool`      | `False` | If True, add retrieved knowledge to the context, to enable RAG. See [knowledge](/concepts/teams/knowledge) for more information.                                          |
+| `add_session_summary_to_context` | `bool`      | `False` | If True, add the session summary to the context. See [sessions](/concepts/sessions/overview) for more information.                                                           |
+| `add_memories_to_context`        | `bool`      | `False` | If True, add the user memories to the context. See [memory](/concepts/memory/overview) for more information.                                                                 |
+| `add_dependencies_to_context`    | `bool`      | `False` | If True, add the dependencies to the context. See [dependencies](/concepts/dependencies/overview) for more information.                                                      |
+| `add_session_state_to_context`   | `bool`      | `False` | If True, add the session state to the context. See [state](/concepts/state/overview) for more information.                                                                   |
+| `add_knowledge_to_context`       | `bool`      | `False` | If True, add retrieved knowledge to the context, to enable RAG. See [knowledge](/concepts/knowledge/overview) for more information.                                          |
 | `enable_agentic_knowledge_filters` | `bool`      | `False` | If True, let the team choose the knowledge filters. See [knowledge](/concepts/knowledge/filters/overview) for more information.                                       |
 | `system_message`                 | `str`       | `None`  | Override the default system message.                                                                                                                                       |
 | `respond_directly`               | `bool`      | `False` | If True, the team leader won't process responses from members and instead will return them directly.                                                                       |
@@ -320,7 +320,7 @@ team = Team(
 
 #### Tool Instructions
 
-If you are using a [Toolkit](/concepts/tools/toolkits/toolkits) on your team, you can add tool instructions to the system message using the `instructions` parameter:
+If you are using a [Toolkit](/concepts/tools/toolkits/overview) on your team, you can add tool instructions to the system message using the `instructions` parameter:
 
 ```python
 from agno.agent import Agent
@@ -394,7 +394,7 @@ team.print_response("Love in the year 12000.")
 
 The `input` sent to the `Team.run()` or `Team.print_response()` is used as the user message.
 
-See [dependencies](/concepts/teams/dependencies) for how to do dependency injection for your user message.
+See [dependencies](/concepts/dependencies/overview) for how to do dependency injection for your user message.
 
 ### Additional user message context
 
@@ -438,7 +438,7 @@ Use the following references from the knowledge base if it helps:
 
 ## Chat history
 
-If you have database storage enabled on your team, session history is automatically stored (see [sessions](/concepts/teams/sessions)).
+If you have database storage enabled on your team, session history is automatically stored (see [sessions](/concepts/sessions/overview)).
 
 You can now add the history of the conversation to the context using `add_history_to_context`.
 
@@ -480,7 +480,7 @@ team.print_response("What was my first question?")
 
 This will add the history of the conversation to the context, which can be used to provide context for the next message.
 
-See more details on [sessions](/concepts/teams/sessions#session-history).
+See more details on [sessions](/concepts/chat_history/overview).
 
 <Note>All team member runs are added to the team session history.</Note>
 

@@ -7,8 +7,8 @@ description: Enable your Agents to store session history, memories, and more.
 **Storage** adds persistence to your Agents, allowing them to remember previous messages, user memories, and more.
 
 It works by equipping your Agents with a database that they will use to store and retrieve:
-- [Sessions](/concepts/agents/sessions)
-- [User Memories](/concepts/agents/memory)
+- [Sessions](/concepts/sessions/overview)
+- [User Memories](/concepts/memory/overview)
 
 In addition this DB is used to store [knowledge](/concepts/knowledge/content_db) and [evals](/concepts/evals/overview).
 
@@ -42,7 +42,7 @@ It's recommended to add `id` for better management and easier identification of 
 
 ### Adding session history to the context
 
-Agents with a `db` will persist their [sessions](/concepts/agents/sessions) in the database. You can also automatically add the persisted history to the context, effectively enabling Agents to persist sessions:
+Agents with a `db` will persist their [sessions](/concepts/sessions/overview) in the database. You can also automatically add the persisted history to the context, effectively enabling Agents to persist sessions:
 
 ```python
 from agno.agent import Agent

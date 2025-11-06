@@ -136,7 +136,36 @@
                   "concepts/input_output/overview",
                   "concepts/input_output/agent",
                   "concepts/input_output/team",
-                  "concepts/input_output/workflow"
+                  "concepts/input_output/workflow",
+                  {
+                    "group": "Examples",
+                    "pages": [
+                      {
+                        "group": "Agent",
+                        "pages": [
+                          "examples/concepts/agent/input_and_output/input_as_dict",
+                          "examples/concepts/agent/input_and_output/input_as_list",
+                          "examples/concepts/agent/input_and_output/input_as_message",
+                          "examples/concepts/agent/input_and_output/input_as_messages_list",
+                          "examples/concepts/agent/input_and_output/input_schema_on_agent",
+                          "examples/concepts/agent/input_and_output/input_schema_on_agent_as_typed_dict",
+                          "examples/concepts/agent/input_and_output/output_model",
+                          "examples/concepts/agent/input_and_output/parser_model",
+                          "examples/concepts/agent/input_and_output/parser_model_ollama"
+                        ]
+                      },
+                      {
+                        "group": "Team",
+                        "pages": [
+                          "examples/concepts/teams/input_output/pydantic_model_output",
+                          "examples/concepts/teams/input_output/pydantic_model_as_input",
+                          "examples/concepts/teams/input_output/team_with_parser_model",
+                          "examples/concepts/teams/input_output/team_with_output_model",
+                          "examples/concepts/teams/input_output/structured_output_streaming"
+                        ]
+                      }
+                    ]
+                  }
                 ]
               },
               {
@@ -154,6 +183,46 @@
                       "concepts/sessions/metrics/team",
                       "concepts/sessions/metrics/workflow"
                     ]
+                  },
+                  {
+                    "group": "Examples",
+                    "pages": [
+                      {
+                        "group": "Agent",
+                        "pages": [
+                          "examples/concepts/agent/session/01_persistent_session",
+                          "examples/concepts/agent/session/02_persistent_session_history",
+                          "examples/concepts/agent/session/03_session_summary",
+                          "examples/concepts/agent/session/04_session_summary_references",
+                          "examples/concepts/agent/session/05_chat_history",
+                          "examples/concepts/agent/session/06_rename_session",
+                          "examples/concepts/agent/session/07_in_memory_db",
+                          "examples/concepts/agent/session/08_cache_session",
+                          "examples/concepts/agent/session/09_disable_storing_history_messages",
+                          "examples/concepts/agent/session/10_disable_storing_tool_messages"
+                        ]
+                      },
+                      {
+                        "group": "Team",
+                        "pages": [
+                          "examples/concepts/teams/session/cache_session",
+                          "examples/concepts/teams/session/chat_history",
+                          "examples/concepts/teams/session/in_memory_db",
+                          "examples/concepts/teams/session/persistent_session_history",
+                          "examples/concepts/teams/session/persistent_session",
+                          "examples/concepts/teams/session/rename_session",
+                          "examples/concepts/teams/session/session_summary",
+                          "examples/concepts/teams/session/session_summary_references"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "References",
+                    "pages": [
+                      "reference/agents/session",
+                      "reference/agents/run-response"
+                    ]
                   }
                 ]
               },
@@ -161,8 +230,6 @@
                 "group": "Database",
                 "pages": [
                   "concepts/db/overview",
-                  "concepts/agents/storage",
-                  "concepts/teams/storage",
                   {
                     "group": "Storage Providers",
                     "pages": [
@@ -483,6 +550,7 @@
               {
                 "group": "Model Providers",
                 "pages": [
+                  "concepts/models/model-index",
                   {
                     "group": "Native Model Providers",
                     "pages": [
@@ -572,7 +640,7 @@
               {
                 "group": "Toolkits",
                 "pages": [
-                  "concepts/tools/toolkits/toolkits",
+                  "concepts/tools/toolkits/overview",
                   {
                     "group": "Search",
                     "pages": [
@@ -771,7 +839,7 @@
         "tab": "AgentOS",
         "groups": [
           {
-            "group": "AgentOS",
+            "group": "Get Started",
             "pages": [
               "agent-os/introduction",
               "agent-os/creating-your-first-os",
@@ -786,35 +854,168 @@
                   "agent-os/features/memories"
                 ]
               },
-              "agent-os/security",
-              "agent-os/api",
+              "agent-os/security"
+            ]
+          },
+          {
+            "group": "AgentOS",
+            "pages": [
+              "agent-os/overview",
+              {
+                "group": "AgentOS API",
+                "pages": [
+                  "agent-os/api/authentication",
+                  "agent-os/api/usage",
+                  {
+                    "group": "API Reference",
+                    "pages": [
+                      "reference-api/overview",
+                      {
+                        "group": "Core",
+                        "pages": ["reference-api/schema/core/get-os-configuration"]
+                      },
+                      {
+                        "group": "Agents",
+                        "pages": [
+                          "reference-api/schema/agents/list-all-agents",
+                          "reference-api/schema/agents/get-agent-details",
+                          "reference-api/schema/agents/create-agent-run",
+                          "reference-api/schema/agents/cancel-agent-run",
+                          "reference-api/schema/agents/continue-agent-run"
+                        ]
+                      },
+                      {
+                        "group": "Teams",
+                        "pages": [
+                          "reference-api/schema/teams/list-all-teams",
+                          "reference-api/schema/teams/get-team-details",
+                          "reference-api/schema/teams/create-team-run",
+                          "reference-api/schema/teams/cancel-team-run"
+                        ]
+                      },
+                      {
+                        "group": "Workflows",
+                        "pages": [
+                          "reference-api/schema/workflows/list-all-workflows",
+                          "reference-api/schema/workflows/get-workflow-details",
+                          "reference-api/schema/workflows/execute-workflow",
+                          "reference-api/schema/workflows/cancel-workflow-run"
+                        ]
+                      },
+                      {
+                        "group": "Sessions",
+                        "pages": [
+                          "reference-api/schema/sessions/list-sessions",
+                          "reference-api/schema/sessions/get-session-by-id",
+                          "reference-api/schema/sessions/get-session-runs",
+                          "reference-api/schema/sessions/get-run-by-id",
+                          "reference-api/schema/sessions/create-new-session",
+                          "reference-api/schema/sessions/update-session",
+                          "reference-api/schema/sessions/rename-session",
+                          "reference-api/schema/sessions/delete-session",
+                          "reference-api/schema/sessions/delete-multiple-sessions"
+                        ]
+                      },
+                      {
+                        "group": "Memory",
+                        "pages": [
+                          "reference-api/schema/memory/list-memories",
+                          "reference-api/schema/memory/get-memory-by-id",
+                          "reference-api/schema/memory/get-memory-topics",
+                          "reference-api/schema/memory/get-user-memory-statistics",
+                          "reference-api/schema/memory/create-memory",
+                          "reference-api/schema/memory/update-memory",
+                          "reference-api/schema/memory/delete-memory",
+                          "reference-api/schema/memory/delete-multiple-memories"
+                        ]
+                      },
+                      {
+                        "group": "Evals",
+                        "pages": [
+                          "reference-api/schema/evals/list-evaluation-runs",
+                          "reference-api/schema/evals/get-evaluation-run",
+                          "reference-api/schema/evals/execute-evaluation",
+                          "reference-api/schema/evals/update-evaluation-run",
+                          "reference-api/schema/evals/delete-evaluation-runs"
+                        ]
+                      },
+                      {
+                        "group": "Knowledge",
+                        "pages": [
+                          "reference-api/schema/knowledge/list-content",
+                          "reference-api/schema/knowledge/get-content-by-id",
+                          "reference-api/schema/knowledge/get-content-status",
+                          "reference-api/schema/knowledge/search-knowledge",
+                          "reference-api/schema/knowledge/upload-content",
+                          "reference-api/schema/knowledge/update-content",
+                          "reference-api/schema/knowledge/delete-all-content",
+                          "reference-api/schema/knowledge/delete-content-by-id"
+                        ]
+                      },
+                      {
+                        "group": "Metrics",
+                        "pages": [
+                          "reference-api/schema/metrics/get-agentos-metrics",
+                          "reference-api/schema/metrics/refresh-metrics"
+                        ]
+                      },
+                      {
+                        "group": "Interfaces",
+                        "pages": [
+                          {
+                            "group": "A2A",
+                            "pages": [
+                              "reference-api/schema/a2a/send-message",
+                              "reference-api/schema/a2a/stream-message"
+                            ]
+                          },
+                          {
+                            "group": "AGUI",
+                            "pages": [
+                              "reference-api/schema/agui/get-status",
+                              "reference-api/schema/agui/run-agent"
+                            ]
+                          },
+                          {
+                            "group": "Slack",
+                            "pages": ["reference-api/schema/slack/slack-events"]
+                          },
+                          {
+                            "group": "Whatsapp",
+                            "pages": [
+                              "reference-api/schema/whatsapp/status",
+                              "reference-api/schema/whatsapp/verify-webhook",
+                              "reference-api/schema/whatsapp/webhook"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
               {
                 "group": "MCP",
                 "pages": ["agent-os/mcp/mcp", "agent-os/mcp/tools"]
               },
               {
-                "group": "Configure your AgentOS",
+                "group": "Bring Your Own FastAPI App",
                 "pages": [
-                  "agent-os/customize/custom-fastapi",
-                  {
-                    "group": "Furth AgentOS",
-                    "pages": []
-                  },
-                  {
-                    "group": "Middleware",
-                    "pages": [
-                      "agent-os/customize/middleware/overview",
-                      "agent-os/customize/middleware/custom",
-                      "agent-os/customize/middleware/jwt"
-                    ]
-                  },
-                  "agent-os/customize/config",
-                  "agent-os/customize/os/attributes",
-                  "agent-os/customize/os/override_routes",
-                  "agent-os/customize/os/lifespan",
-                  "agent-os/customize/os/manage_knowledge"
+                  "agent-os/custom-fastapi/overview",
+                  "agent-os/custom-fastapi/override_routes"
                 ]
               },
+              {
+                "group": "Middleware",
+                "pages": [
+                  "agent-os/middleware/overview",
+                  "agent-os/middleware/custom",
+                  "agent-os/middleware/jwt"
+                ]
+              },
+              "agent-os/config",
+              "agent-os/lifespan",
+              "agent-os/manage_knowledge",
               {
                 "group": "Interfaces",
                 "pages": [
@@ -824,7 +1025,19 @@
                   "agent-os/interfaces/slack/introduction"
                 ]
               },
-              "agent-os/agent-ui"
+              {
+                "group": "Reference",
+                "pages": [
+                  "reference/agent-os/agent-os",
+                  "reference/agent-os/configuration"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "AgentUI",
+            "pages": [
+              "agent-os/agent-ui/overview"
             ]
           },
           {
@@ -889,139 +1102,6 @@
                   }
                 ]
               }
-            ]
-          },
-          {
-            "group": "AgentOS API",
-            "pages": [
-              "reference-api/overview",
-              {
-                "group": "Core",
-                "pages": ["reference-api/schema/core/get-os-configuration"]
-              },
-              {
-                "group": "Agents",
-                "pages": [
-                  "reference-api/schema/agents/list-all-agents",
-                  "reference-api/schema/agents/get-agent-details",
-                  "reference-api/schema/agents/create-agent-run",
-                  "reference-api/schema/agents/cancel-agent-run",
-                  "reference-api/schema/agents/continue-agent-run"
-                ]
-              },
-              {
-                "group": "Teams",
-                "pages": [
-                  "reference-api/schema/teams/list-all-teams",
-                  "reference-api/schema/teams/get-team-details",
-                  "reference-api/schema/teams/create-team-run",
-                  "reference-api/schema/teams/cancel-team-run"
-                ]
-              },
-              {
-                "group": "Workflows",
-                "pages": [
-                  "reference-api/schema/workflows/list-all-workflows",
-                  "reference-api/schema/workflows/get-workflow-details",
-                  "reference-api/schema/workflows/execute-workflow",
-                  "reference-api/schema/workflows/cancel-workflow-run"
-                ]
-              },
-              {
-                "group": "Sessions",
-                "pages": [
-                  "reference-api/schema/sessions/list-sessions",
-                  "reference-api/schema/sessions/get-session-by-id",
-                  "reference-api/schema/sessions/get-session-runs",
-                  "reference-api/schema/sessions/get-run-by-id",
-                  "reference-api/schema/sessions/create-new-session",
-                  "reference-api/schema/sessions/update-session",
-                  "reference-api/schema/sessions/rename-session",
-                  "reference-api/schema/sessions/delete-session",
-                  "reference-api/schema/sessions/delete-multiple-sessions"
-                ]
-              },
-              {
-                "group": "Memory",
-                "pages": [
-                  "reference-api/schema/memory/list-memories",
-                  "reference-api/schema/memory/get-memory-by-id",
-                  "reference-api/schema/memory/get-memory-topics",
-                  "reference-api/schema/memory/get-user-memory-statistics",
-                  "reference-api/schema/memory/create-memory",
-                  "reference-api/schema/memory/update-memory",
-                  "reference-api/schema/memory/delete-memory",
-                  "reference-api/schema/memory/delete-multiple-memories"
-                ]
-              },
-              {
-                "group": "Evals",
-                "pages": [
-                  "reference-api/schema/evals/list-evaluation-runs",
-                  "reference-api/schema/evals/get-evaluation-run",
-                  "reference-api/schema/evals/execute-evaluation",
-                  "reference-api/schema/evals/update-evaluation-run",
-                  "reference-api/schema/evals/delete-evaluation-runs"
-                ]
-              },
-              {
-                "group": "Knowledge",
-                "pages": [
-                  "reference-api/schema/knowledge/list-content",
-                  "reference-api/schema/knowledge/get-content-by-id",
-                  "reference-api/schema/knowledge/get-content-status",
-                  "reference-api/schema/knowledge/search-knowledge",
-                  "reference-api/schema/knowledge/upload-content",
-                  "reference-api/schema/knowledge/update-content",
-                  "reference-api/schema/knowledge/delete-all-content",
-                  "reference-api/schema/knowledge/delete-content-by-id"
-                ]
-              },
-              {
-                "group": "Metrics",
-                "pages": [
-                  "reference-api/schema/metrics/get-agentos-metrics",
-                  "reference-api/schema/metrics/refresh-metrics"
-                ]
-              },
-              {
-                "group": "Interfaces",
-                "pages": [
-                  {
-                    "group": "A2A",
-                    "pages": [
-                      "reference-api/schema/a2a/send-message",
-                      "reference-api/schema/a2a/stream-message"
-                    ]
-                  },
-                  {
-                    "group": "AGUI",
-                    "pages": [
-                      "reference-api/schema/agui/get-status",
-                      "reference-api/schema/agui/run-agent"
-                    ]
-                  },
-                  {
-                    "group": "Slack",
-                    "pages": ["reference-api/schema/slack/slack-events"]
-                  },
-                  {
-                    "group": "Whatsapp",
-                    "pages": [
-                      "reference-api/schema/whatsapp/status",
-                      "reference-api/schema/whatsapp/verify-webhook",
-                      "reference-api/schema/whatsapp/webhook"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Reference",
-            "pages": [
-              "reference/agent-os/agent-os",
-              "reference/agent-os/configuration"
             ]
           }
         ]
@@ -1484,13 +1564,13 @@
                   {
                     "group": "Structured Input/Output",
                     "pages": [
-                      "examples/concepts/teams/structured_input_output/pydantic_model_output",
-                      "examples/concepts/teams/structured_input_output/pydantic_model_as_input",
-                      "examples/concepts/teams/structured_input_output/team_with_parser_model",
-                      "examples/concepts/teams/structured_input_output/team_with_output_model",
-                      "examples/concepts/teams/structured_input_output/structured_output_streaming",
-                      "examples/concepts/teams/structured_input_output/async_structured_output_streaming",
-                      "examples/concepts/teams/structured_input_output/input_schema_on_team"
+                      "examples/concepts/teams/input_output/pydantic_model_output",
+                      "examples/concepts/teams/input_output/pydantic_model_as_input",
+                      "examples/concepts/teams/input_output/team_with_parser_model",
+                      "examples/concepts/teams/input_output/team_with_output_model",
+                      "examples/concepts/teams/input_output/structured_output_streaming",
+                      "examples/concepts/teams/input_output/async_structured_output_streaming",
+                      "examples/concepts/teams/input_output/input_schema_on_team"
                     ]
                   },
                   {
@@ -3008,6 +3088,23 @@
               "templates/infra-management/new-users",
               "templates/infra-management/format-and-validate"
             ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              {
+                "group": "CLI",
+                "pages": [
+                  "reference/agno-infra/cli/ws/create",
+                  "reference/agno-infra/cli/ws/up",
+                  "reference/agno-infra/cli/ws/down",
+                  "reference/agno-infra/cli/ws/restart",
+                  "reference/agno-infra/cli/ws/patch",
+                  "reference/agno-infra/cli/ws/config",
+                  "reference/agno-infra/cli/ws/delete"
+                ]
+              }
+            ]
           }
         ]
       },
@@ -3206,23 +3303,6 @@
                   "reference/hooks/openai-moderation-guardrail",
                   "reference/hooks/pii-guardrail",
                   "reference/hooks/prompt-injection-guardrail"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Agno Infra",
-            "pages": [
-              {
-                "group": "CLI",
-                "pages": [
-                  "reference/agno-infra/cli/ws/create",
-                  "reference/agno-infra/cli/ws/up",
-                  "reference/agno-infra/cli/ws/down",
-                  "reference/agno-infra/cli/ws/restart",
-                  "reference/agno-infra/cli/ws/patch",
-                  "reference/agno-infra/cli/ws/config",
-                  "reference/agno-infra/cli/ws/delete"
                 ]
               }
             ]

@@ -66,9 +66,9 @@ The Agent creates a default system message that can be customized using the foll
 | `add_datetime_to_context`        | `bool`      | `False` | If True, add the current datetime to the prompt to give the agent a sense of time. This allows for relative times like "tomorrow" to be used in the prompt                 |
 | `add_name_to_context`            | `bool`      | `False` | If True, add the name of the agent to the context.                                                                                                                         |
 | `add_location_to_context`        | `bool`      | `False` | If True, add the location of the agent to the context. This allows for location-aware responses and local context.                                                         |
-| `add_session_summary_to_context` | `bool`      | `False` | If True, add the session summary to the context. See [sessions](/concepts/agents/sessions) for more information.                                                           |
-| `add_memories_to_context`        | `bool`      | `False` | If True, add the user memories to the context. See [memory](/concepts/agents/memory) for more information.                                                                 |
-| `add_session_state_to_context`   | `bool`      | `False` | If True, add the session state to the context. See [state](/concepts/agents/state) for more information.                                                                   |
+| `add_session_summary_to_context` | `bool`      | `False` | If True, add the session summary to the context. See [sessions](/concepts/sessions/overview) for more information.                                                           |
+| `add_memories_to_context`        | `bool`      | `False` | If True, add the user memories to the context. See [memory](/concepts/memory/overview) for more information.                                                                 |
+| `add_session_state_to_context`   | `bool`      | `False` | If True, add the session state to the context. See [state](/concepts/state/overview) for more information.                                                                   |
 | `enable_agentic_knowledge_filters` | `bool`      | `False` | If True, let the agent choose the knowledge filters. See [knowledge](/concepts/knowledge/filters/overview) for more information.                                                      |
 | `system_message`                 | `str`       | `None`  | Override the default system message.                                                                                                                                       |
 | `build_context`                  | `bool`      | `True`  | Optionally disable the building of the context.                                                                                                                            |
@@ -190,7 +190,7 @@ agent.print_response("What is the average rating of movies?", stream=True)
 
 #### Tool Instructions
 
-If you are using a [Toolkit](/concepts/tools/toolkits/toolkits) on your agent, you can add tool instructions to the system message using the `instructions` parameter:
+If you are using a [Toolkit](/concepts/tools/toolkits/overview) on your agent, you can add tool instructions to the system message using the `instructions` parameter:
 
 ```python
 from agno.agent import Agent
@@ -301,11 +301,11 @@ Use the following references from the knowledge base if it helps:
 </additional context>
 ```
 
-See [dependencies](/concepts/agents/dependencies) for how to do dependency injection for your user message.
+See [dependencies](/concepts/dependencies/overview) for how to do dependency injection for your user message.
 
 ## Chat history
 
-If you have database storage enabled on your agent, session history is automatically stored (see [sessions](/concepts/agents/sessions)).
+If you have database storage enabled on your agent, session history is automatically stored (see [sessions](/concepts/sessions/overview)).
 
 You can now add the history of the conversation to the context using `add_history_to_context`.
 
@@ -334,7 +334,7 @@ agent.print_response("What was my first question?")
 
 This will add the history of the conversation to the context, which can be used to provide context for the next message.
 
-See more details on [sessions](/concepts/agents/sessions#session-history).
+See more details on [sessions](/concepts/chat_history/overview).
 
 ## Managing Tool Calls
 
