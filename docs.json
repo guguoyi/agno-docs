@@ -648,7 +648,217 @@
                   "concepts/models/overview",
                   "concepts/models/model-as-string",
                   "concepts/models/compatibility",
+<<<<<<< HEAD
                   "concepts/models/cache-response"
+=======
+                  "concepts/models/cache-response",
+                  {
+                    "group": "Native Model Providers",
+                    "pages": [
+                      "concepts/models/anthropic",
+                      "concepts/models/cohere",
+                      "concepts/models/dashscope",
+                      "concepts/models/deepseek",
+                      "concepts/models/google",
+                      "concepts/models/meta",
+                      "concepts/models/mistral",
+                      {
+                        "group": "OpenAI",
+                        "pages": [
+                          "concepts/models/openai",
+                          "concepts/models/openai-responses"
+                        ]
+                      },
+                      "concepts/models/perplexity",
+                      "concepts/models/vercel",
+                      "concepts/models/xai"
+                    ]
+                  },
+                  {
+                    "group": "Local Model Providers",
+                    "pages": [
+                      "concepts/models/ollama",
+                      "concepts/models/llama_cpp",
+                      "concepts/models/lmstudio",
+                      "concepts/models/vllm"
+                    ]
+                  },
+                  {
+                    "group": "Cloud Model Providers",
+                    "pages": [
+                      {
+                        "group": "AWS",
+                        "pages": [
+                          "concepts/models/aws-bedrock",
+                          "concepts/models/aws-claude"
+                        ]
+                      },
+                      {
+                        "group": "Azure",
+                        "pages": [
+                          "concepts/models/azure-ai-foundry",
+                          "concepts/models/azure-openai"
+                        ]
+                      },
+                      "concepts/models/ibm-watsonx",
+                      {
+                        "group": "Vertex AI",
+                        "pages": ["concepts/models/vertexai-claude"]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Model Gateways & Aggregators",
+                    "pages": [
+                      "concepts/models/aimlapi",
+                      {
+                        "group": "Cerebras",
+                        "pages": [
+                          "concepts/models/cerebras",
+                          "concepts/models/cerebras_openai"
+                        ]
+                      },
+                      "concepts/models/cometapi",
+                      "concepts/models/deepinfra",
+                      "concepts/models/fireworks",
+                      "concepts/models/groq",
+                      "concepts/models/huggingface",
+                      "concepts/models/langdb",
+                      {
+                        "group": "LiteLLM",
+                        "pages": [
+                          "concepts/models/litellm",
+                          "concepts/models/litellm_openai"
+                        ]
+                      },
+                      "concepts/models/nebius",
+                      "concepts/models/nexus",
+                      "concepts/models/nvidia",
+                      "concepts/models/openrouter",
+                      "concepts/models/portkey",
+                      "concepts/models/requesty",
+                      "concepts/models/sambanova",
+                      "concepts/models/siliconflow",
+                      "concepts/models/together"
+                    ]
+                  },
+                  "concepts/models/openai-like"
+                ]
+              },
+              {
+                "group": "Knowledge",
+                "pages": [
+                  "concepts/knowledge/overview",
+                  "concepts/knowledge/how-it-works",
+                  "concepts/knowledge/getting-started",
+                  {
+                    "group": "Core Concepts",
+                    "pages": [
+                      "concepts/knowledge/core-concepts/terminology",
+                      "concepts/knowledge/core-concepts/knowledge-bases",
+                      "concepts/knowledge/core-concepts/search-retrieval",
+                      "concepts/knowledge/content_types",
+                      "concepts/knowledge/content_db"
+                    ]
+                  },
+                  {
+                    "group": "Vector Databases",
+                    "pages": [
+                      "concepts/vectordb/overview",
+                      "concepts/vectordb/pgvector",
+                      "concepts/vectordb/lancedb",
+                      "concepts/vectordb/pinecone",
+                      "concepts/vectordb/qdrant",
+                      "concepts/vectordb/chroma",
+                      "concepts/vectordb/milvus",
+                      "concepts/vectordb/weaviate",
+                      "concepts/vectordb/couchbase",
+                      "concepts/vectordb/cassandra",
+                      "concepts/vectordb/clickhouse",
+                      "concepts/vectordb/singlestore",
+                      "concepts/vectordb/redis",
+                      "concepts/vectordb/mongodb",
+                      "concepts/vectordb/azure_cosmos_mongodb",
+                      "concepts/vectordb/surrealdb",
+                      "concepts/vectordb/lightrag"
+                    ]
+                  },
+                  {
+                    "group": "Building Knowledge Bases",
+                    "pages": [
+                      "concepts/knowledge/readers",
+                      {
+                        "group": "Chunking",
+                        "pages": [
+                          "concepts/knowledge/chunking/overview",
+                          "concepts/knowledge/chunking/fixed-size-chunking",
+                          "concepts/knowledge/chunking/semantic-chunking",
+                          "concepts/knowledge/chunking/recursive-chunking",
+                          "concepts/knowledge/chunking/document-chunking",
+                          "concepts/knowledge/chunking/csv-row-chunking",
+                          "concepts/knowledge/chunking/markdown-chunking",
+                          "concepts/knowledge/chunking/agentic-chunking",
+                          "concepts/knowledge/chunking/custom-chunking"
+                        ]
+                      },
+                      {
+                        "group": "Embeddings",
+                        "pages": [
+                          "concepts/knowledge/embedder/overview",
+                          "concepts/knowledge/embedder/openai",
+                          "concepts/knowledge/embedder/gemini",
+                          "concepts/knowledge/embedder/ollama",
+                          "concepts/knowledge/embedder/azure_openai",
+                          "concepts/knowledge/embedder/cohere",
+                          "concepts/knowledge/embedder/fireworks",
+                          "concepts/knowledge/embedder/huggingface",
+                          "concepts/knowledge/embedder/mistral",
+                          "concepts/knowledge/embedder/nebius",
+                          "concepts/knowledge/embedder/qdrant_fastembed",
+                          "concepts/knowledge/embedder/sentencetransformers",
+                          "concepts/knowledge/embedder/together",
+                          "concepts/knowledge/embedder/vllm",
+                          "concepts/knowledge/embedder/voyageai",
+                          "concepts/knowledge/embedder/aws_bedrock"
+                        ]
+                      },
+
+                      {
+                        "group": "Knowledge Filters",
+                        "pages": [
+                          "concepts/knowledge/filters/overview",
+                          "concepts/knowledge/filters/manual-filters",
+                          "concepts/knowledge/filters/agentic-filters"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Advanced",
+                    "pages": [
+                      "concepts/knowledge/advanced/custom-retriever",
+                      "concepts/knowledge/advanced/hybrid-search",
+                      "concepts/knowledge/advanced/performance-tips"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Memory",
+                "pages": [
+                  "concepts/memory/overview",
+                  "concepts/memory/working-with-memories",
+                  "concepts/memory/production-best-practices"
+                ]
+              },
+              {
+                "group": "Reasoning",
+                "pages": [
+                  "concepts/reasoning/overview",
+                  "concepts/reasoning/reasoning-models",
+                  "concepts/reasoning/reasoning-tools",
+                  "concepts/reasoning/reasoning-agents"
+>>>>>>> d695dcd8fba1a0959bacb46fb35c220f7252d64d
                 ]
               },
               {
@@ -2099,6 +2309,7 @@
                               "examples/models/anthropic/basic",
                               "examples/models/anthropic/basic_stream",
                               "examples/models/anthropic/code_execution",
+                              "examples/models/anthropic/skills",
                               "examples/models/anthropic/tool_use",
                               "examples/models/anthropic/structured_output",
                               "examples/models/anthropic/knowledge",
