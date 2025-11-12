@@ -3264,6 +3264,389 @@
             ]
           },
           {
+            "group": "Help",
+            "pages": [
+              "how-to/install",
+              "how-to/v2-changelog",
+              "how-to/v2-migration",
+              "how-to/workflows-migration",
+              "how-to/cursor-rules",
+              "how-to/contribute"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "AgentOS",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "agent-os/introduction",
+              "agent-os/creating-your-first-os",
+              "agent-os/connecting-your-os",
+              {
+                "group": "Control Plane",
+                "pages": [
+                  "agent-os/control-plane",
+                  "agent-os/features/chat-interface",
+                  "agent-os/features/knowledge-management",
+                  "agent-os/features/session-tracking",
+                  "agent-os/features/memories"
+                ]
+              },
+              "agent-os/security"
+            ]
+          },
+          {
+            "group": "AgentOS",
+            "pages": [
+              "agent-os/overview",
+              {
+                "group": "AgentOS API",
+                "pages": [
+                  "agent-os/api/authentication",
+                  "agent-os/api/usage"
+                ]
+              },
+              {
+                "group": "MCP",
+                "pages": ["agent-os/mcp/mcp", "agent-os/mcp/tools"]
+              },
+              {
+                "group": "Bring Your Own FastAPI App",
+                "pages": [
+                  "agent-os/custom-fastapi/overview",
+                  "agent-os/custom-fastapi/override_routes"
+                ]
+              },
+              {
+                "group": "Middleware",
+                "pages": [
+                  "agent-os/middleware/overview",
+                  "agent-os/middleware/custom",
+                  "agent-os/middleware/jwt"
+                ]
+              },
+              "agent-os/config",
+              "agent-os/lifespan",
+              "agent-os/manage_knowledge",
+              {
+                "group": "Interfaces",
+                "pages": [
+                  "agent-os/interfaces/whatsapp/introduction",
+                  "agent-os/interfaces/a2a/introduction",
+                  "agent-os/interfaces/ag-ui/introduction",
+                  "agent-os/interfaces/slack/introduction"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "API Reference",
+            "pages": [
+              "reference-api/overview",
+              {
+                "group": "Core",
+                "pages": ["reference-api/schema/core/get-os-configuration"]
+              },
+              {
+                "group": "Agents",
+                "pages": [
+                  "reference-api/schema/agents/list-all-agents",
+                  "reference-api/schema/agents/get-agent-details",
+                  "reference-api/schema/agents/create-agent-run",
+                  "reference-api/schema/agents/cancel-agent-run",
+                  "reference-api/schema/agents/continue-agent-run"
+                ]
+              },
+              {
+                "group": "Teams",
+                "pages": [
+                  "reference-api/schema/teams/list-all-teams",
+                  "reference-api/schema/teams/get-team-details",
+                  "reference-api/schema/teams/create-team-run",
+                  "reference-api/schema/teams/cancel-team-run"
+                ]
+              },
+              {
+                "group": "Workflows",
+                "pages": [
+                  "reference-api/schema/workflows/list-all-workflows",
+                  "reference-api/schema/workflows/get-workflow-details",
+                  "reference-api/schema/workflows/execute-workflow",
+                  "reference-api/schema/workflows/cancel-workflow-run"
+                ]
+              },
+              {
+                "group": "Sessions",
+                "pages": [
+                  "reference-api/schema/sessions/list-sessions",
+                  "reference-api/schema/sessions/get-session-by-id",
+                  "reference-api/schema/sessions/get-session-runs",
+                  "reference-api/schema/sessions/get-run-by-id",
+                  "reference-api/schema/sessions/create-new-session",
+                  "reference-api/schema/sessions/update-session",
+                  "reference-api/schema/sessions/rename-session",
+                  "reference-api/schema/sessions/delete-session",
+                  "reference-api/schema/sessions/delete-multiple-sessions"
+                ]
+              },
+              {
+                "group": "Memory",
+                "pages": [
+                  "reference-api/schema/memory/list-memories",
+                  "reference-api/schema/memory/get-memory-by-id",
+                  "reference-api/schema/memory/get-memory-topics",
+                  "reference-api/schema/memory/get-user-memory-statistics",
+                  "reference-api/schema/memory/create-memory",
+                  "reference-api/schema/memory/update-memory",
+                  "reference-api/schema/memory/delete-memory",
+                  "reference-api/schema/memory/delete-multiple-memories"
+                ]
+              },
+              {
+                "group": "Evals",
+                "pages": [
+                  "reference-api/schema/evals/list-evaluation-runs",
+                  "reference-api/schema/evals/get-evaluation-run",
+                  "reference-api/schema/evals/execute-evaluation",
+                  "reference-api/schema/evals/update-evaluation-run",
+                  "reference-api/schema/evals/delete-evaluation-runs"
+                ]
+              },
+              {
+                "group": "Knowledge",
+                "pages": [
+                  "reference-api/schema/knowledge/list-content",
+                  "reference-api/schema/knowledge/get-content-by-id",
+                  "reference-api/schema/knowledge/get-content-status",
+                  "reference-api/schema/knowledge/search-knowledge",
+                  "reference-api/schema/knowledge/upload-content",
+                  "reference-api/schema/knowledge/update-content",
+                  "reference-api/schema/knowledge/delete-all-content",
+                  "reference-api/schema/knowledge/delete-content-by-id"
+                ]
+              },
+              {
+                "group": "Metrics",
+                "pages": [
+                  "reference-api/schema/metrics/get-agentos-metrics",
+                  "reference-api/schema/metrics/refresh-metrics"
+                ]
+              },
+              {
+                "group": "Interfaces",
+                "pages": [
+                  {
+                    "group": "A2A",
+                    "pages": [
+                      "reference-api/schema/a2a/send-message",
+                      "reference-api/schema/a2a/stream-message"
+                    ]
+                  },
+                  {
+                    "group": "AGUI",
+                    "pages": [
+                      "reference-api/schema/agui/get-status",
+                      "reference-api/schema/agui/run-agent"
+                    ]
+                  },
+                  {
+                    "group": "Slack",
+                    "pages": ["reference-api/schema/slack/slack-events"]
+                  },
+                  {
+                    "group": "Whatsapp",
+                    "pages": [
+                      "reference-api/schema/whatsapp/status",
+                      "reference-api/schema/whatsapp/verify-webhook",
+                      "reference-api/schema/whatsapp/webhook"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "reference/agent-os/agent-os",
+              "reference/agent-os/configuration"
+            ]
+          },
+          {
+            "group": "Examples",
+            "pages": [
+              "examples/agent-os/demo",
+              "examples/agent-os/extra_configuration",
+              "examples/agent-os/hitl",
+              {
+                "group": "MCP",
+                "pages": [
+                  "examples/agent-os/mcp/enable_mcp_example",
+                  "examples/agent-os/mcp/mcp_tools_example"
+                ]
+              },
+              {
+                "group": "Middleware",
+                "pages": [
+                  "examples/agent-os/middleware/custom-middleware",
+                  "examples/agent-os/middleware/jwt-middleware",
+                  "examples/agent-os/middleware/jwt-cookies",
+                  "examples/agent-os/middleware/custom-fastapi-jwt"
+                ]
+              },
+              {
+                "group": "Interfaces",
+                "pages": [
+                  {
+                    "group": "WhatsApp",
+                    "pages": [
+                      "examples/agent-os/interfaces/whatsapp/basic",
+                      "examples/agent-os/interfaces/whatsapp/image_generation_tools",
+                      "examples/agent-os/interfaces/whatsapp/reasoning_agent",
+                      "examples/agent-os/interfaces/whatsapp/image_generation_model",
+                      "examples/agent-os/interfaces/whatsapp/agent_with_media",
+                      "examples/agent-os/interfaces/whatsapp/agent_with_user_memory"
+                    ]
+                  },
+                  {
+                    "group": "A2A",
+                    "pages": [
+                      "examples/agent-os/interfaces/a2a/basic",
+                      "examples/agent-os/interfaces/a2a/agent_with_tools",
+                      "examples/agent-os/interfaces/a2a/team"
+                    ]
+                  },
+                  {
+                    "group": "AG-UI",
+                    "pages": [
+                      "examples/agent-os/interfaces/ag-ui/basic",
+                      "examples/agent-os/interfaces/ag-ui/agent_with_tools",
+                      "examples/agent-os/interfaces/ag-ui/team"
+                    ]
+                  },
+                  {
+                    "group": "Slack",
+                    "pages": [
+                      "examples/agent-os/interfaces/slack/basic",
+                      "examples/agent-os/interfaces/slack/agent_with_user_memory",
+                      "examples/agent-os/interfaces/slack/reasoning_agent"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "AgentUI",
+            "pages": [
+              "agent-os/agent-ui/overview"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Learn",
+        "groups": [
+          {
+            "group": "Tutorials",
+            "pages": ["tutorials/overview", "tutorials/social-media-agent"]
+          },
+          {
+            "group": "Getting Started",
+            "hidden": true,
+            "pages": [
+              "examples/getting-started/introduction",
+              "examples/getting-started/01-basic-agent",
+              "examples/getting-started/02-agent-with-tools",
+              "examples/getting-started/03-agent-with-knowledge",
+              "examples/getting-started/04-write-your-own-tool",
+              "examples/getting-started/05-structured-output",
+              "examples/getting-started/06-agent-with-storage",
+              "examples/getting-started/07-agent-state",
+              "examples/getting-started/08-agent-context",
+              "examples/getting-started/09-agent-session",
+              "examples/getting-started/10-user-memories-and-summaries",
+              "examples/getting-started/11-retry-function-call",
+              "examples/getting-started/12-human-in-the-loop",
+              "examples/getting-started/13-image-agent",
+              "examples/getting-started/14-image-generation",
+              "examples/getting-started/15-video-generation",
+              "examples/getting-started/16-audio-agent",
+              "examples/getting-started/17-agent-team",
+              "examples/getting-started/18-research-agent-exa",
+              "examples/getting-started/19-blog-generator-workflow"
+            ]
+          },
+          {
+            "group": "Use Cases",
+            "pages": [
+              "examples/use-cases/overview",
+              {
+                "group": "Agents",
+                "pages": [
+                  "examples/use-cases/agents/agno_assist",
+                  "examples/use-cases/agents/airbnb_mcp",
+                  "examples/use-cases/agents/books-recommender",
+                  "examples/use-cases/agents/competitor_analysis_agent",
+                  "examples/use-cases/agents/deep_knowledge",
+                  "examples/use-cases/agents/deep_research_agent_exa",
+                  "examples/use-cases/agents/legal_consultant",
+                  "examples/use-cases/agents/media_trend_analysis_agent",
+                  "examples/use-cases/agents/meeting_summarizer_agent",
+                  "examples/use-cases/agents/movie-recommender",
+                  "examples/use-cases/agents/readme_generator",
+                  "examples/use-cases/agents/recipe-creator",
+                  "examples/use-cases/agents/recipe_rag_image",
+                  "examples/use-cases/agents/reddit-post-generator",
+                  "examples/use-cases/agents/research-agent",
+                  "examples/use-cases/agents/research-agent-exa",
+                  "examples/use-cases/agents/run_as_cli",
+                  "examples/use-cases/agents/shopping_partner",
+                  "examples/use-cases/agents/social_media_agent",
+                  "examples/use-cases/agents/startup-analyst-agent",
+                  "examples/use-cases/agents/study-partner",
+                  "examples/use-cases/agents/travel-planner",
+                  "examples/use-cases/agents/tweet-analysis-agent",
+                  "examples/use-cases/agents/translation_agent",
+                  "examples/use-cases/agents/web_extraction_agent",
+                  "examples/use-cases/agents/youtube-agent"
+                ]
+              },
+              {
+                "group": "Teams",
+                "pages": [
+                  "examples/use-cases/teams/discussion_team",
+                  "examples/use-cases/teams/autonomous_startup_team",
+                  "examples/use-cases/teams/content_team",
+                  "examples/use-cases/teams/hackernews_team",
+                  "examples/use-cases/teams/news_agency_team",
+                  "examples/use-cases/teams/reasoning_team",
+                  "examples/use-cases/teams/ai_support_team",
+                  "examples/use-cases/teams/multi_language_team"
+                ]
+              },
+              {
+                "group": "Workflows",
+                "pages": [
+                  "examples/use-cases/workflows/company-description",
+                  "examples/use-cases/workflows/blog-post-generator",
+                  "examples/use-cases/workflows/employee-recruiter",
+                  "examples/use-cases/workflows/investment-report-generator",
+                  "examples/use-cases/workflows/startup-idea-validator",
+                  "examples/use-cases/workflows/notion-knowledge-manager"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "SDK Reference",
+        "groups": [
+          {
             "group": "SDK Reference",
             "pages": [
               "reference/agents/agent",
@@ -3464,384 +3847,6 @@
                   "reference/vector_db/singlestore",
                   "reference/vector_db/weaviate",
                   "reference/vector_db/surrealdb"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Help",
-            "pages": [
-              "how-to/install",
-              "how-to/v2-changelog",
-              "how-to/v2-migration",
-              "how-to/workflows-migration",
-              "how-to/cursor-rules",
-              "how-to/contribute"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "AgentOS",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "agent-os/introduction",
-              "agent-os/creating-your-first-os",
-              "agent-os/connecting-your-os",
-              {
-                "group": "Control Plane",
-                "pages": [
-                  "agent-os/control-plane",
-                  "agent-os/features/chat-interface",
-                  "agent-os/features/knowledge-management",
-                  "agent-os/features/session-tracking",
-                  "agent-os/features/memories"
-                ]
-              },
-              "agent-os/security"
-            ]
-          },
-          {
-            "group": "AgentOS",
-            "pages": [
-              "agent-os/overview",
-              {
-                "group": "AgentOS API",
-                "pages": [
-                  "agent-os/api/authentication",
-                  "agent-os/api/usage",
-                  {
-                    "group": "API Reference",
-                    "pages": [
-                      "reference-api/overview",
-                      {
-                        "group": "Core",
-                        "pages": ["reference-api/schema/core/get-os-configuration"]
-                      },
-                      {
-                        "group": "Agents",
-                        "pages": [
-                          "reference-api/schema/agents/list-all-agents",
-                          "reference-api/schema/agents/get-agent-details",
-                          "reference-api/schema/agents/create-agent-run",
-                          "reference-api/schema/agents/cancel-agent-run",
-                          "reference-api/schema/agents/continue-agent-run"
-                        ]
-                      },
-                      {
-                        "group": "Teams",
-                        "pages": [
-                          "reference-api/schema/teams/list-all-teams",
-                          "reference-api/schema/teams/get-team-details",
-                          "reference-api/schema/teams/create-team-run",
-                          "reference-api/schema/teams/cancel-team-run"
-                        ]
-                      },
-                      {
-                        "group": "Workflows",
-                        "pages": [
-                          "reference-api/schema/workflows/list-all-workflows",
-                          "reference-api/schema/workflows/get-workflow-details",
-                          "reference-api/schema/workflows/execute-workflow",
-                          "reference-api/schema/workflows/cancel-workflow-run"
-                        ]
-                      },
-                      {
-                        "group": "Sessions",
-                        "pages": [
-                          "reference-api/schema/sessions/list-sessions",
-                          "reference-api/schema/sessions/get-session-by-id",
-                          "reference-api/schema/sessions/get-session-runs",
-                          "reference-api/schema/sessions/get-run-by-id",
-                          "reference-api/schema/sessions/create-new-session",
-                          "reference-api/schema/sessions/update-session",
-                          "reference-api/schema/sessions/rename-session",
-                          "reference-api/schema/sessions/delete-session",
-                          "reference-api/schema/sessions/delete-multiple-sessions"
-                        ]
-                      },
-                      {
-                        "group": "Memory",
-                        "pages": [
-                          "reference-api/schema/memory/list-memories",
-                          "reference-api/schema/memory/get-memory-by-id",
-                          "reference-api/schema/memory/get-memory-topics",
-                          "reference-api/schema/memory/get-user-memory-statistics",
-                          "reference-api/schema/memory/create-memory",
-                          "reference-api/schema/memory/update-memory",
-                          "reference-api/schema/memory/delete-memory",
-                          "reference-api/schema/memory/delete-multiple-memories"
-                        ]
-                      },
-                      {
-                        "group": "Evals",
-                        "pages": [
-                          "reference-api/schema/evals/list-evaluation-runs",
-                          "reference-api/schema/evals/get-evaluation-run",
-                          "reference-api/schema/evals/execute-evaluation",
-                          "reference-api/schema/evals/update-evaluation-run",
-                          "reference-api/schema/evals/delete-evaluation-runs"
-                        ]
-                      },
-                      {
-                        "group": "Knowledge",
-                        "pages": [
-                          "reference-api/schema/knowledge/list-content",
-                          "reference-api/schema/knowledge/get-content-by-id",
-                          "reference-api/schema/knowledge/get-content-status",
-                          "reference-api/schema/knowledge/search-knowledge",
-                          "reference-api/schema/knowledge/upload-content",
-                          "reference-api/schema/knowledge/update-content",
-                          "reference-api/schema/knowledge/delete-all-content",
-                          "reference-api/schema/knowledge/delete-content-by-id"
-                        ]
-                      },
-                      {
-                        "group": "Metrics",
-                        "pages": [
-                          "reference-api/schema/metrics/get-agentos-metrics",
-                          "reference-api/schema/metrics/refresh-metrics"
-                        ]
-                      },
-                      {
-                        "group": "Interfaces",
-                        "pages": [
-                          {
-                            "group": "A2A",
-                            "pages": [
-                              "reference-api/schema/a2a/send-message",
-                              "reference-api/schema/a2a/stream-message"
-                            ]
-                          },
-                          {
-                            "group": "AGUI",
-                            "pages": [
-                              "reference-api/schema/agui/get-status",
-                              "reference-api/schema/agui/run-agent"
-                            ]
-                          },
-                          {
-                            "group": "Slack",
-                            "pages": ["reference-api/schema/slack/slack-events"]
-                          },
-                          {
-                            "group": "Whatsapp",
-                            "pages": [
-                              "reference-api/schema/whatsapp/status",
-                              "reference-api/schema/whatsapp/verify-webhook",
-                              "reference-api/schema/whatsapp/webhook"
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "MCP",
-                "pages": ["agent-os/mcp/mcp", "agent-os/mcp/tools"]
-              },
-              {
-                "group": "Bring Your Own FastAPI App",
-                "pages": [
-                  "agent-os/custom-fastapi/overview",
-                  "agent-os/custom-fastapi/override_routes"
-                ]
-              },
-              {
-                "group": "Middleware",
-                "pages": [
-                  "agent-os/middleware/overview",
-                  "agent-os/middleware/custom",
-                  "agent-os/middleware/jwt"
-                ]
-              },
-              "agent-os/config",
-              "agent-os/lifespan",
-              "agent-os/manage_knowledge",
-              {
-                "group": "Interfaces",
-                "pages": [
-                  "agent-os/interfaces/whatsapp/introduction",
-                  "agent-os/interfaces/a2a/introduction",
-                  "agent-os/interfaces/ag-ui/introduction",
-                  "agent-os/interfaces/slack/introduction"
-                ]
-              },
-              {
-                "group": "Reference",
-                "pages": [
-                  "reference/agent-os/agent-os",
-                  "reference/agent-os/configuration"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Examples",
-            "pages": [
-              "examples/agent-os/demo",
-              "examples/agent-os/extra_configuration",
-              "examples/agent-os/hitl",
-              {
-                "group": "MCP",
-                "pages": [
-                  "examples/agent-os/mcp/enable_mcp_example",
-                  "examples/agent-os/mcp/mcp_tools_example"
-                ]
-              },
-              {
-                "group": "Middleware",
-                "pages": [
-                  "examples/agent-os/middleware/custom-middleware",
-                  "examples/agent-os/middleware/jwt-middleware",
-                  "examples/agent-os/middleware/jwt-cookies",
-                  "examples/agent-os/middleware/custom-fastapi-jwt"
-                ]
-              },
-              {
-                "group": "Interfaces",
-                "pages": [
-                  {
-                    "group": "WhatsApp",
-                    "pages": [
-                      "examples/agent-os/interfaces/whatsapp/basic",
-                      "examples/agent-os/interfaces/whatsapp/image_generation_tools",
-                      "examples/agent-os/interfaces/whatsapp/reasoning_agent",
-                      "examples/agent-os/interfaces/whatsapp/image_generation_model",
-                      "examples/agent-os/interfaces/whatsapp/agent_with_media",
-                      "examples/agent-os/interfaces/whatsapp/agent_with_user_memory"
-                    ]
-                  },
-                  {
-                    "group": "A2A",
-                    "pages": [
-                      "examples/agent-os/interfaces/a2a/basic",
-                      "examples/agent-os/interfaces/a2a/agent_with_tools",
-                      "examples/agent-os/interfaces/a2a/team"
-                    ]
-                  },
-                  {
-                    "group": "AG-UI",
-                    "pages": [
-                      "examples/agent-os/interfaces/ag-ui/basic",
-                      "examples/agent-os/interfaces/ag-ui/agent_with_tools",
-                      "examples/agent-os/interfaces/ag-ui/team"
-                    ]
-                  },
-                  {
-                    "group": "Slack",
-                    "pages": [
-                      "examples/agent-os/interfaces/slack/basic",
-                      "examples/agent-os/interfaces/slack/agent_with_user_memory",
-                      "examples/agent-os/interfaces/slack/reasoning_agent"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "group": "AgentUI",
-            "pages": [
-              "agent-os/agent-ui/overview"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Learn",
-        "groups": [
-          {
-            "group": "Tutorials",
-            "pages": ["tutorials/overview", "tutorials/social-media-agent"]
-          },
-          {
-            "group": "Getting Started",
-            "hidden": true,
-            "pages": [
-              "examples/getting-started/introduction",
-              "examples/getting-started/01-basic-agent",
-              "examples/getting-started/02-agent-with-tools",
-              "examples/getting-started/03-agent-with-knowledge",
-              "examples/getting-started/04-write-your-own-tool",
-              "examples/getting-started/05-structured-output",
-              "examples/getting-started/06-agent-with-storage",
-              "examples/getting-started/07-agent-state",
-              "examples/getting-started/08-agent-context",
-              "examples/getting-started/09-agent-session",
-              "examples/getting-started/10-user-memories-and-summaries",
-              "examples/getting-started/11-retry-function-call",
-              "examples/getting-started/12-human-in-the-loop",
-              "examples/getting-started/13-image-agent",
-              "examples/getting-started/14-image-generation",
-              "examples/getting-started/15-video-generation",
-              "examples/getting-started/16-audio-agent",
-              "examples/getting-started/17-agent-team",
-              "examples/getting-started/18-research-agent-exa",
-              "examples/getting-started/19-blog-generator-workflow"
-            ]
-          },
-          {
-            "group": "Use Cases",
-            "pages": [
-              "examples/use-cases/overview",
-              {
-                "group": "Agents",
-                "pages": [
-                  "examples/use-cases/agents/agno_assist",
-                  "examples/use-cases/agents/airbnb_mcp",
-                  "examples/use-cases/agents/books-recommender",
-                  "examples/use-cases/agents/competitor_analysis_agent",
-                  "examples/use-cases/agents/deep_knowledge",
-                  "examples/use-cases/agents/deep_research_agent_exa",
-                  "examples/use-cases/agents/legal_consultant",
-                  "examples/use-cases/agents/media_trend_analysis_agent",
-                  "examples/use-cases/agents/meeting_summarizer_agent",
-                  "examples/use-cases/agents/movie-recommender",
-                  "examples/use-cases/agents/readme_generator",
-                  "examples/use-cases/agents/recipe-creator",
-                  "examples/use-cases/agents/recipe_rag_image",
-                  "examples/use-cases/agents/reddit-post-generator",
-                  "examples/use-cases/agents/research-agent",
-                  "examples/use-cases/agents/research-agent-exa",
-                  "examples/use-cases/agents/run_as_cli",
-                  "examples/use-cases/agents/shopping_partner",
-                  "examples/use-cases/agents/social_media_agent",
-                  "examples/use-cases/agents/startup-analyst-agent",
-                  "examples/use-cases/agents/study-partner",
-                  "examples/use-cases/agents/travel-planner",
-                  "examples/use-cases/agents/tweet-analysis-agent",
-                  "examples/use-cases/agents/translation_agent",
-                  "examples/use-cases/agents/web_extraction_agent",
-                  "examples/use-cases/agents/youtube-agent"
-                ]
-              },
-              {
-                "group": "Teams",
-                "pages": [
-                  "examples/use-cases/teams/discussion_team",
-                  "examples/use-cases/teams/autonomous_startup_team",
-                  "examples/use-cases/teams/content_team",
-                  "examples/use-cases/teams/hackernews_team",
-                  "examples/use-cases/teams/news_agency_team",
-                  "examples/use-cases/teams/reasoning_team",
-                  "examples/use-cases/teams/ai_support_team",
-                  "examples/use-cases/teams/multi_language_team"
-                ]
-              },
-              {
-                "group": "Workflows",
-                "pages": [
-                  "examples/use-cases/workflows/company-description",
-                  "examples/use-cases/workflows/blog-post-generator",
-                  "examples/use-cases/workflows/employee-recruiter",
-                  "examples/use-cases/workflows/investment-report-generator",
-                  "examples/use-cases/workflows/startup-idea-validator",
-                  "examples/use-cases/workflows/notion-knowledge-manager"
                 ]
               }
             ]
