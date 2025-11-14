@@ -10,7 +10,10 @@ It works by equipping your Agents with a database that they will use to store an
 - [Sessions](/concepts/sessions/overview)
 - [User Memories](/concepts/memory/overview)
 
-In addition this DB is used to store [knowledge](/concepts/knowledge/content_db) and [evals](/concepts/evals/overview).
+In addition this DB is used to store [knowledge](/concepts/knowledge/content_db), [evals](/concepts/evals/overview) and [culture](/concepts/culture/overview).
+<Note>
+Culture is an experimental feature.
+</Note>
 
 <Tip>
 **When should I use Storage on my Agents?**
@@ -155,7 +158,7 @@ This is the list of the databases we currently support:
     title="DynamoDB"
     icon="database"
     iconType="duotone"
-    href="/concepts/db/dynamodb"
+    href="/concepts/storage/dynamodb"
   >
     Amazon's NoSQL database service
   </Card>
@@ -163,7 +166,7 @@ This is the list of the databases we currently support:
     title="FireStore"
     icon="database"
     iconType="duotone"
-    href="/concepts/db/firestore"
+    href="/concepts/storage/firestore"
   >
     Google's NoSQL document database
   </Card>
@@ -171,7 +174,7 @@ This is the list of the databases we currently support:
     title="JSON"
     icon="file-code"
     iconType="duotone"
-    href="/concepts/db/json"
+    href="/concepts/storage/json"
   >
     Simple file-based JSON storage
   </Card>
@@ -179,7 +182,7 @@ This is the list of the databases we currently support:
     title="JSON on GCS"
     icon="cloud"
     iconType="duotone"
-    href="/concepts/db/gcs"
+    href="/concepts/storage/gcs"
   >
     JSON storage on Google Cloud Storage
   </Card>
@@ -187,7 +190,7 @@ This is the list of the databases we currently support:
     title="MongoDB"
     icon="database"
     iconType="duotone"
-    href="/concepts/db/mongodb"
+    href="/concepts/storage/mongodb"
   >
     Popular NoSQL document database
   </Card>
@@ -195,7 +198,7 @@ This is the list of the databases we currently support:
     title="MySQL"
     icon="database"
     iconType="duotone"
-    href="/concepts/db/mysql"
+    href="/concepts/storage/mysql"
   >
     Widely-used relational database
   </Card>
@@ -203,7 +206,7 @@ This is the list of the databases we currently support:
     title="Neon"
     icon="database"
     iconType="duotone"
-    href="/concepts/db/neon"
+    href="/concepts/storage/neon"
   >
     Serverless PostgreSQL platform
   </Card>
@@ -211,7 +214,7 @@ This is the list of the databases we currently support:
     title="PostgreSQL"
     icon="database"
     iconType="duotone"
-    href="/concepts/db/postgres"
+    href="/concepts/storage/postgres"
   >
     Advanced open-source relational database
   </Card>
@@ -219,7 +222,7 @@ This is the list of the databases we currently support:
     title="Redis"
     icon="database"
     iconType="duotone"
-    href="/concepts/db/redis"
+    href="/concepts/storage/redis"
   >
     In-memory data structure store
   </Card>
@@ -227,7 +230,7 @@ This is the list of the databases we currently support:
     title="SingleStore"
     icon="database"
     iconType="duotone"
-    href="/concepts/db/singlestore"
+    href="/concepts/storage/singlestore"
   >
     Real-time analytics database
   </Card>
@@ -235,7 +238,7 @@ This is the list of the databases we currently support:
     title="SQLite"
     icon="database"
     iconType="duotone"
-    href="/concepts/db/sqlite"
+    href="/concepts/storage/sqlite"
   >
     Lightweight embedded database
   </Card>
@@ -243,14 +246,14 @@ This is the list of the databases we currently support:
     title="Supabase"
     icon="database"
     iconType="duotone"
-    href="/concepts/db/supabase"
+    href="/concepts/storage/supabase"
   >
     Open source Firebase alternative
   </Card>
 </CardGroup>
 
 <Note>
-We also support using an [In-Memory](/concepts/db/in_memory) database. This is not recommended for production, but perfect for demos and testing.
+We also support using an [In-Memory](/concepts/storage/in_memory) database. This is not recommended for production, but perfect for demos and testing.
 </Note>
 
-You can see a detailed list of [examples](/examples/concepts/db) for all supported databases.
+You can see a detailed list of [examples](/examples/concepts/storage) for all supported databases.

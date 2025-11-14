@@ -89,7 +89,7 @@
                   "concepts/agents/running-agents",
                   "concepts/agents/debugging-agents",
                   {
-                    "group": "Examples",
+                    "group": "Usage",
                     "pages": [
                       {
                         "group": "Basic Flows",
@@ -135,7 +135,7 @@
                   "concepts/teams/delegation",
                   "concepts/teams/debugging-teams",
                   {
-                    "group": "Examples",
+                    "group": "Usage",
                     "pages": [
                       {
                         "group": "Basic Flows",
@@ -201,7 +201,7 @@
                   "concepts/workflows/workflow-tools",
                   "concepts/workflows/background-execution",
                   {
-                    "group": "Examples",
+                    "group": "Usage",
                     "pages": [
                       {
                         "group": "Basic Workflows",
@@ -425,221 +425,7 @@
               {
                 "group": "Database",
                 "pages": [
-                  "concepts/db/overview",
-                  {
-                    "group": "Storage Providers",
-                    "pages": [
-                      {
-                        "group": "PostgreSQL",
-                        "pages": [
-                          "concepts/db/postgres",
-                          {
-                            "group": "Examples",
-                            "pages": [
-                              "examples/concepts/db/postgres/postgres_for_agent",
-                              "examples/concepts/db/postgres/postgres_for_team",
-                              "examples/concepts/db/postgres/postgres_for_workflow"
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "group": "Async PostgreSQL",
-                        "pages": [
-                          "concepts/db/async_postgres",
-                          {
-                            "group": "Examples",
-                            "pages": [
-                              "examples/concepts/db/postgres/async_postgres_for_agent",
-                              "examples/concepts/db/postgres/async_postgres_for_team",
-                              "examples/concepts/db/postgres/async_postgres_for_workflow"
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "group": "MySQL",
-                        "pages": [
-                          "concepts/db/mysql",
-                          {
-                            "group": "Examples",
-                            "pages": [
-                              "examples/concepts/db/mysql/mysql_for_agent",
-                              "examples/concepts/db/mysql/mysql_for_team",
-                              "examples/concepts/db/mysql/mysql_for_workflow"
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "group": "SQLite",
-                        "pages": [
-                          "concepts/db/sqlite",
-                          {
-                            "group": "Examples",
-                            "pages": [
-                              "examples/concepts/db/sqlite/sqlite_for_agent",
-                              "examples/concepts/db/sqlite/sqlite_for_team",
-                              "examples/concepts/db/sqlite/sqlite_for_workflow"
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "group": "Async SQLite",
-                        "pages": [
-                          "concepts/db/async_sqlite",
-                          {
-                            "group": "Examples",
-                            "pages": [
-                              "examples/concepts/db/sqlite/async_sqlite_for_agent",
-                              "examples/concepts/db/sqlite/async_sqlite_for_team",
-                              "examples/concepts/db/sqlite/async_sqlite_for_workflow"
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "group": "In-Memory",
-                        "pages": [
-                          "concepts/db/in_memory",
-                          {
-                            "group": "Examples",
-                            "pages": [
-                              "examples/concepts/db/in_memory/in_memory_for_agent",
-                              "examples/concepts/db/in_memory/in_memory_for_team",
-                              "examples/concepts/db/in_memory/in_memory_for_workflow"
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "group": "DynamoDB",
-                        "pages": [
-                          "concepts/db/dynamodb",
-                          {
-                            "group": "Examples",
-                            "pages": [
-                              "examples/concepts/db/dynamodb/dynamodb_for_agent",
-                              "examples/concepts/db/dynamodb/dynamodb_for_team",
-                              "examples/concepts/db/dynamodb/dynamodb_for_workflow"
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "group": "MongoDB",
-                        "pages": [
-                          "concepts/db/mongodb",
-                          {
-                            "group": "Examples",
-                            "pages": [
-                              "examples/concepts/db/mongodb/mongodb_for_agent",
-                              "examples/concepts/db/mongodb/mongodb_for_team",
-                              "examples/concepts/db/mongodb/mongodb_for_workflow"
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "group": "Async MongoDB",
-                        "pages": [
-                          "concepts/db/async_mongo",
-                          {
-                            "group": "Examples",
-                            "pages": [
-                              "examples/concepts/db/mongodb/async_mongodb_for_agent",
-                              "examples/concepts/db/mongodb/async_mongodb_for_team",
-                              "examples/concepts/db/mongodb/async_mongodb_for_workflow"
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "group": "JSON",
-                        "pages": [
-                          "concepts/db/json",
-                          {
-                            "group": "Examples",
-                            "pages": [
-                              "examples/concepts/db/json/json_for_agent",
-                              "examples/concepts/db/json/json_for_team",
-                              "examples/concepts/db/json/json_for_workflow"
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "group": "Singlestore",
-                        "pages": [
-                          "concepts/db/singlestore",
-                          {
-                            "group": "Examples",
-                            "pages": [
-                              "examples/concepts/db/singlestore/singlestore_for_agent",
-                              "examples/concepts/db/singlestore/singlestore_for_team",
-                              "examples/concepts/db/singlestore/singlestore_for_workflow"
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "group": "Redis",
-                        "pages": [
-                          "concepts/db/redis",
-                          {
-                            "group": "Examples",
-                            "pages": [
-                              "examples/concepts/db/redis/redis_for_agent",
-                              "examples/concepts/db/redis/redis_for_team",
-                              "examples/concepts/db/redis/redis_for_workflow"
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "group": "GCS",
-                        "pages": [
-                          "concepts/db/gcs",
-                          {
-                            "group": "Examples",
-                            "pages": [
-                              "examples/concepts/db/gcs/gcs_for_agent",
-                              "examples/concepts/db/gcs/gcs_for_team",
-                              "examples/concepts/db/gcs/gcs_for_workflow"
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "group": "Firestore",
-                        "pages": [
-                          "concepts/db/firestore",
-                          {
-                            "group": "Examples",
-                            "pages": [
-                              "examples/concepts/db/firestore/firestore_for_agent",
-                              "examples/concepts/db/firestore/firestore_for_team",
-                              "examples/concepts/db/firestore/firestore_for_workflow"
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "group": "Supabase",
-                        "pages": [
-                          "concepts/db/supabase"
-                        ]
-                      },
-                      {
-                        "group": "Neon",
-                        "pages": [
-                          "concepts/db/neon"
-                        ]
-                      },
-                      "examples/concepts/db/miscellaneous/selecting_tables"
-                    ]
-                  }
+                  "concepts/storage/overview"
                 ]
               },
               {
@@ -2901,6 +2687,220 @@
                 ]
               },
               {
+                "group": "Database Providers",
+                "pages": [
+                  {
+                    "group": "PostgreSQL",
+                    "pages": [
+                      "concepts/storage/postgres",
+                      {
+                        "group": "Examples",
+                        "pages": [
+                          "examples/concepts/storage/postgres/postgres_for_agent",
+                          "examples/concepts/storage/postgres/postgres_for_team",
+                          "examples/concepts/storage/postgres/postgres_for_workflow"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Async PostgreSQL",
+                    "pages": [
+                      "concepts/storage/async_postgres",
+                      {
+                        "group": "Examples",
+                        "pages": [
+                          "examples/concepts/storage/postgres/async_postgres_for_agent",
+                          "examples/concepts/storage/postgres/async_postgres_for_team",
+                          "examples/concepts/storage/postgres/async_postgres_for_workflow"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "MySQL",
+                    "pages": [
+                      "concepts/storage/mysql",
+                      {
+                        "group": "Examples",
+                        "pages": [
+                          "examples/concepts/storage/mysql/mysql_for_agent",
+                          "examples/concepts/storage/mysql/mysql_for_team",
+                          "examples/concepts/storage/mysql/mysql_for_workflow"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "SQLite",
+                    "pages": [
+                      "concepts/storage/sqlite",
+                      {
+                        "group": "Examples",
+                        "pages": [
+                          "examples/concepts/storage/sqlite/sqlite_for_agent",
+                          "examples/concepts/storage/sqlite/sqlite_for_team",
+                          "examples/concepts/storage/sqlite/sqlite_for_workflow"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Async SQLite",
+                    "pages": [
+                      "concepts/storage/async_sqlite",
+                      {
+                        "group": "Examples",
+                        "pages": [
+                          "examples/concepts/storage/sqlite/async_sqlite_for_agent",
+                          "examples/concepts/storage/sqlite/async_sqlite_for_team",
+                          "examples/concepts/storage/sqlite/async_sqlite_for_workflow"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "In-Memory",
+                    "pages": [
+                      "concepts/storage/in_memory",
+                      {
+                        "group": "Examples",
+                        "pages": [
+                          "examples/concepts/storage/in_memory/in_memory_for_agent",
+                          "examples/concepts/storage/in_memory/in_memory_for_team",
+                          "examples/concepts/storage/in_memory/in_memory_for_workflow"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "DynamoDB",
+                    "pages": [
+                      "concepts/storage/dynamodb",
+                      {
+                        "group": "Examples",
+                        "pages": [
+                          "examples/concepts/storage/dynamodb/dynamodb_for_agent",
+                          "examples/concepts/storage/dynamodb/dynamodb_for_team",
+                          "examples/concepts/storage/dynamodb/dynamodb_for_workflow"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "MongoDB",
+                    "pages": [
+                      "concepts/storage/mongodb",
+                      {
+                        "group": "Examples",
+                        "pages": [
+                          "examples/concepts/storage/mongodb/mongodb_for_agent",
+                          "examples/concepts/storage/mongodb/mongodb_for_team",
+                          "examples/concepts/storage/mongodb/mongodb_for_workflow"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Async MongoDB",
+                    "pages": [
+                      "concepts/storage/async_mongo",
+                      {
+                        "group": "Examples",
+                        "pages": [
+                          "examples/concepts/storage/mongodb/async_mongodb_for_agent",
+                          "examples/concepts/storage/mongodb/async_mongodb_for_team",
+                          "examples/concepts/storage/mongodb/async_mongodb_for_workflow"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "JSON",
+                    "pages": [
+                      "concepts/storage/json",
+                      {
+                        "group": "Examples",
+                        "pages": [
+                          "examples/concepts/storage/json/json_for_agent",
+                          "examples/concepts/storage/json/json_for_team",
+                          "examples/concepts/storage/json/json_for_workflow"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Singlestore",
+                    "pages": [
+                      "concepts/storage/singlestore",
+                      {
+                        "group": "Examples",
+                        "pages": [
+                          "examples/concepts/storage/singlestore/singlestore_for_agent",
+                          "examples/concepts/storage/singlestore/singlestore_for_team",
+                          "examples/concepts/storage/singlestore/singlestore_for_workflow"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Redis",
+                    "pages": [
+                      "concepts/storage/redis",
+                      {
+                        "group": "Examples",
+                        "pages": [
+                          "examples/concepts/storage/redis/redis_for_agent",
+                          "examples/concepts/storage/redis/redis_for_team",
+                          "examples/concepts/storage/redis/redis_for_workflow"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "GCS",
+                    "pages": [
+                      "concepts/storage/gcs",
+                      {
+                        "group": "Examples",
+                        "pages": [
+                          "examples/concepts/storage/gcs/gcs_for_agent",
+                          "examples/concepts/storage/gcs/gcs_for_team",
+                          "examples/concepts/storage/gcs/gcs_for_workflow"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Firestore",
+                    "pages": [
+                      "concepts/storage/firestore",
+                      {
+                        "group": "Examples",
+                        "pages": [
+                          "examples/concepts/storage/firestore/firestore_for_agent",
+                          "examples/concepts/storage/firestore/firestore_for_team",
+                          "examples/concepts/storage/firestore/firestore_for_workflow"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Supabase",
+                    "pages": [
+                      "concepts/storage/supabase"
+                    ]
+                  },
+                  {
+                    "group": "Neon",
+                    "pages": [
+                      "concepts/storage/neon"
+                    ]
+                  },
+                  "examples/concepts/storage/miscellaneous/selecting_tables"
+                ]
+              },
+              {
                 "group": "Toolkits",
                 "pages": [
                   "concepts/tools/toolkits/overview",
@@ -3804,6 +3804,7 @@
               {
                 "group": "Knowledge",
                 "pages": [
+                  "reference-api/schema/knowledge/get-config",
                   "reference-api/schema/knowledge/list-content",
                   "reference-api/schema/knowledge/get-content-by-id",
                   "reference-api/schema/knowledge/get-content-status",
@@ -3989,7 +3990,7 @@
     },
     {
       "source": "/agents/storage",
-      "destination": "/concepts/db/overview"
+      "destination": "/concepts/storage/overview"
     },
     {
       "source": "/agents/tools",
