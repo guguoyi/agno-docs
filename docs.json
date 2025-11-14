@@ -710,6 +710,7 @@
                           "examples/concepts/tools/mcp/airbnb",
                           "examples/concepts/tools/mcp/github",
                           "examples/concepts/tools/mcp/notion",
+                          "examples/concepts/tools/mcp/parallel",
                           "examples/concepts/tools/mcp/pipedream_auth",
                           "examples/concepts/tools/mcp/pipedream_slack",
                           "examples/concepts/tools/mcp/pipedream_google_calendar",
@@ -2098,7 +2099,9 @@
                             "pages": [
                               "examples/models/anthropic/basic",
                               "examples/models/anthropic/basic_stream",
+                              "examples/models/anthropic/betas",
                               "examples/models/anthropic/code_execution",
+                              "examples/models/anthropic/context_management",
                               "examples/models/anthropic/skills",
                               "examples/models/anthropic/tool_use",
                               "examples/models/anthropic/structured_output",
@@ -2909,6 +2912,7 @@
                       "concepts/tools/toolkits/search/googlesearch",
                       "concepts/tools/toolkits/search/hackernews",
                       "concepts/tools/toolkits/search/linkup",
+                      "concepts/tools/toolkits/search/parallel",
                       "concepts/tools/toolkits/search/pubmed",
                       "concepts/tools/toolkits/search/searxng",
                       "concepts/tools/toolkits/search/serpapi",
@@ -3064,6 +3068,7 @@
                           "examples/concepts/tools/search/google_search",
                           "examples/concepts/tools/search/hackernews",
                           "examples/concepts/tools/search/linkup",
+                          "examples/concepts/tools/search/parallel",
                           "examples/concepts/tools/search/pubmed",
                           "examples/concepts/tools/search/searxng",
                           "examples/concepts/tools/search/serpapi",
@@ -3317,7 +3322,7 @@
                 "group": "Bring Your Own FastAPI App",
                 "pages": [
                   "agent-os/custom-fastapi/overview",
-                  "agent-os/custom-fastapi/override_routes"
+                  "agent-os/custom-fastapi/override-routes"
                 ]
               },
               {
@@ -3330,7 +3335,7 @@
               },
               "agent-os/config",
               "agent-os/lifespan",
-              "agent-os/manage_knowledge",
+              "agent-os/manage-knowledge",
               {
                 "group": "Interfaces",
                 "pages": [
@@ -3351,8 +3356,8 @@
               {
                 "group": "MCP",
                 "pages": [
-                  "examples/agent-os/mcp/enable_mcp_example",
-                  "examples/agent-os/mcp/mcp_tools_example"
+                  "examples/agent-os/mcp/enable-mcp-example",
+                  "examples/agent-os/mcp/mcp-tools-example"
                 ]
               },
               {
@@ -3371,18 +3376,18 @@
                     "group": "WhatsApp",
                     "pages": [
                       "examples/agent-os/interfaces/whatsapp/basic",
-                      "examples/agent-os/interfaces/whatsapp/image_generation_tools",
-                      "examples/agent-os/interfaces/whatsapp/reasoning_agent",
-                      "examples/agent-os/interfaces/whatsapp/image_generation_model",
-                      "examples/agent-os/interfaces/whatsapp/agent_with_media",
-                      "examples/agent-os/interfaces/whatsapp/agent_with_user_memory"
+                      "examples/agent-os/interfaces/whatsapp/image-generation-tools",
+                      "examples/agent-os/interfaces/whatsapp/reasoning-agent",
+                      "examples/agent-os/interfaces/whatsapp/image-generation-model",
+                      "examples/agent-os/interfaces/whatsapp/agent-with-media",
+                      "examples/agent-os/interfaces/whatsapp/agent-with-user-memory"
                     ]
                   },
                   {
                     "group": "A2A",
                     "pages": [
                       "examples/agent-os/interfaces/a2a/basic",
-                      "examples/agent-os/interfaces/a2a/agent_with_tools",
+                      "examples/agent-os/interfaces/a2a/agent-with-tools",
                       "examples/agent-os/interfaces/a2a/team"
                     ]
                   },
@@ -3390,7 +3395,7 @@
                     "group": "AG-UI",
                     "pages": [
                       "examples/agent-os/interfaces/ag-ui/basic",
-                      "examples/agent-os/interfaces/ag-ui/agent_with_tools",
+                      "examples/agent-os/interfaces/ag-ui/agent-with-tools",
                       "examples/agent-os/interfaces/ag-ui/team"
                     ]
                   },
@@ -3398,8 +3403,9 @@
                     "group": "Slack",
                     "pages": [
                       "examples/agent-os/interfaces/slack/basic",
-                      "examples/agent-os/interfaces/slack/agent_with_user_memory",
-                      "examples/agent-os/interfaces/slack/reasoning_agent"
+                      "examples/agent-os/interfaces/slack/agent-with-user-memory",
+                      "examples/agent-os/interfaces/slack/reasoning-agent",
+                      "examples/agent-os/interfaces/slack/research-workflow"
                     ]
                   }
                 ]
@@ -3538,7 +3544,7 @@
                 "pages": [
                   "reference/agents/run-response",
                   "reference/teams/team-response",
-                  "reference/workflows/workflow_run_output",
+                  "reference/workflows/run-output",
                   "reference/run/run_context"
                 ]
               },
