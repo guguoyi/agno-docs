@@ -3471,11 +3471,11 @@
           {
             "group": "Agent Examples",
             "pages": [
-              "examples/use-cases/agents/youtube-agent",
-              "examples/use-cases/agents/agno_assist",
+              "examples/use-cases/agents/agno-assist",
+              "examples/use-cases/agents/competitor-analysis-agent",
               "examples/use-cases/agents/research-agent",
-              "examples/use-cases/agents/web_extraction_agent",
-              "examples/use-cases/agents/competitor_analysis_agent",
+              "examples/use-cases/agents/web-extraction-agent",
+              "examples/use-cases/agents/youtube-agent",
               {
                 "group": "More Agent Examples",
                 "pages": [
