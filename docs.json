@@ -74,6 +74,7 @@
     "tabs": [
       {
         "tab": "Home",
+        "icon": "home",
         "groups": [
           {
             "group": "Overview",
