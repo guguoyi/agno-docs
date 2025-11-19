@@ -432,7 +432,7 @@
               {
                 "group": "Database",
                 "pages": [
-                  "basics/storage/overview"
+                  "basics/database/overview"
                 ]
               },
               {
@@ -474,7 +474,7 @@
                     ]
                   },
                   {
-                    "group": "Creating Tools",
+                    "group": "Create Your Own Tools",
                     "pages": [
                       "basics/tools/creating-tools/overview",
                       "basics/tools/creating-tools/python-functions",
@@ -2468,7 +2468,7 @@
                   {
                     "group": "PostgreSQL",
                     "pages": [
-                      "basics/storage/postgres",
+                      "basics/database/postgres",
                       {
                         "group": "Usage",
                         "pages": [
@@ -2482,7 +2482,7 @@
                   {
                     "group": "Async PostgreSQL",
                     "pages": [
-                      "basics/storage/async-postgres",
+                      "basics/database/async-postgres",
                       {
                         "group": "Usage",
                         "pages": [
@@ -2496,7 +2496,7 @@
                   {
                     "group": "MySQL",
                     "pages": [
-                      "basics/storage/mysql",
+                      "basics/database/mysql",
                       {
                         "group": "Usage",
                         "pages": [
@@ -2510,7 +2510,7 @@
                   {
                     "group": "SQLite",
                     "pages": [
-                      "basics/storage/sqlite",
+                      "basics/database/sqlite",
                       {
                         "group": "Usage",
                         "pages": [
@@ -2524,7 +2524,7 @@
                   {
                     "group": "Async SQLite",
                     "pages": [
-                      "basics/storage/async-sqlite",
+                      "basics/database/async-sqlite",
                       {
                         "group": "Usage",
                         "pages": [
@@ -2538,7 +2538,7 @@
                   {
                     "group": "In-Memory",
                     "pages": [
-                      "basics/storage/in-memory",
+                      "basics/database/in-memory",
                       {
                         "group": "Usage",
                         "pages": [
@@ -2552,7 +2552,7 @@
                   {
                     "group": "DynamoDB",
                     "pages": [
-                      "basics/storage/dynamodb",
+                      "basics/database/dynamodb",
                       {
                         "group": "Usage",
                         "pages": [
@@ -2566,7 +2566,7 @@
                   {
                     "group": "MongoDB",
                     "pages": [
-                      "basics/storage/mongodb",
+                      "basics/database/mongodb",
                       {
                         "group": "Usage",
                         "pages": [
@@ -2580,7 +2580,7 @@
                   {
                     "group": "Async MongoDB",
                     "pages": [
-                      "basics/storage/async-mongo",
+                      "basics/database/async-mongo",
                       {
                         "group": "Usage",
                         "pages": [
@@ -2594,7 +2594,7 @@
                   {
                     "group": "JSON",
                     "pages": [
-                      "basics/storage/json",
+                      "basics/database/json",
                       {
                         "group": "Usage",
                         "pages": [
@@ -2608,7 +2608,7 @@
                   {
                     "group": "Singlestore",
                     "pages": [
-                      "basics/storage/singlestore",
+                      "basics/database/singlestore",
                       {
                         "group": "Usage",
                         "pages": [
@@ -2622,7 +2622,7 @@
                   {
                     "group": "Redis",
                     "pages": [
-                      "basics/storage/redis",
+                      "basics/database/redis",
                       {
                         "group": "Usage",
                         "pages": [
@@ -2636,7 +2636,7 @@
                   {
                     "group": "GCS",
                     "pages": [
-                      "basics/storage/gcs",
+                      "basics/database/gcs",
                       {
                         "group": "Usage",
                         "pages": [
@@ -2650,7 +2650,7 @@
                   {
                     "group": "Firestore",
                     "pages": [
-                      "basics/storage/firestore",
+                      "basics/database/firestore",
                       {
                         "group": "Usage",
                         "pages": [
@@ -2664,13 +2664,13 @@
                   {
                     "group": "Supabase",
                     "pages": [
-                      "basics/storage/supabase"
+                      "basics/database/supabase"
                     ]
                   },
                   {
                     "group": "Neon",
                     "pages": [
-                      "basics/storage/neon"
+                      "basics/database/neon"
                     ]
                   },
                   "examples/basics/storage/miscellaneous/selecting_tables"
