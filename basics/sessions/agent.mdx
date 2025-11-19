@@ -17,7 +17,7 @@ Here are the core concepts:
 - **Run:** Every interaction (i.e. chat or turn) with an Agent is called a **run**. Runs are identified by a `run_id` and `Agent.run()` creates a new `run_id` when called.
 - **Messages:** are the individual messages sent between the model and the Agent. Messages are the communication protocol between the Agent and model.
 
-See [Session Storage](/basics/storage/overview) for more details on how sessions are stored.
+See [Session Storage](/basics/database/overview) for more details on how sessions are stored.
 
 ## Single session
 
@@ -88,7 +88,7 @@ agent.print_response(
 ```
 <Note>
   For session history and management, you need to have a database assigned to
-  the agent. See [Storage](/basics/storage/overview) for more details.
+  the agent. See [Storage](/basics/database/overview) for more details.
 </Note>
 
 ### History in Context
