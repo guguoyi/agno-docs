@@ -82,7 +82,7 @@
           {
             "group": "Get Started",
             "pages": [
-              "getting-started/introduction",
+              "introduction",
               "getting-started/quickstart",
               "getting-started/agent-engineering",
               "getting-started/getting-help"
@@ -3258,11 +3258,11 @@
                   {
                     "group": "Testing",
                     "pages": [
-                      "integrations/testing/scenario-testing",
+                      "integrations/testing/overview",
                       {
                         "group": "Usage",
                         "pages": [
-                          "examples/basics/integrations/testing/scenario/basic"
+                          "integrations/testing/usage/basic"
                         ]
                       }
                     ]
