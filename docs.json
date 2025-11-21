@@ -432,9 +432,9 @@
                       {
                         "group": "Usage",
                         "pages": [
-                          "examples/basics/teams/tools/team_with_custom_tools",
-                          "examples/basics/teams/tools/team_with_tool_hooks",
-                          "examples/basics/teams/tools/async_team_with_tools"
+                          "basics/tools/usage/team-with-custom-tools",
+                          "basics/tools/usage/team-with-tool-hooks",
+                          "basics/tools/usage/async-team-with-tools"
                         ]
                       }
                     ]
@@ -661,16 +661,16 @@
                       {
                         "group": "Usage",
                         "pages": [
-                          "examples/basics/knowledge/basic-operations/include-exclude-files",
-                          "examples/basics/knowledge/basic-operations/remove-content",
-                          "examples/basics/knowledge/basic-operations/remove-vectors",
-                          "examples/basics/knowledge/basic-operations/skip-if-exists",
-                          "examples/basics/knowledge/basic-operations/sync-operations",
+                          "basics/knowledge/getting-started/usage/include-exclude-files",
+                          "basics/knowledge/getting-started/usage/remove-content",
+                          "basics/knowledge/getting-started/usage/remove-vectors",
+                          "basics/knowledge/getting-started/usage/skip-if-exists",
+                          "basics/knowledge/getting-started/usage/sync-operations",
                           {
                             "group": "Remote Content",
                             "pages": [
-                              "examples/basics/knowledge/remote-content/gcs-content",
-                              "examples/basics/knowledge/remote-content/s3-content"
+                              "basics/knowledge/getting-started/usage/gcs-content",
+                              "basics/knowledge/getting-started/usage/s3-content"
                             ]
                           }
                         ]
@@ -896,120 +896,120 @@
                       {
                         "group": "OpenAI",
                         "pages": [
-                          "basics/knowledge/embedder/openai",
-                          "examples/basics/knowledge/embedders/openai-embedder"
+                          "basics/knowledge/embedder/openai/overview",
+                          "basics/knowledge/embedder/openai/usage/openai-embedder"
                         ]
                       },
                       {
                         "group": "Gemini",
                         "pages": [
-                          "basics/knowledge/embedder/gemini",
-                          "examples/basics/knowledge/embedders/gemini-embedder"
+                          "basics/knowledge/embedder/gemini/overview",
+                          "basics/knowledge/embedder/gemini/usage/gemini-embedder"
                         ]
                       },
                       {
                         "group": "Ollama",
                         "pages": [
-                          "basics/knowledge/embedder/ollama",
-                          "examples/basics/knowledge/embedders/ollama-embedder"
+                          "basics/knowledge/embedder/ollama/overview",
+                          "basics/knowledge/embedder/ollama/usage/ollama-embedder"
                         ]
                       },
                       {
                         "group": "Azure OpenAI",
                         "pages": [
-                          "basics/knowledge/embedder/azure-openai",
-                          "examples/basics/knowledge/embedders/azure-embedder"
+                          "basics/knowledge/embedder/azure-openai/overview",
+                          "basics/knowledge/embedder/azure-openai/usage/azure-embedder"
                         ]
                       },
                       {
                         "group": "Cohere",
                         "pages": [
-                          "basics/knowledge/embedder/cohere",
-                          "examples/basics/knowledge/embedders/cohere-embedder"
+                          "basics/knowledge/embedder/cohere/overview",
+                          "basics/knowledge/embedder/cohere/usage/cohere-embedder"
                         ]
                       },
                       {
                         "group": "Fireworks",
                         "pages": [
-                          "basics/knowledge/embedder/fireworks",
-                          "examples/basics/knowledge/embedders/fireworks-embedder"
+                          "basics/knowledge/embedder/fireworks/overview",
+                          "basics/knowledge/embedder/fireworks/usage/fireworks-embedder"
                         ]
                       },
                       {
                         "group": "HuggingFace",
                         "pages": [
-                          "basics/knowledge/embedder/huggingface",
-                          "examples/basics/knowledge/embedders/huggingface-embedder"
+                          "basics/knowledge/embedder/huggingface/overview",
+                          "basics/knowledge/embedder/huggingface/usage/huggingface-embedder"
                         ]
                       },
                       {
                         "group": "Mistral",
                         "pages": [
-                          "basics/knowledge/embedder/mistral",
-                          "examples/basics/knowledge/embedders/mistral-embedder"
+                          "basics/knowledge/embedder/mistral/overview",
+                          "basics/knowledge/embedder/mistral/usage/mistral-embedder"
                         ]
                       },
                       {
                         "group": "Jina",
                         "pages": [
-                          "basics/knowledge/embedder/jina",
-                          "examples/basics/knowledge/embedders/jina-embedder"
+                          "basics/knowledge/embedder/jina/overview",
+                          "basics/knowledge/embedder/jina/usage/jina-embedder"
                         ]
                       },
                       {
                         "group": "LangDB",
                         "pages": [
-                          "basics/knowledge/embedder/langdb",
-                          "examples/basics/knowledge/embedders/langdb-embedder"
+                          "basics/knowledge/embedder/langdb/overview",
+                          "basics/knowledge/embedder/langdb/usage/langdb-embedder"
                         ]
                       },
                       {
                         "group": "Nebius",
                         "pages": [
-                          "basics/knowledge/embedder/nebius",
-                          "examples/basics/knowledge/embedders/nebius-embedder"
+                          "basics/knowledge/embedder/nebius/overview",
+                          "basics/knowledge/embedder/nebius/usage/nebius-embedder"
                         ]
                       },
                       {
                         "group": "Qdrant FastEmbed",
                         "pages": [
-                          "basics/knowledge/embedder/qdrant-fastembed",
-                          "examples/basics/knowledge/embedders/qdrant-fastembed"
+                          "basics/knowledge/embedder/qdrant-fastembed/overview",
+                          "basics/knowledge/embedder/qdrant-fastembed/usage/qdrant-fastembed"
                         ]
                       },
                       {
                         "group": "Sentence Transformers",
                         "pages": [
-                          "basics/knowledge/embedder/sentencetransformers",
-                          "examples/basics/knowledge/embedders/sentence-transformer-embedder"
+                          "basics/knowledge/embedder/sentencetransformers/overview",
+                          "basics/knowledge/embedder/sentencetransformers/usage/sentence-transformer-embedder"
                         ]
                       },
                       {
                         "group": "Together",
                         "pages": [
-                          "basics/knowledge/embedder/together",
-                          "examples/basics/knowledge/embedders/together-embedder"
+                          "basics/knowledge/embedder/together/overview",
+                          "basics/knowledge/embedder/together/usage/together-embedder"
                         ]
                       },
                       {
                         "group": "Voyage AI",
                         "pages": [
-                          "basics/knowledge/embedder/voyageai",
-                          "examples/basics/knowledge/embedders/voyageai-embedder"
+                          "basics/knowledge/embedder/voyageai/overview",
+                          "basics/knowledge/embedder/voyageai/usage/voyageai-embedder"
                         ]
                       },
                       {
                         "group": "AWS Bedrock",
                         "pages": [
-                          "basics/knowledge/embedder/aws-bedrock",
-                          "examples/basics/knowledge/embedders/aws-bedrock-embedder"
+                          "basics/knowledge/embedder/aws-bedrock/overview",
+                          "basics/knowledge/embedder/aws-bedrock/usage/aws-bedrock-embedder"
                         ]
                       },
                       {
                         "group": "vLLM",
                         "pages": [
-                          "basics/knowledge/embedder/vllm",
-                          "examples/basics/knowledge/embedders/vllm-embedder"
+                          "basics/knowledge/embedder/vllm/overview",
+                          "basics/knowledge/embedder/vllm/usage/vllm-embedder"
                         ]
                       }
                     ]
@@ -1133,7 +1133,7 @@
                     "pages": [
                       "basics/dependencies/agent/overview",
                       {
-                        "group": "Examples",
+                        "group": "Usage",
                         "pages": [
                           "basics/dependencies/agent/usage/add-dependencies-run",
                           "basics/dependencies/agent/usage/add-dependencies-to-context",
@@ -1147,7 +1147,7 @@
                     "pages": [
                       "basics/dependencies/team/overview",
                       {
-                        "group": "Examples",
+                        "group": "Usage",
                         "pages": [
                           "basics/dependencies/team/usage/add-dependencies-run",
                           "basics/dependencies/team/usage/add-dependencies-to-context",
@@ -1169,7 +1169,7 @@
                 "pages": [
                   "basics/hooks/overview",
                   {
-                    "group": "Examples",
+                    "group": "Usage",
                     "pages": [
                       {
                         "group": "Agent",
@@ -2906,19 +2906,19 @@
                   {
                     "group": "Web Scraping",
                     "pages": [
-                      "integrations/toolkits/web_scrape/agentql",
-                      "integrations/toolkits/web_scrape/browserbase",
-                      "integrations/toolkits/web_scrape/crawl4ai",
-                      "integrations/toolkits/web_scrape/firecrawl",
-                      "integrations/toolkits/web_scrape/jina_reader",
-                      "integrations/toolkits/web_scrape/newspaper",
-                      "integrations/toolkits/web_scrape/newspaper4k",
-                      "integrations/toolkits/web_scrape/spider",
-                      "integrations/toolkits/web_scrape/trafilatura",
-                      "integrations/toolkits/web_scrape/website",
-                      "integrations/toolkits/web_scrape/scrapegraph",
-                      "integrations/toolkits/web_scrape/oxylabs",
-                      "integrations/toolkits/web_scrape/brightdata"
+                      "integrations/toolkits/web-scrape/agentql",
+                      "integrations/toolkits/web-scrape/browserbase",
+                      "integrations/toolkits/web-scrape/crawl4ai",
+                      "integrations/toolkits/web-scrape/firecrawl",
+                      "integrations/toolkits/web-scrape/jina-reader",
+                      "integrations/toolkits/web-scrape/newspaper",
+                      "integrations/toolkits/web-scrape/newspaper4k",
+                      "integrations/toolkits/web-scrape/spider",
+                      "integrations/toolkits/web-scrape/trafilatura",
+                      "integrations/toolkits/web-scrape/website",
+                      "integrations/toolkits/web-scrape/scrapegraph",
+                      "integrations/toolkits/web-scrape/oxylabs",
+                      "integrations/toolkits/web-scrape/brightdata"
                     ]
                   },
                   {
@@ -2926,7 +2926,7 @@
                     "pages": [
                       "integrations/toolkits/database/csv",
                       "integrations/toolkits/database/duckdb",
-                      "integrations/toolkits/database/google_bigquery",
+                      "integrations/toolkits/database/google-bigquery",
                       "integrations/toolkits/database/neo4j",
                       "integrations/toolkits/database/pandas",
                       "integrations/toolkits/database/postgres",
@@ -2940,7 +2940,7 @@
                       "integrations/toolkits/local/calculator",
                       "integrations/toolkits/local/docker",
                       "integrations/toolkits/local/file",
-                      "integrations/toolkits/local/local_file_system",
+                      "integrations/toolkits/local/local-file-system",
                       "integrations/toolkits/local/python",
                       "integrations/toolkits/local/shell",
                       "integrations/toolkits/local/sleep"
@@ -2955,7 +2955,7 @@
                   {
                     "group": "Models",
                     "pages": [
-                      "integrations/toolkits/models/azure_openai",
+                      "integrations/toolkits/models/azure-openai",
                       "integrations/toolkits/models/gemini",
                       "integrations/toolkits/models/groq",
                       "integrations/toolkits/models/morph",
@@ -2968,8 +2968,8 @@
                     "pages": [
                       "integrations/toolkits/others/airflow",
                       "integrations/toolkits/others/apify",
-                      "integrations/toolkits/others/aws_lambda",
-                      "integrations/toolkits/others/aws_ses",
+                      "integrations/toolkits/others/aws-lambda",
+                      "integrations/toolkits/others/aws-ses",
                       "integrations/toolkits/others/bitbucket",
                       "integrations/toolkits/others/brandfetch",
                       "integrations/toolkits/others/calcom",
@@ -2977,28 +2977,28 @@
                       "integrations/toolkits/others/clickup",
                       "integrations/toolkits/others/composio",
                       "integrations/toolkits/others/confluence",
-                      "integrations/toolkits/others/custom_api",
+                      "integrations/toolkits/others/custom-api",
                       "integrations/toolkits/others/dalle",
                       "integrations/toolkits/others/daytona",
-                      "integrations/toolkits/others/desi_vocal",
-                      "integrations/toolkits/others/eleven_labs",
+                      "integrations/toolkits/others/desi-vocal",
+                      "integrations/toolkits/others/eleven-labs",
                       "integrations/toolkits/others/e2b",
                       "integrations/toolkits/others/evm",
                       "integrations/toolkits/others/fal",
-                      "integrations/toolkits/others/financial_datasets",
+                      "integrations/toolkits/others/financial-datasets",
                       "integrations/toolkits/others/giphy",
                       "integrations/toolkits/others/github",
-                      "integrations/toolkits/others/google_maps",
+                      "integrations/toolkits/others/google-maps",
                       "integrations/toolkits/others/googlecalendar",
-                      "integrations/toolkits/others/google_sheets",
+                      "integrations/toolkits/others/google-sheets",
                       "integrations/toolkits/others/jira",
                       "integrations/toolkits/others/knowledge",
                       "integrations/toolkits/others/linear",
                       "integrations/toolkits/others/lumalabs",
                       "integrations/toolkits/others/mem0",
                       "integrations/toolkits/others/memori",
-                      "integrations/toolkits/others/mlx_transcribe",
-                      "integrations/toolkits/others/models_labs",
+                      "integrations/toolkits/others/mlx-transcribe",
+                      "integrations/toolkits/others/models-labs",
                       "integrations/toolkits/others/moviepy",
                       "integrations/toolkits/others/notion",
                       "integrations/toolkits/others/opencv",
@@ -3009,160 +3009,13 @@
                       "integrations/toolkits/others/resend",
                       "integrations/toolkits/others/todoist",
                       "integrations/toolkits/others/trello",
-                      "integrations/toolkits/others/user_control_flow",
+                      "integrations/toolkits/others/user-control-flow",
                       "integrations/toolkits/others/visualization",
                       "integrations/toolkits/others/web-browser",
                       "integrations/toolkits/others/webtools",
                       "integrations/toolkits/others/yfinance",
                       "integrations/toolkits/others/youtube",
                       "integrations/toolkits/others/zendesk"
-                    ]
-                  },
-                  {
-                    "group": "Usage",
-                    "hidden": true,
-                    "pages": [
-                      {
-                        "group": "Search",
-                        "pages": [
-                          "examples/basics/tools/search/arxiv",
-                          "examples/basics/tools/search/baidusearch",
-                          "examples/basics/tools/search/crawl4ai",
-                          "examples/basics/tools/search/duckduckgo",
-                          "examples/basics/tools/search/exa",
-                          "examples/basics/tools/search/hackernews",
-                          "examples/basics/tools/search/linkup",
-                          "examples/basics/tools/search/parallel",
-                          "examples/basics/tools/search/pubmed",
-                          "examples/basics/tools/search/searxng",
-                          "examples/basics/tools/search/serpapi",
-                          "examples/basics/tools/search/tavily",
-                          "examples/basics/tools/search/valyu",
-                          "examples/basics/tools/search/wikipedia",
-                          "examples/basics/tools/search/bravesearch"
-                        ]
-                      },
-                      {
-                        "group": "Social",
-                        "pages": [
-                          "examples/basics/tools/social/discord",
-                          "examples/basics/tools/social/email",
-                          "examples/basics/tools/social/reddit",
-                          "examples/basics/tools/social/slack",
-                          "examples/basics/tools/social/twilio",
-                          "examples/basics/tools/social/webex",
-                          "examples/basics/tools/social/whatsapp",
-                          "examples/basics/tools/social/x"
-                        ]
-                      },
-                      {
-                        "group": "Web Scraping",
-                        "pages": [
-                          "examples/basics/tools/web_scrape/jina_reader",
-                          "examples/basics/tools/web_scrape/newspaper",
-                          "examples/basics/tools/web_scrape/newspaper4k",
-                          "examples/basics/tools/web_scrape/trafilatura",
-                          "examples/basics/tools/web_scrape/website",
-                          "examples/basics/tools/web_scrape/spider",
-                          "examples/basics/tools/web_scrape/firecrawl",
-                          "examples/basics/tools/web_scrape/oxylabs",
-                          "examples/basics/tools/web_scrape/brightdata"
-                        ]
-                      },
-                      {
-                        "group": "Database",
-                        "pages": [
-                          "examples/basics/tools/database/csv",
-                          "examples/basics/tools/database/duckdb",
-                          "examples/basics/tools/database/google_bigquery",
-                          "examples/basics/tools/database/neo4j",
-                          "examples/basics/tools/database/pandas",
-                          "examples/basics/tools/database/postgres",
-                          "examples/basics/tools/database/sql",
-                          "examples/basics/tools/database/zep",
-                          "examples/basics/tools/database/zep_async"
-                        ]
-                      },
-                      {
-                        "group": "Local",
-                        "pages": [
-                          "examples/basics/tools/local/calculator",
-                          "examples/basics/tools/local/docker",
-                          "examples/basics/tools/local/file",
-                          "examples/basics/tools/local/local_file_system",
-                          "examples/basics/tools/local/python",
-                          "examples/basics/tools/local/shell",
-                          "examples/basics/tools/local/sleep"
-                        ]
-                      },
-                      {
-                        "group": "File Generation",
-                        "pages": [
-                          "examples/basics/tools/file-generation"
-                        ]
-                      },
-                      {
-                        "group": "Native Model Toolkit",
-                        "pages": [
-                          "examples/basics/tools/models/azure_openai",
-                          "examples/basics/tools/models/morph",
-                          "examples/basics/tools/models/nebius",
-                          {
-                            "group": "OpenAI",
-                            "pages": [
-                              "examples/basics/tools/models/openai/rag-recipe-image",
-                              "examples/basics/tools/models/openai/meeting-summarizer"
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "group": "APIs & External Services",
-                        "pages": [
-                          "examples/basics/tools/others/airflow",
-                          "examples/basics/tools/others/apify",
-                          "examples/basics/tools/others/aws_lambda",
-                          "examples/basics/tools/others/aws_ses",
-                          "examples/basics/tools/others/bitbucket",
-                          "examples/basics/tools/others/brandfetch",
-                          "examples/basics/tools/others/calcom",
-                          "examples/basics/tools/others/clickup",
-                          "examples/basics/tools/others/composio",
-                          "examples/basics/tools/others/confluence",
-                          "examples/basics/tools/others/custom_api",
-                          "examples/basics/tools/others/dalle",
-                          "examples/basics/tools/others/daytona",
-                          "examples/basics/tools/others/desi_vocal",
-                          "examples/basics/tools/others/e2b",
-                          "examples/basics/tools/others/evm",
-                          "examples/basics/tools/others/fal",
-                          "examples/basics/tools/others/financial_datasets",
-                          "examples/basics/tools/others/giphy",
-                          "examples/basics/tools/others/github",
-                          "examples/basics/tools/others/google_calendar",
-                          "examples/basics/tools/others/google_maps",
-                          "examples/basics/tools/others/jira",
-                          "examples/basics/tools/others/knowledge",
-                          "examples/basics/tools/others/linear",
-                          "examples/basics/tools/others/lumalabs",
-                          "examples/basics/tools/others/mem0",
-                          "examples/basics/tools/others/memori",
-                          "examples/basics/tools/others/mlx_transcribe",
-                          "examples/basics/tools/others/models_labs",
-                          "examples/basics/tools/others/opencv",
-                          "examples/basics/tools/others/openbb",
-                          "examples/basics/tools/others/reasoning",
-                          "examples/basics/tools/others/replicate",
-                          "examples/basics/tools/others/resend",
-                          "examples/basics/tools/others/todoist",
-                          "examples/basics/tools/others/user_control_flow",
-                          "examples/basics/tools/others/visualization",
-                          "examples/basics/tools/others/webtools",
-                          "examples/basics/tools/others/yfinance",
-                          "examples/basics/tools/others/youtube",
-                          "examples/basics/tools/others/zendesk"
-                        ]
-                      }
                     ]
                   }
                 ]
@@ -3180,26 +3033,7 @@
                   "integrations/observability/langtrace",
                   "integrations/observability/maxim",
                   "integrations/observability/openlit",
-                  "integrations/observability/weave",
-                  {
-                    "group": "Usage",
-                    "hidden": true,
-                    "pages": [
-                      "examples/basics/integrations/observability/agent_ops",
-                      "examples/basics/integrations/observability/atla_op",
-                      "examples/basics/integrations/observability/arize-phoenix-via-openinference",
-                      "examples/basics/integrations/observability/arize-phoenix-via-openinference-local",
-                      "examples/basics/integrations/observability/langfuse_via_openinference",
-                      "examples/basics/integrations/observability/langfuse_via_openinference_response_model",
-                      "examples/basics/integrations/observability/langfuse_via_openlit",
-                      "examples/basics/integrations/observability/langfuse_via_openinference_team",
-                      "examples/basics/integrations/observability/langsmith-via-openinference",
-                      "examples/basics/integrations/observability/langtrace-op",
-                      "examples/basics/integrations/observability/langwatch_op",
-                      "examples/basics/integrations/observability/maxim",
-                      "examples/basics/integrations/observability/weave-op"
-                    ]
-                  }
+                  "integrations/observability/weave"
                 ]
               },
               {
@@ -3213,8 +3047,8 @@
                         "group": "Usage",
                         "pages": [
                           "integrations/discord/usage/basic",
-                          "integrations/discord/usage/agent_with_media",
-                          "integrations/discord/usage/agent_with_user_memory"
+                          "integrations/discord/usage/agent-with-media",
+                          "integrations/discord/usage/agent-with-user-memory"
                         ]
                       }
                     ]
@@ -3332,23 +3166,23 @@
           {
             "group": "Usage",
             "pages": [
-              "examples/agent-os/demo",
-              "examples/agent-os/extra_configuration",
-              "examples/agent-os/hitl",
+              "agent-os/usage/demo",
+              "agent-os/usage/extra-configuration",
+              "agent-os/usage/hitl",
               {
                 "group": "MCP",
                 "pages": [
-                  "examples/agent-os/mcp/enable-mcp-example",
-                  "examples/agent-os/mcp/mcp-tools-example"
+                  "agent-os/usage/mcp/enable-mcp-example",
+                  "agent-os/usage/mcp/mcp-tools-example"
                 ]
               },
               {
                 "group": "Middleware",
                 "pages": [
-                  "examples/agent-os/middleware/custom-middleware",
-                  "examples/agent-os/middleware/jwt-middleware",
-                  "examples/agent-os/middleware/jwt-cookies",
-                  "examples/agent-os/middleware/custom-fastapi-jwt"
+                  "agent-os/usage/middleware/custom-middleware",
+                  "agent-os/usage/middleware/jwt-middleware",
+                  "agent-os/usage/middleware/jwt-cookies",
+                  "agent-os/usage/middleware/custom-fastapi-jwt"
                 ]
               },
               {
@@ -3357,37 +3191,37 @@
                   {
                     "group": "WhatsApp",
                     "pages": [
-                      "examples/agent-os/interfaces/whatsapp/basic",
-                      "examples/agent-os/interfaces/whatsapp/image-generation-tools",
-                      "examples/agent-os/interfaces/whatsapp/reasoning-agent",
-                      "examples/agent-os/interfaces/whatsapp/image-generation-model",
-                      "examples/agent-os/interfaces/whatsapp/agent-with-media",
-                      "examples/agent-os/interfaces/whatsapp/agent-with-user-memory"
+                      "agent-os/usage/interfaces/whatsapp/basic",
+                      "agent-os/usage/interfaces/whatsapp/image-generation-tools",
+                      "agent-os/usage/interfaces/whatsapp/reasoning-agent",
+                      "agent-os/usage/interfaces/whatsapp/image-generation-model",
+                      "agent-os/usage/interfaces/whatsapp/agent-with-media",
+                      "agent-os/usage/interfaces/whatsapp/agent-with-user-memory"
                     ]
                   },
                   {
                     "group": "A2A",
                     "pages": [
-                      "examples/agent-os/interfaces/a2a/basic",
-                      "examples/agent-os/interfaces/a2a/agent-with-tools",
-                      "examples/agent-os/interfaces/a2a/team"
+                      "agent-os/usage/interfaces/a2a/basic",
+                      "agent-os/usage/interfaces/a2a/agent-with-tools",
+                      "agent-os/usage/interfaces/a2a/team"
                     ]
                   },
                   {
                     "group": "AG-UI",
                     "pages": [
-                      "examples/agent-os/interfaces/ag-ui/basic",
-                      "examples/agent-os/interfaces/ag-ui/agent-with-tools",
-                      "examples/agent-os/interfaces/ag-ui/team"
+                      "agent-os/usage/interfaces/ag-ui/basic",
+                      "agent-os/usage/interfaces/ag-ui/agent-with-tools",
+                      "agent-os/usage/interfaces/ag-ui/team"
                     ]
                   },
                   {
                     "group": "Slack",
                     "pages": [
-                      "examples/agent-os/interfaces/slack/basic",
-                      "examples/agent-os/interfaces/slack/agent-with-user-memory",
-                      "examples/agent-os/interfaces/slack/reasoning-agent",
-                      "examples/agent-os/interfaces/slack/research-workflow"
+                      "agent-os/usage/interfaces/slack/basic",
+                      "agent-os/usage/interfaces/slack/agent-with-user-memory",
+                      "agent-os/usage/interfaces/slack/reasoning-agent",
+                      "agent-os/usage/interfaces/slack/research-workflow"
                     ]
                   }
                 ]
@@ -3648,15 +3482,15 @@
                   "reference/models/xai",
                   "reference/models/vercel",
                   "reference/models/bedrock",
-                  "reference/models/bedrock_claude",
+                  "reference/models/bedrock-claude",
                   "reference/models/azure",
-                  "reference/models/azure_open_ai",
+                  "reference/models/azure-open-ai",
                   "reference/models/fireworks",
                   "reference/models/openrouter",
                   "reference/models/sambanova",
                   "reference/models/internlm",
-                  "reference/models/ollama_tools",
-                  "reference/models/openai_like",
+                  "reference/models/ollama-tools",
+                  "reference/models/openai-like",
                   "reference/models/ibm-watsonx"
                 ]
               },
@@ -3674,7 +3508,7 @@
                   {
                     "group": "Embedders",
                     "pages": [
-                      "reference/knowledge/embedder/azure_openai",
+                      "reference/knowledge/embedder/azure-openai",
                       "reference/knowledge/embedder/cohere",
                       "reference/knowledge/embedder/fastembed",
                       "reference/knowledge/embedder/fireworks",
@@ -3740,19 +3574,19 @@
                 "group": "Vector Databases",
                 "hidden": true,
                 "pages": [
-                  "reference/vector_db/cassandra",
-                  "reference/vector_db/chromadb",
-                  "reference/vector_db/couchbase",
-                  "reference/vector_db/clickhouse",
-                  "reference/vector_db/lancedb",
-                  "reference/vector_db/milvus",
-                  "reference/vector_db/mongodb",
-                  "reference/vector_db/pgvector",
-                  "reference/vector_db/pinecone",
-                  "reference/vector_db/qdrant",
-                  "reference/vector_db/singlestore",
-                  "reference/vector_db/weaviate",
-                  "reference/vector_db/surrealdb"
+                  "reference/vector-db/cassandra",
+                  "reference/vector-db/chromadb",
+                  "reference/vector-db/couchbase",
+                  "reference/vector-db/clickhouse",
+                  "reference/vector-db/lancedb",
+                  "reference/vector-db/milvus",
+                  "reference/vector-db/mongodb",
+                  "reference/vector-db/pgvector",
+                  "reference/vector-db/pinecone",
+                  "reference/vector-db/qdrant",
+                  "reference/vector-db/singlestore",
+                  "reference/vector-db/weaviate",
+                  "reference/vector-db/surrealdb"
                 ]
               }
             ]
@@ -3905,16 +3739,16 @@
                 "group": "Docker",
                 "pages": [
                   "templates/agent-infra-docker/introduction",
-                  "templates/agent-infra-docker/run_local",
-                  "templates/agent-infra-docker/run_prd"
+                  "templates/agent-infra-docker/run-local",
+                  "templates/agent-infra-docker/run-prd"
                 ]
               },
               {
                 "group": "AWS",
                 "pages": [
                   "templates/agent-infra-aws/introduction",
-                  "templates/agent-infra-aws/run_local",
-                  "templates/agent-infra-aws/run_aws",
+                  "templates/agent-infra-aws/run-local",
+                  "templates/agent-infra-aws/run-aws",
                   {
                     "group": "AWS Template Management",
                     "pages": [
@@ -3940,8 +3774,8 @@
                 "group": "Railway",
                 "pages": [
                   "templates/agent-infra-railway/introduction",
-                  "templates/agent-infra-railway/run_local",
-                  "templates/agent-infra-railway/run_prd"
+                  "templates/agent-infra-railway/run-local",
+                  "templates/agent-infra-railway/run-prd"
                 ]
               }
             ]
@@ -3994,7 +3828,7 @@
     },
     {
       "source": "/get-started",
-      "destination": "/introduction/quickstart"
+      "destination": "/getting-started/quickstart"
     },
     {
       "source": "/introduction/monitoring",
@@ -4018,7 +3852,7 @@
     },
     {
       "source": "/agents/structured-output",
-      "destination": "/basics/input_output/agent"
+      "destination": "/basics/input-output/agent"
     },
     {
       "source": "/agents/context",
@@ -4030,7 +3864,7 @@
     },
     {
       "source": "/agents/storage",
-      "destination": "/basics/storage/overview"
+      "destination": "/basics/database/overview"
     },
     {
       "source": "/agents/tools",
@@ -4101,8 +3935,8 @@
       "destination": "/basics/knowledge/embedder/openai"
     },
     {
-      "source": "/embedder/qdrant_fastembed",
-      "destination": "/basics/knowledge/embedder/qdrant_fastembed"
+      "source": "/embedder/qdrant-fastembed",
+      "destination": "/basics/knowledge/embedder/qdrant-fastembed/overview"
     },
     {
       "source": "/embedder/together",
@@ -4130,15 +3964,15 @@
     },
     {
       "source": "/vectordb/couchbase",
-      "destination": "/basics/vectordb/couchbase"
+      "destination": "/integrations/vectordb/couchbase/overview"
     },
     {
       "source": "/vectordb/weaviate",
-      "destination": "/basics/vectordb/weaviate"
+      "destination": "/integrations/vectordb/weaviate/overview"
     },
     {
       "source": "/models/litellm",
-      "destination": "/basics/models/litellm"
+      "destination": "/integrations/models/gateways/litellm/overview"
     },
     {
       "source": "/observability/langfuse",
@@ -4158,11 +3992,11 @@
     },
     {
       "source": "/agent-ui/introduction",
-      "destination": "/agent-os/agent-ui/overview"
+      "destination": "/basics/agent-ui/overview"
     },
     {
       "source": "/basics/knowledge/vectordb/lightrag",
-      "destination": "/basics/vectordb/lightrag"
+      "destination": "/integrations/vectordb/lightrag/overview"
     },
     {
       "source": "/basics/multimodal/speech-to-text",
@@ -4186,7 +4020,7 @@
     },
     {
       "source": "/basics/workflows/run_workflow",
-      "destination": "/basics/workflows/running-workflow"
+      "destination": "/basics/workflows/running-workflows"
     }
   ]
 }
