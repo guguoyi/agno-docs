@@ -34,7 +34,7 @@ When you give an agent access to a knowledge base, several powerful capabilities
 
 ### Automatic Information Retrieval
 The agent doesn't need to be told when to search - it automatically determines when additional information would help answer a question or complete a task.
-Although - explicitly instructing the agent to search a knowledge base is a perfectly fine and very common use case. 
+Although - explicitly instructing the agent to search a knowledge base is a perfectly fine and very common use case.
 
 ```python
 # Agent automatically searches when needed
@@ -108,11 +108,13 @@ Ready to build your own knowledge base? The process is straightforward:
 <CodeGroup>
 ```python Basic Setup
 from agno.knowledge.knowledge import Knowledge
-from agno.vectordb.lancedb import LanceDb
+from agno.vectordb.pgvector import PgVector
+from agno.db.postgres import PostgresDb
 
 # Create a knowledge base
 knowledge = Knowledge(
-    vector_db=LanceDb(table_name="my_knowledge")
+    contents_db=PostgresDb(db_url="postgresql+psycopg://ai:ai@localhost:5532/ai"),
+    vector_db=PgVector(db_url="postgresql+psycopg://ai:ai@localhost:5532/ai")
 )
 
 # Add your content

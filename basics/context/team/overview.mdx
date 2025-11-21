@@ -5,7 +5,7 @@ description: Learn how to write prompts and other context engineering techniques
 keywords: [context, context engineering, system message, user message, prompts, prompt engineering]
 ---
 
-Context engineering is the process of designing and controlling the information (context) that is sent to language models to guide their behavior and outputs. 
+Context engineering is the process of designing and controlling the information (context) that is sent to language models to guide their behavior and outputs.
 In practice, building context comes down to one question: "Which information is most likely to achieve the desired outcome?"
 
 Effective context engineering is an iterative process: refining the system message, trying out different descriptions and instructions, and using features such as schemas, delegation, and tool integrations.
@@ -143,7 +143,7 @@ The Team creates a default system message that can be customized using the follo
 | `enable_agentic_knowledge_filters` | `bool`      | `False` | If True, let the team choose the knowledge filters. See [knowledge](/basics/knowledge/filters/overview) for more information.                                       |
 | `system_message`                 | `str`       | `None`  | Override the default system message.                                                                                                                                       |
 | `respond_directly`               | `bool`      | `False` | If True, the team leader won't process responses from members and instead will return them directly.                                                                       |
-| `delegate_task_to_all_members`   | `bool`      | `False` | If True, the team leader will delegate the task to all members, instead of deciding for a subset.                                                                         |
+| `delegate_to_all_members`        | `bool`      | `False` | If True, the team leader will delegate the task to all members simultaneously, instead of one by one. When running async (using `arun`) members will run concurrently.                                                                         |
 | `determine_input_for_members`    | `bool`      | `True`  | Set to false if you want to send the run input directly to the member agents.                                                                                             |
 | `share_member_interactions`      | `bool`      | `False` | If True, send all previous member interactions to members.                                                                                                                 |
 | `get_member_information_tool`    | `bool`      | `False` | If True, add a tool to get information about the team members.                                                                                                             |
@@ -314,7 +314,6 @@ web_agent = Agent(
 team = Team(
     members=[web_agent],
     get_member_information_tool=True,  # Adds a tool to get information about team members
-    add_member_tools_to_context=False, # Removes the member tools from the system message
 )
 ```
 
@@ -416,7 +415,7 @@ web_agent = Agent(
 
 team = Team(
     members=[web_agent],
-    add_knowledge_to_context=True, 
+    add_knowledge_to_context=True,
     add_dependencies_to_context=True
 )
 team.print_response("What is the capital of France?", dependencies={"name": "John Doe"})
@@ -522,7 +521,7 @@ team.print_response("Search for AI news")
 team.print_response("Search for crypto trends")
 team.print_response("Search for tech stocks")
 # Older searches will be filtered from context
-team.print_response("Search for startups") 
+team.print_response("Search for startups")
 team.print_response("Search for weather in Mumbai")
 team.print_response("Search for latest startup fundraises")
 team.print_response("What topics did I search for recently?")

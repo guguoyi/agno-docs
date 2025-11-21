@@ -398,7 +398,8 @@
               {
                 "group": "Database",
                 "pages": [
-                  "basics/database/overview"
+                  "basics/database/overview",
+                  "basics/database/migrations"
                 ]
               },
               {
@@ -3030,7 +3031,6 @@
                           "examples/basics/tools/search/crawl4ai",
                           "examples/basics/tools/search/duckduckgo",
                           "examples/basics/tools/search/exa",
-                          "examples/basics/tools/search/google_search",
                           "examples/basics/tools/search/hackernews",
                           "examples/basics/tools/search/linkup",
                           "examples/basics/tools/search/parallel",

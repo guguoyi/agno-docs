@@ -116,7 +116,7 @@ multi_language_team.print_response(
 ```
 
 <Note>
-`respond_directly` is not compatible with `delegate_task_to_all_members`.
+`respond_directly` is not compatible with `delegate_to_all_members`.
 </Note>
 
 <Note>
@@ -250,7 +250,7 @@ team.print_response(input="What is the meaning of life?", stream=True)
 
 ## Delegate tasks to all members simultaneously
 
-Set `delegate_task_to_all_members=True` to delegate the task to **all members at once**, rather than selectively choosing members.
+Set `delegate_to_all_members=True` to delegate the task to **all members at once**, rather than selectively choosing members.
 
 When running asynchronously (using `arun`), all members execute **concurrently** for maximum parallelism.
 
@@ -278,7 +278,6 @@ from agno.models.openai import OpenAIChat
 from agno.team.team import Team
 from agno.tools.arxiv import ArxivTools
 from agno.tools.duckduckgo import DuckDuckGoTools
-from agno.tools.googlesearch import GoogleSearchTools
 from agno.tools.hackernews import HackerNewsTools
 
 reddit_researcher = Agent(
@@ -311,7 +310,7 @@ academic_paper_researcher = Agent(
     name="Academic Paper Researcher",
     model=OpenAIChat("gpt-5-mini"),
     role="Research academic papers and scholarly content",
-    tools=[GoogleSearchTools(), ArxivTools()],
+    tools=[DuckDuckGoTools(), ArxivTools()],
     add_name_to_context=True,
     instructions=dedent("""
     You are a academic paper researcher.
@@ -351,7 +350,7 @@ agent_team = Team(
         "You are a discussion master.",
         "You have to stop the discussion when you think the team has reached a consensus.",
     ],
-    delegate_task_to_all_members=True,
+    delegate_to_all_members=True,
     markdown=True,
     show_members_responses=True,
 )
@@ -361,7 +360,6 @@ if __name__ == "__main__":
         agent_team.aprint_response(
             input="Start the discussion on the topic: 'What is the best way to learn to code?'",
             stream=True,
-            stream_intermediate_steps=True,
         )
     )
 ```
