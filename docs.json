@@ -293,7 +293,6 @@
                   {
                     "group": "With Agents",
                     "pages": [
-                      "basics/input-output/agent/overview",
                       {
                         "group": "Usage",
                         "pages": [
@@ -316,7 +315,6 @@
                   {
                     "group": "With Teams",
                     "pages": [
-                      "basics/input-output/team/overview",
                       {
                         "group": "Usage",
                         "pages": [
@@ -337,7 +335,6 @@
                   {
                     "group": "With Workflows",
                     "pages": [
-                      "basics/input-output/workflow/overview",
                       {
                         "group": "Usage",
                         "pages": []
@@ -428,7 +425,6 @@
                   {
                     "group": "Tools with Teams",
                     "pages": [
-                      "basics/tools/team",
                       {
                         "group": "Usage",
                         "pages": [

@@ -1,139 +1,202 @@
 ---
 title: Input & Output
 sidebarTitle: Overview
-description: Learn how to use structured input and output with Agents for reliable, production-ready systems.
+description: Learn how to control inputs and outputs with type-safe Pydantic models for reliable, production-ready systems.
 ---
 
-Agno Agents/Teams/Workflows support various forms of input and output, from simple string-based interactions to structured data validation using Pydantic models.
-
-The most standard pattern is to use `str` input and `str` output.
-
-Take a look at the following example for a simple Agent:
-
-```python
-from agno.agent import Agent
-from agno.models.openai import OpenAIChat
-
-agent = Agent(
-    model=OpenAIChat(id="gpt-5-mini"),
-    description="You write movie scripts.",
-)
-
-response = agent.run("Write movie script about a girl living in New York")
-print(response.content)
-```
+Agno Agents, Teams and Workflows support various forms of input and output, from simple string-based interactions to structured data validation using Pydantic models.
 
 ## Structured Output
 
-One of our favorite features is to generate structured data (i.e. a pydantic model). This is generally called "Structured Output". Use this feature to extract features, classify data, produce fake data etc. The best part is that they work with function calls, knowledge bases and all other features.
+Generate validated, type-safe outputs using Pydantic models for reliable production systems. Structured outputs provide consistent, predictable response formats instead of unstructured text.
 
-Take a look at the following example for a structured output Agent:
+Common use cases include data extraction, classification, content generation, and validation.
 
-```python movie_agent.py
-from typing import List
-from rich.pretty import pprint
+<Info>
+Structured outputs work seamlessly with tools, knowledge bases, and most other Agno features.
+</Info>
+
+### Agent Example
+
+```python
 from pydantic import BaseModel, Field
 from agno.agent import Agent
 from agno.models.openai import OpenAIChat
 
 class MovieScript(BaseModel):
-    setting: str = Field(..., description="Provide a nice setting for a blockbuster movie.")
-    ending: str = Field(..., description="Ending of the movie. If not available, provide a happy ending.")
-    genre: str = Field(
-        ..., description="Genre of the movie. If not available, select action, thriller or romantic comedy."
-    )
-    name: str = Field(..., description="Give a name to this movie")
-    characters: List[str] = Field(..., description="Name of characters for this movie.")
-    storyline: str = Field(..., description="3 sentence storyline for the movie. Make it exciting!")
+    setting: str = Field(..., description="Setting for the movie")
+    genre: str = Field(..., description="Genre of the movie")
+    storyline: str = Field(..., description="Storyline for the movie")
 
-# Agent that uses structured outputs
-structured_output_agent = Agent(
+agent = Agent(
     model=OpenAIChat(id="gpt-5-mini"),
     description="You write movie scripts.",
     output_schema=MovieScript,
 )
 
-structured_output_agent.print_response("New York")
+response = agent.run("Write a movie script about New York")
+print(response.content)  # Returns MovieScript object
 ```
 
-The output is an object of the `MovieScript` class, here's how it looks:
+### Team Example
 
 ```python
-MovieScript(
-│   setting='In the bustling streets and iconic skyline of New York City.',
-│   ending='Isabella and Alex, having narrowly escaped the clutches of the Syndicate, find themselves standing at the top of the Empire State Building. As the glow of the setting sun bathes the city, they share a victorious kiss. Newly emboldened and as an unstoppable duo, they vow to keep NYC safe from any future threats.',
-│   genre='Action Thriller',
-│   name='The NYC Chronicles',
-│   characters=['Isabella Grant', 'Alex Chen', 'Marcus Kane', 'Detective Ellie Monroe', 'Victor Sinclair'],
-│   storyline='Isabella Grant, a fearless investigative journalist, uncovers a massive conspiracy involving a powerful syndicate plotting to control New York City. Teaming up with renegade cop Alex Chen, they must race against time to expose the culprits before the city descends into chaos. Dodging danger at every turn, they fight to protect the city they love from imminent destruction.'
+from pydantic import BaseModel
+from agno.agent import Agent
+from agno.models.openai import OpenAIChat
+from agno.team import Team
+
+class StockReport(BaseModel):
+    symbol: str
+    company_name: str
+    analysis: str
+
+team = Team(
+    model=OpenAIChat(id="gpt-5-mini"),
+    members=[...],
+    output_schema=StockReport,
 )
+
+response = team.run("Analyze NVDA stock")
+print(response.content)  # Returns StockReport object
 ```
+
+### Workflow Example
+
+```python
+from pydantic import BaseModel
+from agno.agent import Agent
+from agno.models.openai import OpenAIChat
+from agno.workflow import Step, Workflow
+
+class ResearchFindings(BaseModel):
+    summary: str
+    insights: list[str]
+
+research_agent = Agent(
+    model=OpenAIChat(id="gpt-5-mini"),
+    output_schema=ResearchFindings,
+)
+
+workflow = Workflow(
+    steps=[Step(agent=research_agent)],
+)
+
+response = workflow.run("Research AI trends")
+print(response.content)  # Returns ResearchFindings object
+```
+
+<Tip>
+For models that don't support structured output, Agno provides JSON mode, which instructs the model to respond in JSON format. While less accurate than native structured output, JSON mode offers a fallback option for compatible models. Set `use_json_mode=True` on your Agent, Team, or Workflow.
+</Tip>
 
 ## Structured Input
 
-Agents/Teams/Workflows all support structured input as well. They can be provided with a pydantic model or a `TypedDict` by passing it in the `run()` or `print_response()` as the `input` parameter.
+Agents, Teams, and Workflows support structured input using Pydantic models or `TypedDict`. Pass them to the `input` parameter in `run()` or `print_response()`.
 
-Take a look at the following example for a structured input Agent:
+### Agent Example
 
 ```python
-from typing import List
-
+from pydantic import BaseModel, Field
 from agno.agent import Agent
 from agno.models.openai import OpenAIChat
-from agno.tools.hackernews import HackerNewsTools
-from pydantic import BaseModel, Field
-
 
 class ResearchTopic(BaseModel):
-    """Structured research topic with specific requirements"""
-
     topic: str
-    focus_areas: List[str] = Field(description="Specific areas to focus on")
-    target_audience: str = Field(description="Who this research is for")
-    sources_required: int = Field(description="Number of sources needed", default=5)
+    focus_areas: list[str] = Field(description="Areas to focus on")
+    sources_required: int = Field(default=5)
 
-hackernews_agent = Agent(
-    name="Hackernews Agent",
+agent = Agent(
     model=OpenAIChat(id="gpt-5-mini"),
-    tools=[HackerNewsTools()],
-    role="Extract key insights and content from Hackernews posts",
+    tools=[...],
 )
 
-hackernews_agent.print_response(
+agent.run(
     input=ResearchTopic(
         topic="AI",
-        focus_areas=["AI", "Machine Learning"],
-        target_audience="Developers",
+        focus_areas=["Machine Learning", "LLMs"],
         sources_required=5,
     )
 )
 ```
 
-## Learn more
+### Team Example
+
+```python
+from pydantic import BaseModel, Field
+from agno.team import Team
+from agno.models.openai import OpenAIChat
+
+class ResearchProject(BaseModel):
+    project_name: str
+    research_topics: list[str] = Field(min_items=1)
+    max_sources: int = Field(ge=3, le=20, default=10)
+
+team = Team(
+    model=OpenAIChat(id="gpt-5-mini"),
+    members=[...],
+)
+
+team.run(
+    input=ResearchProject(
+        project_name="AI Framework Comparison",
+        research_topics=["LangChain", "CrewAI", "Agno"],
+        max_sources=15,
+    )
+)
+```
+
+### Workflow Example
+
+```python
+from pydantic import BaseModel, Field
+from agno.workflow import Workflow
+
+class ResearchRequest(BaseModel):
+    topic: str = Field(description="Research topic")
+    depth: int = Field(description="Research depth (1-10)")
+
+workflow = Workflow(
+    steps=[...],
+    input_schema=ResearchRequest,
+)
+
+workflow.run(
+    input=ResearchRequest(
+        topic="AI trends 2024",
+        depth=8,
+    )
+)
+```
+
+## Typesafe Patterns
+
+When you combine both `input_schema` and `output_schema`, you create a **typesafe** component with end-to-end type safety—a fully validated data pipeline from input to output.
+
+## Advanced Features
+
+- **[Parser Model](/basics/input-output/agent/usage/parser-model)**: Use a different model to parse and structure output from your primary model
+- **[Output Model](/basics/input-output/agent/usage/output-model)**: Use a different model to produce the final output
+- **[Input Validation](/basics/input-output/agent/usage/input-schema-on-agent)**: Set `input_schema` to automatically validate dictionary inputs
+- **[Streaming](/basics/input-output/team/usage/structured-output-streaming)**: Structured outputs work seamlessly with streaming
+
+## Learn More
 
 <CardGroup cols={3}>
   <Card
-    title="Input & Output with Agents"
+    title="Agent Usage Examples"
     icon="robot"
     iconType="duotone"
-    href="/basics/input-output/agent/overview"
+    href="/basics/input-output/agent/usage"
   >
-    Learn about the details of input and output with Agents.
+    Explore detailed examples for structured input and output with Agents.
   </Card>
   <Card
-    title="Input & Output with Teams"
+    title="Team Usage Examples"
     icon="users"
     iconType="duotone"
-    href="/basics/input-output/team/overview"
+    href="/basics/input-output/team/usage"
   >
-    Learn about the details of input and output with Teams.
-  </Card>
-  <Card
-    title="Input & Output with Workflows"
-    icon="diagram-project"
-    iconType="duotone"
-    href="/basics/input-output/workflow/overview"
-  >
-    Learn about the details of input and output with Workflows.
+    Explore detailed examples for structured input and output with Teams.
   </Card>
 </CardGroup>
