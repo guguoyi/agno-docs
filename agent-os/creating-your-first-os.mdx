@@ -52,11 +52,13 @@ Create `my_os.py`:
 ```python
 from agno.agent import Agent
 from agno.models.openai import OpenAIChat
+from agno.db.sqlite import AsyncSqliteDb
 from agno.os import AgentOS
 
 assistant = Agent(
     name="Assistant",
     model=OpenAIChat(id="gpt-5-mini"),
+    db=AsyncSqliteDb(db_file="my_os.db"),
     instructions=["You are a helpful AI assistant."],
     markdown=True,
 )
@@ -73,6 +75,12 @@ if __name__ == "__main__":
     # Default port is 7777; change with port=...
     agent_os.serve(app="my_os:app", reload=True)
 ```
+
+<Tip>
+It is recommended to use all of the `async` building blocks of Agno when building your AgentOS. For example, use async tool definitions, async database connections, async pre/post hooks, etc.
+
+This helps unlock maximum concurrency and performance when running your AgentOS.
+</Tip>
 
 ## Running Your OS
 
