@@ -3040,6 +3040,7 @@
                   "integrations/observability/langtrace",
                   "integrations/observability/maxim",
                   "integrations/observability/openlit",
+                  "integrations/observability/traceloop",
                   "integrations/observability/weave"
                 ]
               },
