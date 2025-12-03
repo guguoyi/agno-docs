@@ -631,9 +631,7 @@
               {
                 "group": "Context Compression",
                 "tag": "beta",
-                "pages": [
-                  "basics/context-compression/overview"
-                ]
+                "pages": ["basics/context-compression/overview"]
               },
               {
                 "group": "Knowledge",
@@ -3052,6 +3050,7 @@
                       "integrations/toolkits/others/reasoning",
                       "integrations/toolkits/others/replicate",
                       "integrations/toolkits/others/resend",
+                      "integrations/toolkits/others/spotify",
                       "integrations/toolkits/others/todoist",
                       "integrations/toolkits/others/trello",
                       "integrations/toolkits/others/user-control-flow",
@@ -3481,9 +3480,7 @@
               },
               {
                 "group": "Context Compression",
-                "pages": [
-                  "reference/compression/compression-manager"
-                ]
+                "pages": ["reference/compression/compression-manager"]
               },
               {
                 "group": "Database",
@@ -3505,10 +3502,7 @@
               },
               {
                 "group": "Tracing",
-                "pages": [
-                  "reference/tracing/trace",
-                  "reference/tracing/span"
-                ]
+                "pages": ["reference/tracing/trace", "reference/tracing/span"]
               },
               {
                 "group": "Hooks",
