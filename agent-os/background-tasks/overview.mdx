@@ -11,19 +11,32 @@ When serving agents or teams through AgentOS, you can configure pre-hooks and po
 
 By default, hooks used by agents and teams in your AgentOS are in the execution path and block the response:
 
-```
-Request → Pre-hooks → Agent Processing → Post-hooks → Response
-                                              ↑
-                                    User waits for completion
-```
+<img 
+  className="block dark:hidden" 
+  src="/images/background-tasks-notenabled-light.png" 
+  alt="Background tasks not enabled"
+/>
+
+<img 
+  className="hidden dark:block" 
+  src="/images/background-tasks-notenabled-dark.png" 
+  alt="Background tasks not enabled"
+/>
 
 With background hooks enabled, your hooks won't block the response, increasing response speed:
 
-```
-Request → Agent Processing → Response (immediate)
-                ↓
-        Pre-hooks + Post-hooks run in background
-```
+<img 
+  className="block dark:hidden" 
+  src="/images/background-tasks-enabled-light.png" 
+  alt="Background tasks enabled"
+/>
+
+<img 
+  className="hidden dark:block" 
+  src="/images/background-tasks-enabled-dark.png" 
+  alt="Background tasks enabled"
+/>
+
 
 This is useful for:
 
