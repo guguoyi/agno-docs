@@ -3227,6 +3227,7 @@
                     "pages": [
                       "agent-os/tracing/usage/basic-agent-tracing",
                       "agent-os/tracing/usage/basic-team-tracing",
+                      "agent-os/tracing/usage/basic-workflow-tracing",
                       "agent-os/tracing/usage/agent-with-knowledge-tracing",
                       "agent-os/tracing/usage/agent-with-reasoning-tools-tracing",
                       "agent-os/tracing/usage/tracing-with-multi-db-scenario",
