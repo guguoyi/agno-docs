@@ -5,11 +5,11 @@ sidebarTitle: Overview
 
 This example demonstrates how to use the [Scenario](https://github.com/langwatch/scenario) framework for agentic simulation-based testing. Scenario enables you to simulate conversations between agents, user simulators, and judges, making it easy to test and evaluate agent behaviors in a controlled environment.
 
-> **Tip:** For a more advanced scenario testing example, check out the [customer support scenario](https://github.com/langwatch/create-agent-app/tree/main/agno_example) for a more complex agent, including tool calls and advanced scenario features.
+> **Tip:** For a more information about using Scenario with Agno, check out the [Scenario documentation](https://github.com/langwatch/scenario/blob/main/docs/docs/pages/agent-integration/agno.mdx).
 
 ## Basic Scenario Testing
 
-```python cookbook/agent_basics/other/scenario_testing.py
+```python scenario_testing.py
 import pytest
 import scenario
 from agno.agent import Agent
@@ -85,7 +85,7 @@ async def test_vegetarian_recipe_agent() -> None:
 
   <Step title="Run Agent">
     ```bash
-    pytest cookbook/agent_basics/other/scenario_testing.py
+    pytest scenario_testing.py
     ```
   </Step>
 </Steps> 
