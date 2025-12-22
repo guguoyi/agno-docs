@@ -3285,6 +3285,7 @@
               "agent-os/usage/demo",
               "agent-os/usage/extra-configuration",
               "agent-os/usage/hitl",
+              "agent-os/usage/database-migrations",
               {
                 "group": "MCP",
                 "pages": [
@@ -3890,6 +3891,13 @@
                       "reference-api/schema/whatsapp/webhook"
                     ]
                   }
+                ]
+              },
+              {
+                "group": "Database migrations",
+                "pages": [
+                  "reference-api/schema/database/migrate-all-databases",
+                  "reference-api/schema/database/migrate-database"
                 ]
               }
             ]

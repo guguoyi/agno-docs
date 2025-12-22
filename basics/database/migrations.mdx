@@ -8,7 +8,24 @@ You can expect the schemas in your Agno database tables to be stable across vers
 
 However, in future versions, we may occasionally update or add new columns or tables.
 
-If you need to apply a migration, you can use the `MigrationManager` class:
+To apply migrations, Agno provides two options:
+
+- **Use the AgentOS migration endpoints**: This is the easiest option when using AgentOS. You just need to make a POST request.
+- **Migrate manually using the `MigrationManager`**: If you prefer a more controlled migration experience, you can use the MigrationManager class to upgrade or downgrate your schemas.
+
+## Using the AgentOS Migration Endpoints
+
+If you are using the [AgentOS](/agent-os/introduction), you can handle your migration needs via the migration endpoints.
+
+You can read more about it in the [AgentOS Database Migrations](/agent-os/usage/database-migrations) page.
+
+## Migrate manually using the MigrationManager
+
+All migrations are ultimately handled by the `MigrationManager` class.
+
+You can use it directly to have total control over your migration process, or use one of the supporting scripts we provide.
+
+Using it directly looks like this:
 
 ```python
 import asyncio
@@ -26,23 +43,9 @@ if __name__ == "__main__":
     asyncio.run(run_migrations())
 ```
 
-You can find some pre-made scripts to handle your migration needs in the [`libs/agno/migrations`](https://github.com/agno-agi/agno/tree/main/libs/agno/migrations) directory.
+You can find the supporting scripts to handle your migration needs in the [`libs/agno/migrations`](https://github.com/agno-agi/agno/tree/main/libs/agno/migrations) directory.
 
-The `MigrationManager` class supports the following databases:
-
-- PostgreSQL
-- SQLite
-- MySQL
-- SingleStore
-
-You can also use the asynchronous database classes (`AsyncPostgresDb` and `AsyncSqliteDb`) with your migrations.
-
-<Tip>
-- We recommend avoiding creating columns in your database manually. This can cause the migration manager to fail.
-- Ensure the schema versions in the `agno_schema_versions` table are correct.
-</Tip>
-
-## How It Works
+## About the MigrationManager
 
 The `MigrationManager`:
 
@@ -52,11 +55,22 @@ The `MigrationManager`:
 4. Updates the schema version record after successful migration
 5. Supports both synchronous and asynchronous database operations
 
+The following databases are supported:
+
+- PostgreSQL
+- SQLite
+- MySQL
+- SingleStore
+
+You can also use the asynchronous database classes (`AsyncPostgresDb` and `AsyncSqliteDb`) are also supported.
+
+<Tip>
+- We recommend avoiding creating columns in your database manually. This can cause the migration manager to fail.
+- Ensure the schema versions in the `agno_schema_versions` table are correct.
+</Tip>
+
 See the [MigrationManager](/reference/storage/migrations) page for more information.
 
-<Note>
-When using [AgentOS](/agent-os/overview), it is recommended that you run the migrations in a separate script and restart the AgentOS for the updated schema's to take effect.
-</Note>
 
 ### Upgrade a specific table
 
@@ -114,7 +128,7 @@ if __name__ == "__main__":
 <Tabs>
   <Tab title="Schema mismatch errors">
   If you continue to see errors and are not able to read or write to the database, it's likely due to a mismatch between the schema version and the actual schema of the table.
-  
+
   Please set the `force` parameter to `True` to force the migration for a specific table.
   ```python
     await MigrationManager(db).up(
