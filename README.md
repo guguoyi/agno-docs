@@ -67,8 +67,8 @@ First, symlink the `agno` repo (gitignored):
 ln -s ~/code/agno agno
 ```
 
-For agno engineers, also symlink the `projects` repo:
+For agno engineers, also symlink the `specs` repo:
 
 ```
-ln -s ~/code/projects projects
+ln -s ~/code/specs specs
 ```
