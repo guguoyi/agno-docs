@@ -53,21 +53,15 @@ agent.print_response(
     ```
   </Step>
 
-  <Step title="Install libraries">
+  <Step title="Install dependencies">
     ```bash
-    pip install -U ollama agno sqlalchemy psycopg pgvector
+    uv pip install -U ollama agno sqlalchemy psycopg pgvector
     ```
   </Step>
 
   <Step title="Run Agent">
-    <CodeGroup>
-    ```bash Mac
+    ```bash
     python cookbook/11_models/ollama/memory.py
     ```
-
-    ```bash Windows
-    python cookbook/11_models/ollama/memory.py
-    ```
-    </CodeGroup>
   </Step>
 </Steps>
