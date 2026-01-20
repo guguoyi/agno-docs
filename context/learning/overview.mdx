@@ -5,7 +5,7 @@ sidebarTitle: Overview
 keywords: [learning, learning machine, user profile, user memory, session context, entity memory, learned knowledge, agent learning]
 ---
 
-Imagine an agent that remembers not just what you said, but *learns* from every interaction - understanding your preferences, tracking project context, building knowledge about entities, and capturing reusable insights. This is the power of the Learning Machine.
+**Learning Machine coordinates multiple learning stores to capture user profiles, observations, session context, entity knowledge, and reusable insights across interactions.**
 
 ## What is Learning Machine?
 
@@ -20,7 +20,7 @@ Learning Machine is a unified learning system that coordinates multiple **learni
 | **Learned Knowledge** | Insights, patterns, best practices | Configurable | Collective intelligence |
 
 <Tip>
-**The Goal:** An agent on interaction 1000 is fundamentally better than it was on interaction 1.
+New to Learning Machine? Start with [Getting Started](/context/learning/getting-started).
 </Tip>
 
 ## Quick Start
@@ -37,7 +37,7 @@ db = PostgresDb(db_url="postgresql+psycopg://ai:ai@localhost:5532/ai")
 agent = Agent(
     model=OpenAIResponses(id="gpt-5.2"),
     db=db,
-    learning=True,  # Enable all learning stores
+    learning=True,  # Enable user profile learning
 )
 
 agent.print_response(
@@ -48,10 +48,10 @@ agent.print_response(
 ```
 
 With `learning=True`, your agent automatically:
-- Captures user profile information (name, preferences)
-- Stores unstructured observations about users
-- Tracks session context (summary, goals)
-- Recalls relevant context in future interactions
+- Extracts user profile information (name, preferred name)
+- Recalls profile context in future interactions
+
+For user memory, session context, and other stores, use explicit configuration (see Level 2 below).
 
 ## Three Levels of Control
 
@@ -61,7 +61,7 @@ With `learning=True`, your agent automatically:
 agent = Agent(
     model=model,
     db=db,
-    learning=True,  # Enable everything with defaults
+    learning=True,  # Enable user profile learning
 )
 ```
 

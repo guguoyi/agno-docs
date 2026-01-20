@@ -100,15 +100,16 @@ Run it:
 python learning_agent.py
 ```
 
-The agent will remember Sarah's name, company, role, and preferences across sessions.
+The agent will remember Sarah's name across sessions.
 
 ## What Just Happened?
 
 With `learning=True`, the agent:
 
-1. **Extracted profile info** from Session 1 (name: Sarah, company: Acme Corp, role: data scientist)
-2. **Stored a preference** (prefers detailed explanations)
-3. **Recalled this context** in Session 2 to answer accurately
+1. **Extracted profile info** from Session 1 (name: Sarah, preferred name if mentioned)
+2. **Recalled this profile** in Session 2 to answer accurately
+
+Note: `learning=True` only enables user profile extraction. For user memory, session context, and other stores, use explicit `LearningMachine` configuration.
 
 ## Customizing What Gets Learned
 
