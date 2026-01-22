@@ -969,7 +969,6 @@
                 "pages": [
                   "context/learning/overview",
                   "context/learning/getting-started",
-                  "context/learning/learning-modes",
                   {
                     "group": "Learning Stores",
                     "pages": [
@@ -980,6 +979,7 @@
                       "context/learning/stores/learned-knowledge"
                     ]
                   },
+                  "context/learning/learning-modes", 
                   "context/learning/custom-schemas"
                 ]
               },

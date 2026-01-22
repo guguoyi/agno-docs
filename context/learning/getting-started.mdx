@@ -1,10 +1,10 @@
 ---
-title: Getting Started with Learning
+title: Let Agents Learn
 description: Set up your first learning-enabled agent in minutes.
-sidebarTitle: Getting Started
+sidebarTitle: Get Started
 ---
 
-This guide walks you through setting up an agent with Learning Machine.
+This guide walks you through setting up an agent as a Learning Machine.
 
 ## Prerequisites
 
@@ -113,7 +113,7 @@ Note: `learning=True` only enables user profile extraction. For user memory, ses
 
 ## Customizing What Gets Learned
 
-Control which stores are enabled:
+You can control learning through your choice of [learning stores](./stores/user-profile.mdx) and [learning modes](./learning-modes.mdx). Depending upon which stores are enabled for your agent, and the choice of default learning mode for that store or a selected mode, your agent behavior can be optimized for specific use cases. 
 
 ```python
 from agno.learn import LearningMachine
@@ -153,19 +153,19 @@ agent = Agent(
 
 <CardGroup cols={2}>
   <Card
+    title="Learning Stores"
+    icon="user"
+    iconType="duotone"
+    href="/context/learning/stores/user-profile"
+  >
+    Deep dive into Learning Stores.
+  </Card>
+  <Card
     title="Learning Modes"
     icon="sliders"
     iconType="duotone"
     href="/context/learning/learning-modes"
   >
     Control how and when learning happens.
-  </Card>
-  <Card
-    title="User Profile Store"
-    icon="user"
-    iconType="duotone"
-    href="/context/learning/stores/user-profile"
-  >
-    Deep dive into profile extraction.
   </Card>
 </CardGroup>

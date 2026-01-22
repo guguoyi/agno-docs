@@ -1,12 +1,20 @@
 ---
 title: Learning Modes
-description: Control when and how your agent learns with ALWAYS, AGENTIC, and PROPOSE modes.
+description: Control when and how your agent learns using learning modes.
 sidebarTitle: Learning Modes
 ---
 
-Learning Machine stores can operate in different modes, giving you control over when and how learning happens.
+Learning mode gives you full control over when and how a Learning Machine actually learns.
+
+The [learning stores](/context/learning/stores/user-profile.mdx) associated with a Learning Machine can be configured to operate in one of the three learning modes:
+
+* ALWAYS
+* AGENTIC
+* PROPOSE
 
 ## Overview
+
+Following are the three supported learning modes. Each Learning Store can be configured to run in different modes.
 
 | Mode | Behavior | LLM Calls | Best For |
 |------|----------|-----------|----------|
@@ -45,14 +53,14 @@ agent.print_response(
 1. Agent responds to the user
 2. In parallel, an extraction LLM call analyzes the conversation
 3. Relevant information is saved to the store
-4. No agent awareness or tool calls needed
+4. No agent awareness or tool calls are required
 
 **Best for:**
 - User Profile (capturing names, preferences)
 - User Memory (capturing observations)
 - Session Context (maintaining summaries)
 
-**Default for:** `user_profile`, `user_memory`, `session_context`
+**Default for Learning Stores:** `user_profile`, `user_memory`, `session_context`
 
 ## AGENTIC Mode
 
@@ -100,7 +108,7 @@ agent.print_response(
 - Learned Knowledge (agent captures insights when relevant)
 - Entity Memory (agent builds knowledge graph as needed)
 
-**Default for:** `learned_knowledge`, `entity_memory`
+**Default for Learning Stores:** `learned_knowledge`, `entity_memory`
 
 ## PROPOSE Mode
 
@@ -200,4 +208,17 @@ learning = LearningMachine(
 | AGENTIC | No additional latency | Only when agent calls tools |
 | PROPOSE | No additional latency | Only when agent proposes |
 
-For latency-sensitive applications, prefer AGENTIC mode and let the agent decide when learning is worthwhile.
+AGENTIC mode is recommended for latency-sensitive applications. It allows the agent to decide when learning is worthwhile and when to call tools to save information.
+
+## Default Learning Modes
+
+The "defaults" refer to the built-in learning mode behavior for the different Learning Stores available in Agno.
+
+|Learning Store | Default Mode |Behavior|
+|---------------|--------------|--------|
+| user_profile | ALWAYS | Automatically extracts name/preferences in the background.|
+| user_memory | ALWAYS | Automatically extracts unstructured observations about the user.|
+| session_context | ALWAYS | Automatically tracks session goals and summaries.|
+| learned_knowledge | AGENTIC | Agent must use tools to save/search for insights.|
+| entity_memory | AGENTIC | Agent must use tools to build its "mental rolodex" of entities.|
+
