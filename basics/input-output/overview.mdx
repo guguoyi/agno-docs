@@ -85,14 +85,6 @@ learning machines.
 
 When you combine both `input_schema` and `output_schema`, you create a **typesafe** component with end-to-end type safety—a fully validated data pipeline from input to output. This ensures that your agents and teams act like reliable, strongly-typed software functions, preventing runtime errors and ensuring data consistency across your entire application.
 
-## Advanced I/OFeatures
-
-- **[Input Validation](/basics/input-output/agent/input-schema)**: Set `input_schema` to automatically validate dictionary inputs
-- **[Parser Model](/basics/input-output/agent/output-model)**: Use a different model to parse and structure output from your primary model
-- **[Output Model](/basics/input-output/agent/output-model)**: Use a different model to produce the final output
-- **[Streaming](/basics/input-output/team/output-schema)**: Structured outputs work seamlessly with streaming
-
-
 ## Best Practice 
 If you are building a [Learning Machine](../context/learning/overview), use Structured Inputs to feed it context from the database (like User History) and Structured Outputs to extract new learnings to save back to the database.
 
@@ -139,7 +131,8 @@ If you are building a [Learning Machine](../context/learning/overview), use Stru
     href="./input-schema/team/input-schema"
   >
     Validate Team Input
-  </Card> <Card
+  </Card> 
+  <Card
     title="Team Output Schema"
     icon="rocket"
     iconType="duotone"
