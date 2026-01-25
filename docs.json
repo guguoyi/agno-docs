@@ -219,28 +219,22 @@
                 "group": "Input & Output",
                 "pages": [
                   "basics/input-output/overview",
-                  "basics/input-output/structured-input",
                   {
-                    "group": "Input Schema",
+                    "group": "Structured Input",
                     "pages": [
-                      "basics/input-output/input-schema/agent/input-schema",
-                      "basics/input-output/input-schema/team/input-schema"
-                    ]
-                  },
-                  "basics/input-output/structured-output",
-                  {
-                    "group": "Output Schema",
-                    "pages": [
-                      "basics/input-output/output-schema/agent/output-schema",
-                      "basics/input-output/output-schema/team/output-schema"
+                      "basics/input-output/structured-input/agent",
+                      "basics/input-output/structured-input/team"
                     ]
                   },
                   {
-                    "group": "Output Model",
+                    "group": "Structured Output",
                     "pages": [
-                      "basics/input-output/output-schema/agent/output-model"
+                      "basics/input-output/structured-output/agent",
+                      "basics/input-output/structured-output/team"
                     ]
-                  }
+                  },
+                  "basics/input-output/output-model",
+                  "basics/input-output/multimodal"
                 ]
               },
               {

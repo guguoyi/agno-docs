@@ -1,145 +1,99 @@
 ---
 title: Input & Output
 sidebarTitle: Overview
-description: Build reliable learning machines with type-safe I/O and Pydantic models.
+description: Pass data to agents and handle their responses.
 ---
 
-Providing inputs to an agentic system and receiving outputs
-from it is a fundamental aspect of building learning machines.
+Agents accept input and generate output in many different formats, from simple strings to validated Pydantic models. Start with strings, add structure when you need validation.
 
-In production grade systems you want to validate what you send to the agent and what comes back from it.
+## Basic Usage
 
-## Quick Start
+String in, string out:
+```python
+from agno.agent import Agent
+from agno.models.openai import OpenAIResponses
 
-The following code creates a simple agent that validates both input and output using Pydantic models.
+agent = Agent(model=OpenAIResponses(id="gpt-5.2"))
 
-Create a type-safe agent in seconds:
+response = agent.run("What's the capital of France?")
+print(response.content)  # "The capital of France is Paris."
+```
+
+## Structured Input and Output
+
+Use Pydantic models to validate what goes in and what comes back:
 
 ```python
 from pydantic import BaseModel, Field
 from agno.agent import Agent
 from agno.models.openai import OpenAIResponses
 
-# 1. Define Input & Output
-class InputData(BaseModel):
-    items: list[str]
+class ReviewInput(BaseModel):
+    text: str
+    product_id: str
 
-class OutputValidation(BaseModel):
-    is_valid: bool
-    reason: str
+class SentimentResult(BaseModel):
+    sentiment: str = Field(description="positive, negative, or neutral")
+    confidence: float = Field(ge=0, le=1)
+    summary: str = Field(description="One sentence summary")
 
-# 2. Create Agent
 agent = Agent(
     model=OpenAIResponses(id="gpt-5.2"),
-    # Set the Output Schema
-    output_schema=OutputValidation
+    output_schema=SentimentResult,
 )
 
-# 3. Run with Type Safety
 response = agent.run(
-    "Check these items",
-    # Pass the Input Model
-    input=InputData(items=["apple", "banana"])
+    input=ReviewInput(text="Love this product!", product_id="SKU-123")
 )
 
-# 4. Get Validated Data
-result: OutputValidation = response.content
-print(result.is_valid)
+# response.content is a validated SentimentResult object
+result: SentimentResult = response.content
+print(result.sentiment)   # "positive"
+print(result.confidence)  # 0.95
+print(result.summary)     # "Customer expresses strong satisfaction"
 ```
-## Structured I/O 
 
-You can control agent input and outputs by working with simple string or structured data as input and output.
+### When to Use Structured I/O
 
-**Unstructured I/O** is like shouting instructions and getting a rough answer back that must be further
-worked upon. It works, but it's messy.
+| Scenario | Recommendation |
+|----------|----------------|
+| Prototyping, chat interfaces | Strings work well |
+| Data extraction, classification | Use structured output |
+| API responses, pipelines | Use structured input and output |
 
-**Structured I/O** is like using a strict form instead of a casual conversation.
-Instead of hoping for a good answer (Unstructured), you force the agent to fill out specific fields
- (Structured)—guaranteeing you get exactly the data you need for reliable systems.
-
-Structured and type-safe inputs and outputs are key to building production grade, reliable and maintainable
-learning machines.
-
-## Using Structured I/O
+## Guides
 
 <CardGroup cols={2}>
   <Card
     title="Structured Input"
-    icon="rocket"
+    icon="arrow-right-to-bracket"
     iconType="duotone"
-    href="./structured-input"
+    href="/basics/input-output/structured-input/overview"
   >
-    Build reliable agents with structured input
+    Validate data passed to agents with Pydantic models.
   </Card>
   <Card
     title="Structured Output"
-    icon="database"
+    icon="arrow-right-from-bracket"
     iconType="duotone"
-    href="./structured-output"
+    href="/basics/input-output/structured-output/overview"
   >
-    Build reliable agents with structured output
+    Get validated objects instead of raw text.
+  </Card>
+  <Card
+    title="Multimodal Input"
+    icon="images"
+    iconType="duotone"
+    href="/features/multimodal/overview"
+  >
+    Pass images, audio, and files to agents.
+  </Card>
+  <Card
+    title="Output Model"
+    icon="microchip"
+    iconType="duotone"
+    href="/basics/input-output/output-model"
+  >
+    Use a separate model to structure or refine output.
   </Card>
 </CardGroup>
-
-## Typesafe Patterns
-
-When you combine both `input_schema` and `output_schema`, you create a **typesafe** component with end-to-end type safety—a fully validated data pipeline from input to output. This ensures that your agents and teams act like reliable, strongly-typed software functions, preventing runtime errors and ensuring data consistency across your entire application.
-
-## Best Practice 
-If you are building a [Learning Machine](../../context/learning/overview), use Structured Inputs to feed it context from the database (like User History) and Structured Outputs to extract new learnings to save back to the database.
-
-* **Input:** UserContextModel (Fetched from DB)
-* **Output:** NewLearningExtraction (Saved to DB)
-
-## Learn More
-
-<Tabs>
-  <Tab title="Agent">
-  <CardGroup cols={3}>
-  <Card
-    title="Agent Input Schema"
-    icon="rocket"
-    iconType="duotone"
-    href="./input-schema/agent/input-schema"
-  >
-    Validate Agent Input
-  </Card>
-  <Card
-    title="Agent Output Schema"
-    icon="rocket"
-    iconType="duotone"
-    href="./output-schema/agent/output-schema"
-  >
-    Generate agent response using output schema
-  </Card>
-  <Card
-    title="Agent Output Model"
-    icon="rocket"
-    iconType="duotone"
-    href="./output-schema/agent/output-model"
-  >
-    Generate agent response using output model
-  </Card>
-</CardGroup>
-</Tab>
-<Tab title="Team">
-<CardGroup cols={2}>
-  <Card
-    title="Team  Input Schema"
-    icon="rocket"
-    iconType="duotone"
-    href="./input-schema/team/input-schema"
-  >
-    Validate Team Input
-  </Card> 
-  <Card
-    title="Team Output Schema"
-    icon="rocket"
-    iconType="duotone"
-    href="./output-schema/team/output-schema"
-  >
-    Generate team response using output schema
-  </Card>
-</CardGroup>
-</Tab>
-</Tabs>
