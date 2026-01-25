@@ -242,7 +242,7 @@
                 "pages": [
                   "database/overview",
                   {
-                    "group": "Database Providers",
+                    "group": "Providers",
                     "pages": [
                       "database/providers/overview",
                       {
@@ -489,7 +489,7 @@
               {
                 "group": "Knowledge",
                 "pages": [
-                  "knowledge/what-is-knowledge",
+                  "knowledge/overview",
                   "knowledge/getting-started",
                   {
                     "group": "Concepts",
@@ -574,7 +574,7 @@
                     ]
                   },
                   {
-                    "group": "Vector Databases",
+                    "group": "Vector Stores",
                     "pages": [
                       "knowledge/vector-stores/index",
                       {
@@ -3662,11 +3662,11 @@
     },
     {
       "source": "/get-started",
-      "destination": "/getting-started/quickstart"
+      "destination": "/get-started/quickstart"
     },
     {
       "source": "/introduction/monitoring",
-      "destination": "/integrations/observability/overview"
+      "destination": "/observability/overview"
     },
     {
       "source": "/introduction/playground",
@@ -3686,15 +3686,15 @@
     },
     {
       "source": "/agents/structured-output",
-      "destination": "/input-output/agent"
+      "destination": "/input-output/overview"
     },
     {
       "source": "/agents/context",
-      "destination": "/context/agent"
+      "destination": "/context/overview"
     },
     {
       "source": "/agents/multimodal",
-      "destination": "/features/multimodal/overview"
+      "destination": "/multimodal/overview"
     },
     {
       "source": "/agents/storage",
@@ -3706,7 +3706,7 @@
     },
     {
       "source": "/agents/user-control-flow",
-      "destination": "/basics/hitl/overview"
+      "destination": "/hitl/overview"
     },
     {
       "source": "/applications/ag-ui/introduction",
@@ -3726,63 +3726,63 @@
     },
     {
       "source": "/chunking/agentic-chunking",
-      "destination": "/knowledge/chunking/agentic-chunking"
+      "destination": "/knowledge/concepts/chunking/agentic-chunking"
     },
     {
       "source": "/chunking/document-chunking",
-      "destination": "/knowledge/chunking/document-chunking"
+      "destination": "/knowledge/concepts/chunking/document-chunking"
     },
     {
       "source": "/chunking/fixed-size-chunking",
-      "destination": "/knowledge/chunking/fixed-size-chunking"
+      "destination": "/knowledge/concepts/chunking/fixed-size-chunking"
     },
     {
       "source": "/chunking/recursive-chunking",
-      "destination": "/knowledge/chunking/recursive-chunking"
+      "destination": "/knowledge/concepts/chunking/recursive-chunking"
     },
     {
       "source": "/embedder",
-      "destination": "/knowledge/embedder/overview"
+      "destination": "/knowledge/concepts/embedder/overview"
     },
     {
       "source": "/embedder/introduction",
-      "destination": "/knowledge/embedder/overview"
+      "destination": "/knowledge/concepts/embedder/overview"
     },
     {
       "source": "/embedder/fireworks",
-      "destination": "/knowledge/embedder/fireworks"
+      "destination": "/knowledge/concepts/embedder/fireworks/overview"
     },
     {
       "source": "/embedder/gemini",
-      "destination": "/knowledge/embedder/gemini"
+      "destination": "/knowledge/concepts/embedder/gemini/overview"
     },
     {
       "source": "/embedder/mistral",
-      "destination": "/knowledge/embedder/mistral"
+      "destination": "/knowledge/concepts/embedder/mistral/overview"
     },
     {
       "source": "/embedder/nebius",
-      "destination": "/knowledge/embedder/nebius"
+      "destination": "/knowledge/concepts/embedder/nebius/nebius-embedder"
     },
     {
       "source": "/embedder/openai",
-      "destination": "/knowledge/embedder/openai"
+      "destination": "/knowledge/concepts/embedder/openai/overview"
     },
     {
       "source": "/embedder/qdrant-fastembed",
-      "destination": "/knowledge/embedder/qdrant-fastembed/overview"
+      "destination": "/knowledge/concepts/embedder/qdrant-fastembed/qdrant-fastembed"
     },
     {
       "source": "/embedder/together",
-      "destination": "/knowledge/embedder/together"
+      "destination": "/knowledge/concepts/embedder/together/together-embedder"
     },
     {
       "source": "/embedder/voyageai",
-      "destination": "/knowledge/embedder/voyageai"
+      "destination": "/knowledge/concepts/embedder/voyageai/voyageai-embedder"
     },
     {
       "source": "/evals/performance",
-      "destination": "/evals/performance"
+      "destination": "/evals/performance/overview"
     },
     {
       "source": "/evals/platform",
@@ -3790,7 +3790,7 @@
     },
     {
       "source": "/evals/reliability",
-      "destination": "/evals/reliability"
+      "destination": "/evals/reliability/overview"
     },
     {
       "source": "/tools/introduction",
@@ -3798,19 +3798,19 @@
     },
     {
       "source": "/vectordb/couchbase",
-      "destination": "/integrations/vectordb/couchbase/overview"
+      "destination": "/knowledge/vector-stores/couchbase/overview"
     },
     {
       "source": "/vectordb/weaviate",
-      "destination": "/integrations/vectordb/weaviate/overview"
+      "destination": "/knowledge/vector-stores/weaviate/overview"
     },
     {
       "source": "/models/litellm",
-      "destination": "/integrations/models/gateways/litellm/overview"
+      "destination": "/models/providers/gateways/litellm/overview"
     },
     {
       "source": "/observability/langfuse",
-      "destination": "/integrations/observability/langfuse"
+      "destination": "/observability/langfuse"
     },
     {
       "source": "/workspaces/introduction",
@@ -3826,15 +3826,15 @@
     },
     {
       "source": "/agent-ui/introduction",
-      "destination": "/basics/agent-ui/overview"
+      "destination": "/other/agent-ui"
     },
     {
       "source": "/basics/knowledge/vectordb/lightrag",
-      "destination": "/integrations/vectordb/lightrag/overview"
+      "destination": "/knowledge/vector-stores/lightrag/overview"
     },
     {
       "source": "/features/multimodal/speech-to-text",
-      "destination": "/features/multimodal/audio/speech-to-text"
+      "destination": "/multimodal/audio/speech-to-text"
     },
     {
       "source": "/features/reasoning/introduction",
@@ -4238,7 +4238,7 @@
     },
     {
       "source": "/basics/knowledge/what-is-knowledge",
-      "destination": "/knowledge/what-is-knowledge"
+      "destination": "/knowledge/overview"
     },
     {
       "source": "/basics/knowledge/concepts/filters/filtering-chroma-db",
@@ -8703,6 +8703,10 @@
     {
       "source": "/features/multimodal/files/file_input",
       "destination": "/multimodal/files/file_input"
+    },
+    {
+      "source": "/knowledge/what-is-knowledge",
+      "destination": "/knowledge/overview"
     }
   ]
 }

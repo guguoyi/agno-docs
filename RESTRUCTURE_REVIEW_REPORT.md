@@ -30,17 +30,14 @@ All 24 broken links are in the `TBD/` directory (orphaned files awaiting review)
 |-------|--------|
 | JSON syntax | **VALID** |
 | Navigation paths exist | **1507 of 1511** (4 are group names/tags) |
-| Duplicate paths | **2 found** |
-| Redirects with valid destinations | **1128 of 1262** |
+| Duplicate paths | **0** (fixed) |
+| Redirects with valid destinations | **1263 of 1263** (all valid) |
 
 ### Duplicate Paths
-```
-- memory/working-with-memories/memory-optimization
-- models/providers/native/xai/usage/tool-use
-```
+~~2 duplicates found~~ **FIXED** - Removed from navigation
 
-### Redirects Issue
-134 redirects still point to old destination paths. These need to be updated to point to the new flat structure.
+### Redirects
+All 1,263 redirects now point to valid destinations.
 
 ---
 
@@ -50,7 +47,7 @@ All 24 broken links are in the `TBD/` directory (orphaned files awaiting review)
 |-------|--------|
 | Expected directories present | **21 of 21** |
 | Empty directories | **0** |
-| Orphaned files (in TBD/) | **269 files** |
+| Orphaned files (in TBD/) | **163 files** |
 
 ### Directory Structure (File Counts)
 
@@ -61,8 +58,8 @@ All 24 broken links are in the `TBD/` directory (orphaned files awaiting review)
 | workflows/ | 42 | guardrails/ | 10 |
 | models/ | 387 | multimodal/ | 55 |
 | tools/ | 154 | observability/ | 13 |
-| knowledge/ | 126 | evals/ | 37 |
-| database/ | 69 | reasoning/ | 38 |
+| knowledge/ | 230 | evals/ | 37 |
+| database/ | 86 | reasoning/ | 38 |
 | sessions/ | 14 | tracing/ | 6 |
 | agent-os/ | 88 | skills/ | 3 |
 | production/ | 41 | reference/ | 138 |
@@ -70,9 +67,11 @@ All 24 broken links are in the `TBD/` directory (orphaned files awaiting review)
 
 ### TBD Directory Contents
 Files moved to `TBD/` for manual review:
-- **181 MDX pages** (orphaned from navigation)
-- **52 images** (unreferenced)
+- **77 MDX pages** (orphaned from navigation)
+- **50 images** (unreferenced)
 - **36 snippets** (unreferenced)
+
+**Note:** 104 pages and 1 image were initially moved to TBD but restored after discovering they were redirect destinations or referenced by active pages.
 
 ---
 
@@ -204,12 +203,16 @@ The `knowledge/` directory is missing an `overview.mdx` file.
 ## Action Items
 
 ### Critical (Must Fix)
-- [ ] Fix 17 missing snippet references (create files or fix references)
+- [x] ~~Fix 17 missing snippet references~~ **FIXED** - Only 4 affected active docs:
+  - `db-async-mongo-params.mdx` → restored `db-async-mongodb-params.mdx` from TBD
+  - `db-mongo-params.mdx` → updated 5 files to use `db-mongodb-params.mdx`
+  - `run-pgvector.mdx` → updated 3 files to use `run-pgvector-docker.mdx`
+  - `workflow-completed-event.mdx` → created new snippet
 
 ### High Priority
-- [ ] Update 134 redirect destinations to new paths
-- [ ] Add `knowledge/overview.mdx`
-- [ ] Remove 2 duplicate paths from docs.json
+- [x] ~~Fix 29 redirects pointing to non-existent pages~~ **FIXED** - Updated all destinations to correct paths
+- [x] ~~Add `knowledge/overview.mdx`~~ **FIXED** - Renamed `what-is-knowledge.mdx` → `overview.mdx`, updated 7 files with internal links
+- [x] ~~Remove 2 duplicate paths from docs.json~~ **FIXED** - Removed duplicates from navigation
 
 ### Medium Priority
 - [ ] Add missing `title` frontmatter to 69 files
@@ -250,6 +253,57 @@ grep -roh --include="*.mdx" '<Snippet file="[^"]+' . | \
 3. `0095b29f` - Phase 2 Part A: Redistribute integrations/ content
 4. `6b01cfc1` - Phase 2 Parts B & C: Resolve multimodal conflict and clean up
 5. `dae504c4` - Clean up orphaned files and unused assets
+
+---
+
+## Orphan Detection Process
+
+When identifying orphaned files for cleanup, the following checks must be performed:
+
+### For Pages (.mdx files)
+
+A page is orphaned ONLY if ALL of these are true:
+1. Not in docs.json navigation
+2. Not a redirect destination in docs.json
+3. Not referenced by any internal links in active pages
+
+```python
+# Check redirect destinations
+redirect_dests = set()
+for redirect in docs.get('redirects', []):
+    dest = redirect.get('destination', '').lstrip('/')
+    redirect_dests.add(dest)
+
+# Page is NOT orphaned if url_path in redirect_dests
+```
+
+### For Images
+
+An image is orphaned ONLY if ALL of these are true:
+1. Not referenced in any .mdx file
+2. Not referenced in config files (docs.json, mint.json)
+3. Not in logo/ or favicon directories
+
+```python
+# Check config files for image references
+config_files = ['docs.json', 'mint.json']
+for cf in config_files:
+    content = open(cf).read()
+    refs = re.findall(r'["\']([^"\']*\.(png|jpg|svg))["\']', content)
+```
+
+### For Snippets
+
+A snippet is orphaned ONLY if:
+1. Not referenced by `<Snippet file="...">` in any active .mdx file
+
+### Common Mistakes to Avoid
+
+| Mistake | Consequence | Prevention |
+|---------|-------------|------------|
+| Only checking .mdx for image refs | Logo/favicon removed | Check config files too |
+| Ignoring redirect destinations | Redirect 404s | Check docs.json redirects |
+| Moving without verifying | Broken references | Run thorough check before moving |
 
 ---
 
