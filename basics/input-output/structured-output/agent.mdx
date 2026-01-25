@@ -87,24 +87,6 @@ print(analysis.current_price)   # 142.50
 print(analysis.recommendation)  # "buy"
 ```
 
-## Streaming
-
-Stream structured output with `stream=True`. Content arrives incrementally:
-```python
-from agno.agent import RunEvent
-
-agent = Agent(
-    model=OpenAIResponses(id="gpt-5.2"),
-    output_schema=StockAnalysis,
-)
-
-for chunk in agent.run("Analyze TSLA", stream=True):
-    if chunk.event == RunEvent.run_content:
-        print(chunk.content, end="", flush=True)
-```
-
-The final `response.content` is still a validated Pydantic object.
-
 ## Schema Design Tips
 
 ### Use Field Descriptions

@@ -74,23 +74,6 @@ report = team.run("Analyze AI market", output_schema=MarketReport)
 comparison = team.run("Compare NVDA vs AMD", output_schema=StockComparison)
 ```
 
-## With Streaming
-
-Stream the team response while still getting a validated object:
-```python
-from agno.team import TeamRunEvent
-
-team = Team(
-    model=OpenAIResponses(id="gpt-5.2"),
-    members=[news_agent, finance_agent],
-    output_schema=ResearchReport,
-)
-
-for chunk in team.run("Analyze AI market trends", stream=True):
-    if chunk.event == TeamRunEvent.run_content:
-        print(chunk.content, end="", flush=True)
-```
-
 ## Member and Team Schemas
 
 You can set `output_schema` on both individual members and the team:
