@@ -1,29 +1,29 @@
 ---
 title: Introduction
-description: "Open-source infrastructure for production-grade multi-agent systems."
+description: "Build, run, and manage multi-agent systems entirely in your cloud."
 keywords: [introduction]
 mode: "wide"
 ---
 
 ## What is Agno?
 
-Agno is a Python SDK, runtime, and control plane for multi-agent systems.
+Agno is the complete stack for multi-agent systems: an SDK for building agents, a runtime for serving them, and a control plane for managing them in production.
+
+Everything runs in your cloud. No data leaves your environment.
 
 | Layer | What it does |
 |-------|--------------|
 | **SDK** | Build agents, teams, and workflows with memory, knowledge, guardrails, and 100+ integrations. |
-| **Runtime** | Run your system as a stateless, secure FastAPI application. |
-| **Control Plane** | Manage and monitor your system using the [AgentOS UI](https://os.agno.com). |
+| **Runtime** | Serve your system as a stateless FastAPI application. |
+| **Control Plane** | Monitor and manage via the [AgentOS UI](https://os.agno.com). |
 
 ## Why Agno?
 
-Running multi-agent systems as a secure, scalable service is a hard, distributed systems problem. Most teams cobble together LLM calls, custom orchestration, and third-party monitoring tools.
-
-Agno replaces that patchwork with a unified stack that runs entirely in your cloud. No data leaves your environment.
+Most teams cobble together LLM calls, custom orchestration, and third-party monitoring. Agno replaces that patchwork with a unified stack optimized for agent workloads.
 
 ## Quick Example
 
-Here's an agent that connects to an MCP server, persists conversation state, and is served via FastAPI:
+An agent with MCP tools, persistent state, and a production-ready API:
 
 ```python
 from agno.agent import Agent
@@ -48,18 +48,16 @@ if __name__ == "__main__":
     agent_os.serve(app="agno_agent:app", reload=True)
 ```
 
-Run this script and connect to [os.agno.com](https://os.agno.com) to chat with your agent:
+Run this and connect to [os.agno.com](https://os.agno.com) to chat with your agent:
 
 <Frame>
-  <video autoPlay muted loop playsInline controls style={{ borderRadius: "0.5rem", width: "100%", height: "auto" }}>
+  <video autoPlay muted loop controls playsInline style={{ borderRadius: "0.5rem", width: "100%", height: "auto" }}>
     <source src="/videos/agno-agent-chat.mp4" type="video/mp4" />
   </video>
 </Frame>
 
-## Get Started
+## Next Steps
 
-| Goal | Guide |
-|------|-------|
-| Build your first agent | [Quickstart](/get-started/quickstart) |
-| Deploy to production | [Production](/production/overview) |
-| Browse examples | [Cookbook](/cookbook/overview) |
+- [Quickstart](/get-started/quickstart): Build your first agent
+- [Production](/production/overview): Deploy to your cloud
+- [Cookbook](/cookbook/overview): Ready-to-use examples
