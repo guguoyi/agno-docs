@@ -241,8 +241,9 @@
                 "group": "Database",
                 "pages": [
                   "database/overview",
+                  "database/session-storage",
                   {
-                    "group": "Providers",
+                    "group": "Supported Databases",
                     "pages": [
                       "database/providers/overview",
                       {
