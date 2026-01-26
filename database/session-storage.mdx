@@ -4,11 +4,12 @@ description: "Store and retrieve agent sessions in your database."
 keywords: [sessions, storage, database, persistence]
 ---
 
-A session is a conversation thread. When you add a database to your agent, each session gets stored automatically, capturing every run with its messages, responses, and metadata.
+A session groups related runs into a conversation thread, identified by a `session_id`. Add a database to your agent and sessions are stored automatically with every run's messages, responses, and metadata.
 
 ## Enable Session Storage
 
 Pass a database to your agent. Sessions are stored automatically.
+
 ```python
 from agno.agent import Agent
 from agno.db.sqlite import SqliteDb
@@ -26,6 +27,7 @@ By default, sessions are stored in the `agno_sessions` table. The table is creat
 ## Configure the Session Table
 
 Use `session_table` to store sessions in a custom table:
+
 ```python
 from agno.db.postgres import PostgresDb
 
@@ -38,12 +40,13 @@ agent = Agent(db=db)
 ```
 
 <Tip>
-Use separate tables for different agents or environments. This makes it easier to query and manage sessions.
+You can use separate tables for different agents or environments.
 </Tip>
 
 ## Retrieve Sessions
 
 Use `get_session()` to retrieve a stored session:
+
 ```python
 agent.print_response("What is the capital of France?", session_id="session_123")
 
@@ -55,23 +58,10 @@ print(session.session_id)
 print(session.runs)  # List of runs with messages and responses
 ```
 
-## What Gets Stored
-
-Each session contains:
-
-| Field | Description |
-|-------|-------------|
-| `session_id` | Unique identifier for the conversation |
-| `user_id` | Optional user association |
-| `agent_id` | The agent that owns this session |
-| `runs` | List of runs with messages, responses, and metrics |
-| `session_data` | State, name, and custom metadata |
-| `created_at` | When the session was created |
-| `updated_at` | When the session was last modified |
-
 ## Works With Teams and Workflows
 
 Session storage works identically for Teams and Workflows:
+
 ```python
 from agno.team import Team
 from agno.workflow import Workflow
@@ -91,32 +81,46 @@ workflow_session = workflow.get_session(session_id="workflow_session_456")
 Workflow sessions store complete pipeline runs rather than conversation messages. See [Workflow Sessions](/sessions/workflow-sessions) for details.
 </Note>
 
+## What Gets Stored
+
+Each session record contains:
+
+| Field           | Type   | Description                                      |
+| --------------- | ------ | ------------------------------------------------ |
+| `session_id`    | `str`  | Unique session identifier                        |
+| `session_type`  | `str`  | Type of session (agent, team, or workflow)       |
+| `agent_id`      | `str`  | The agent ID (if this is an agent session)       |
+| `team_id`       | `str`  | The team ID (if this is a team session)          |
+| `workflow_id`   | `str`  | The workflow ID (if this is a workflow session)  |
+| `user_id`       | `str`  | The user this session belongs to                 |
+| `session_data`  | `dict` | Session-specific data and state                  |
+| `agent_data`    | `dict` | Agent configuration and metadata                 |
+| `team_data`     | `dict` | Team configuration and metadata                  |
+| `workflow_data` | `dict` | Workflow configuration and metadata              |
+| `metadata`      | `dict` | Additional custom metadata                       |
+| `runs`          | `list` | All the runs (interactions) in this session      |
+| `summary`       | `dict` | The session summary (if enabled)                 |
+| `created_at`    | `int`  | Unix timestamp when session was created          |
+| `updated_at`    | `int`  | Unix timestamp of last update                    |
+
 ## Next Steps
 
 <CardGroup cols={2}>
   <Card
-    title="Session Management"
+    title="Chat History Guide"
+    icon="clock-rotate-left"
+    iconType="duotone"
+    href="/sessions/history-management"
+  >
+    Control how conversation history is accessed and used.
+  </Card>
+  <Card
+    title="Session Management Guide"
     icon="gear"
     iconType="duotone"
     href="/sessions/session-management"
   >
     Configure session IDs, naming, and caching.
-  </Card>
-  <Card
-    title="Chat History"
-    icon="clock-rotate-left"
-    iconType="duotone"
-    href="/sessions/history-management"
-  >
-    Include previous messages in agent context.
-  </Card>
-  <Card
-    title="Storage Control"
-    icon="sliders"
-    iconType="duotone"
-    href="/sessions/storage-control"
-  >
-    Choose what gets persisted to your database.
   </Card>
   <Card
     title="Session Summaries"
@@ -125,6 +129,14 @@ Workflow sessions store complete pipeline runs rather than conversation messages
     href="/sessions/session-summaries"
   >
     Condense long conversations to save tokens.
+  </Card>
+  <Card
+    title="Storage Control"
+    icon="sliders"
+    iconType="duotone"
+    href="/sessions/storage-control"
+  >
+    Choose what gets persisted to your database.
   </Card>
 </CardGroup>
 

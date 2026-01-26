@@ -242,6 +242,7 @@
                 "pages": [
                   "database/overview",
                   "database/session-storage",
+                  "database/chat-history",
                   {
                     "group": "Supported Databases",
                     "pages": [
