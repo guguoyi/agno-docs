@@ -25,7 +25,6 @@ agent = Agent(
 agent.print_response("My name is Sarah", session_id="chat_123")
 agent.print_response("What's my name?", session_id="chat_123")  # Agent knows: "Sarah"
 ```
-
 ```python Team
 from agno.team import Team
 from agno.db.sqlite import SqliteDb
@@ -40,8 +39,6 @@ team.print_response("My name is Sarah", session_id="chat_123")
 team.print_response("What's my name?", session_id="chat_123")  # Team knows: "Sarah"
 ```
 </CodeGroup>
-
-The agent now sees the last 3 conversation turns before responding.
 
 <Note>
 Chat history requires a database. Without one, there's nothing to retrieve.
@@ -66,7 +63,7 @@ agent = Agent(
 ```
 
 <Tip>
-Start with `num_history_runs=3`. Increase only if your agent needs more context. For long conversations, combine limited history with [session summaries](/sessions/session-summaries).
+Start with `num_history_runs=3`. Increase only if your agent needs more context. For long conversations, combine limited history with [session summaries](/database/session-summaries).
 </Tip>
 
 ## On-Demand History Access
@@ -141,7 +138,7 @@ workflow = Workflow(
 ```
 
 <Note>
-Workflow history passes previous workflow outputs to steps, not conversation messages. See [Workflow Sessions](/sessions/workflow-sessions) for details.
+Workflow history passes previous workflow outputs to steps, not conversation messages. See [Workflow Sessions](/database/workflow-sessions) for details.
 </Note>
 
 ## Choosing a Pattern
@@ -157,5 +154,6 @@ Workflow history passes previous workflow outputs to steps, not conversation mes
 
 ## Developer Resources
 
+- [Session Storage](/database/session-storage) - What gets stored and how to retrieve it.
 - [AgentSession reference](/reference/agents/session)
 - [TeamSession reference](/reference/teams/session)

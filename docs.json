@@ -241,8 +241,8 @@
                 "group": "Database",
                 "pages": [
                   "database/overview",
-                  "database/session-storage",
                   "database/chat-history",
+                  "database/session-storage",
                   {
                     "group": "Supported Databases",
                     "pages": [

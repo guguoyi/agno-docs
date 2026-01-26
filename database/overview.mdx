@@ -7,8 +7,8 @@ keywords: [database, storage, sessions]
 
 Databases are a foundational part of agent engineering. Add a database to your agent and you get persistent storage for sessions, context, memory, learnings, and evaluation datasets.
 
-- **Session persistence.** Store session information and conversation history across requests.
 - **Chat history.** Include previous messages in context for multi-turn conversations.
+- **Session persistence.** Store session information and conversation history across requests.
 - **State management.** Store internal agent state across runs. Critical for planning agents.
 - **Context control.** Summarize, compress, enrich, and prune context for better responses.
 - **Memory and knowledge.** Store user-level facts, searchable knowledge, decision traces, and learned insights.
@@ -35,7 +35,7 @@ agent.print_response("I'm working on a Python API project", session_id="dev_sess
 agent.print_response("What testing framework should I use?", session_id="dev_session")
 ```
 
-The agent now persists sessions and includes 3 messages from history in every request.
+The agent now persists sessions and includes the last 3 runs in every request.
 
 <img
   className="block dark:hidden"
@@ -51,24 +51,24 @@ The agent now persists sessions and includes 3 messages from history in every re
   style={{ maxWidth: '100%', transform: 'scale(1.1)' }}
 />
 
-## Core Capabilities
+## Guides
 
 <CardGroup cols={2}>
-  <Card
-    title="Session Storage"
-    icon="comments"
-    iconType="duotone"
-    href="/database/session-storage"
-  >
-    Manage conversation threads with IDs, naming, and caching.
-  </Card>
   <Card
     title="Chat History"
     icon="clock-rotate-left"
     iconType="duotone"
     href="/database/chat-history"
   >
-    Control how agents access previous messages.
+    Include previous messages in context for multi-turn conversations.
+  </Card>
+  <Card
+    title="Session Storage"
+    icon="database"
+    iconType="duotone"
+    href="/database/session-storage"
+  >
+    Store and retrieve session data from your database.
   </Card>
   <Card
     title="Session Summaries"
@@ -108,7 +108,8 @@ Agno supports 13+ databases for session storage. Use SQLite for development, Pos
 
 ## Async Support
 
-For async applications, use the async database classes like `AsyncPostgresDb` or `AsyncSqliteDb`:
+For async applications, use the async database classes:
+
 ```python
 from agno.agent import Agent
 from agno.db.postgres import AsyncPostgresDb
