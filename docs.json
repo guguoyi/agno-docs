@@ -88,9 +88,8 @@
             "group": "Get Started",
             "pages": [
               "introduction",
-              "get-started/quickstart",
-              "get-started/performance",
-              "get-started/getting-help"
+              "quickstart",
+              "get-help"
             ]
           },
           {
@@ -838,7 +837,7 @@
                 "group": "Learning",
                 "pages": [
                   "learning/overview",
-                  "learning/getting-started",
+                  "learning/quickstart",
                   {
                     "group": "Learning Stores",
                     "pages": [
@@ -847,7 +846,8 @@
                       "learning/stores/user-memory",
                       "learning/stores/session-context",
                       "learning/stores/entity-memory",
-                      "learning/stores/learned-knowledge"
+                      "learning/stores/learned-knowledge",
+                      "learning/stores/decision-log"
                     ]
                   },
                   "learning/learning-modes",
@@ -8705,6 +8705,14 @@
     {
       "source": "/knowledge/what-is-knowledge",
       "destination": "/knowledge/overview"
+    },
+    {
+      "source": "/get-started/quickstart",
+      "destination": "/quickstart"
+    },
+    {
+      "source": "/get-started/getting-help",
+      "destination": "/get-help"
     }
   ]
 }

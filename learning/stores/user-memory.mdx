@@ -1,35 +1,30 @@
 ---
-title: User Memory Store
-description: Capture unstructured observations about users.
+title: User Memory
 sidebarTitle: User Memory
+description: "Unstructured observations about users."
+mode: wide
 ---
 
-The User Memory Store captures unstructured observations about users - preferences, behaviors, and context that don't fit into structured profile fields.
+The User Memory Store captures unstructured observations about users: preferences, behaviors, and context that don't fit into structured profile fields.
 
-## Overview
-
-| Aspect | Details |
-|--------|---------|
-| **Data Type** | Unstructured text observations |
-| **Scope** | Per user (identified by `user_id`) |
+| Aspect | Value |
+|--------|-------|
+| **Scope** | Per user |
 | **Persistence** | Long-term (with optional curation) |
-| **Default Mode** | ALWAYS |
-| **Supported Modes** | ALWAYS, AGENTIC |
+| **Default mode** | Always |
+| **Supported modes** | Always, Agentic |
 
 ## Basic Usage
-
 ```python
 from agno.agent import Agent
 from agno.db.postgres import PostgresDb
-from agno.learn import LearningMachine, UserMemoryConfig
+from agno.learn import LearningMachine
 from agno.models.openai import OpenAIResponses
 
 agent = Agent(
     model=OpenAIResponses(id="gpt-5.2"),
     db=PostgresDb(db_url="postgresql+psycopg://ai:ai@localhost:5532/ai"),
-    learning=LearningMachine(
-        user_memory=True,
-    ),
+    learning=LearningMachine(user_memory=True),
 )
 
 # Session 1: Share preferences
@@ -45,13 +40,13 @@ agent.print_response(
     user_id="alice@example.com",
     session_id="session_2",
 )
-# Agent knows to include code examples and may relate to ML context
 ```
 
-## ALWAYS Mode (Default)
+The agent knows to include code examples and may relate to ML context.
 
-Memories are extracted automatically after each conversation:
+## Always Mode
 
+Memories are extracted automatically after each response.
 ```python
 from agno.learn import LearningMachine, LearningMode, UserMemoryConfig
 
@@ -59,17 +54,16 @@ agent = Agent(
     model=OpenAIResponses(id="gpt-5.2"),
     db=db,
     learning=LearningMachine(
-        user_memory=UserMemoryConfig(
-            mode=LearningMode.ALWAYS,
-        ),
+        user_memory=UserMemoryConfig(mode=LearningMode.ALWAYS),
     ),
 )
 ```
 
-## AGENTIC Mode
+Tradeoff: extra LLM call per interaction.
 
-The agent gets tools to manage memories explicitly:
+## Agentic Mode
 
+The agent receives tools to manage memories explicitly.
 ```python
 from agno.learn import LearningMachine, LearningMode, UserMemoryConfig
 
@@ -77,26 +71,21 @@ agent = Agent(
     model=OpenAIResponses(id="gpt-5.2"),
     db=db,
     learning=LearningMachine(
-        user_memory=UserMemoryConfig(
-            mode=LearningMode.AGENTIC,
-        ),
+        user_memory=UserMemoryConfig(mode=LearningMode.AGENTIC),
     ),
 )
 
-# Agent can call save_user_memory and delete_user_memory tools
 agent.print_response(
     "Remember that I always want to see error handling in code examples.",
     user_id="alice@example.com",
 )
 ```
 
-**Available tools:**
-- `save_user_memory` - Store a new observation
-- `delete_user_memory` - Remove an outdated memory
+Available tools: `save_user_memory`, `delete_user_memory`
+
+Tradeoff: agent may miss implicit observations.
 
 ## What Gets Captured
-
-User Memory is designed for observations that don't fit structured fields:
 
 | Good for User Memory | Better for User Profile |
 |---------------------|-------------------------|
@@ -104,39 +93,34 @@ User Memory is designed for observations that don't fit structured fields:
 | "Working on ML project" | Company: "Acme Corp" |
 | "Struggles with async code" | Role: "Data Scientist" |
 | "Uses VS Code" | Timezone: "PST" |
-| "Morning person" | Plan: "Enterprise" |
 
 ## Memory Data Model
 
-Each memory contains:
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `memory_id` | `str` | Unique identifier |
-| `memory` | `str` | The observation text |
-| `topics` | `list` | Extracted topics for categorization |
-| `user_id` | `str` | User this memory belongs to |
-| `created_at` | `datetime` | When the memory was created |
-| `updated_at` | `datetime` | Last update timestamp |
+| Field | Description |
+|-------|-------------|
+| `memory_id` | Unique identifier |
+| `memory` | The observation text |
+| `topics` | Extracted topics for categorization |
+| `user_id` | User this memory belongs to |
+| `created_at` | When created |
+| `updated_at` | Last update |
 
 ## Accessing Memories
-
 ```python
-# Get all memories for a user
-learning = agent.get_learning_machine()
-memories = learning.user_memory_store.get_memories(user_id="alice@example.com")
+lm = agent.get_learning_machine()
 
+# Get all memories
+memories = lm.user_memory_store.get_memories(user_id="alice@example.com")
 for memory in memories:
     print(f"- {memory.memory}")
 
 # Debug output
-learning.user_memory_store.print(user_id="alice@example.com")
+lm.user_memory_store.print(user_id="alice@example.com")
 ```
 
 ## Context Injection
 
-Relevant memories are injected into the agent's context:
-
+Relevant memories are injected into the system prompt:
 ```
 <user_memories>
 - Prefers code examples over explanations
@@ -146,75 +130,31 @@ Relevant memories are injected into the agent's context:
 </user_memories>
 ```
 
-## Memory Limits
+## Curation
 
-By default, the most recent/relevant memories are included in context. Configure limits:
-
+Over time, memories accumulate. Use the Curator to maintain them:
 ```python
-from agno.learn import LearningMachine, UserMemoryConfig
+lm = agent.get_learning_machine()
 
-agent = Agent(
-    model=OpenAIResponses(id="gpt-5.2"),
-    db=db,
-    learning=LearningMachine(
-        user_memory=UserMemoryConfig(
-            max_memories=10,  # Limit memories in context
-        ),
-    ),
-)
-```
-
-## Memory Curation
-
-Over time, memories can accumulate. Use the Curator to maintain them:
-
-```python
-learning = agent.get_learning_machine()
-
-# Remove old memories
-learning.curator.prune(user_id="alice@example.com", max_age_days=90)
+# Remove memories older than 90 days
+lm.curator.prune(user_id="alice@example.com", max_age_days=90)
 
 # Remove duplicates
-learning.curator.deduplicate(user_id="alice@example.com")
+lm.curator.deduplicate(user_id="alice@example.com")
 ```
 
 ## Combining with User Profile
 
-Use both stores together for comprehensive user understanding:
-
+Use both stores for comprehensive user understanding:
 ```python
-from agno.learn import LearningMachine, UserProfileConfig, UserMemoryConfig
+from agno.learn import LearningMachine
 
 agent = Agent(
     model=OpenAIResponses(id="gpt-5.2"),
     db=db,
     learning=LearningMachine(
-        user_profile=UserProfileConfig(),  # Structured: name, company
-        user_memory=UserMemoryConfig(),    # Unstructured: preferences, context
+        user_profile=True,  # Structured: name, company
+        user_memory=True,   # Unstructured: preferences, context
     ),
 )
-```
-
-## Example: Personal Assistant
-
-```python
-from agno.agent import Agent
-from agno.db.postgres import PostgresDb
-from agno.learn import LearningMachine, UserMemoryConfig, UserProfileConfig
-from agno.models.openai import OpenAIResponses
-
-agent = Agent(
-    model=OpenAIResponses(id="gpt-5.2"),
-    db=PostgresDb(db_url="postgresql+psycopg://ai:ai@localhost:5532/ai"),
-    learning=LearningMachine(
-        user_profile=True,
-        user_memory=UserMemoryConfig(max_memories=20),
-    ),
-    instructions="""You are a personal assistant. Use what you know about
-    the user to provide personalized, relevant responses.""",
-)
-
-# Over time, the assistant learns:
-# - Profile: Name, timezone, role
-# - Memories: Preferences, ongoing projects, communication style
 ```

@@ -1,63 +1,47 @@
 ---
 title: Introduction
-description: "Build, run, and manage multi-agent systems."
-keywords: [introduction]
+sidebarTitle: Introduction
+description: "Build agents that learn."
+keywords: [introduction, agno]
 mode: "wide"
 ---
 
 ## What is Agno?
 
-Agno is the complete stack for multi-agent systems: an SDK for building agents, a runtime for serving them, and a control plane for managing them in production.
+**A Python SDK for building agents that learn and improve with every interaction.**
 
-Everything runs in your cloud. No data leaves your environment.
+Most agents are stateless. They reason, respond, forget. Session history helps, but they're exactly as capable on day 1000 as they were on day 1.
 
-| Layer | What it does |
-|-------|--------------|
-| **SDK** | Build agents, teams, and workflows with memory, knowledge, guardrails, and 100+ integrations. |
-| **Runtime** | Serve your system as a stateless FastAPI application. |
-| **Control Plane** | Monitor and manage via the [AgentOS UI](https://os.agno.com). |
+Agno agents are different. They remember users across sessions, accumulate knowledge across conversations, and learn from decisions. Insights from one user benefit everyone.
 
-## Why Agno?
-
-Most teams cobble together LLM calls, custom orchestration, and third-party monitoring. Agno replaces that patchwork with a unified stack optimized for agent workloads.
+Everything runs in your cloud. Your data never leaves your environment.
 
 ## Quick Example
-
-An agent with MCP tools, persistent state, and a production-ready API:
-
 ```python
 from agno.agent import Agent
 from agno.db.sqlite import SqliteDb
-from agno.models.anthropic import Claude
-from agno.os import AgentOS
-from agno.tools.mcp import MCPTools
+from agno.models.openai import OpenAIResponses
 
 agent = Agent(
-    name="Agno Agent",
-    model=Claude(id="claude-sonnet-4-5"),
-    db=SqliteDb(db_file="agno.db"),
-    tools=[MCPTools(url="https://docs.agno.com/mcp")],
-    add_history_to_context=True,
-    markdown=True,
+    model=OpenAIResponses(id="gpt-5.2"),
+    db=SqliteDb(db_file="tmp/agents.db"),
+    learning=True,
 )
-
-agent_os = AgentOS(agents=[agent])
-app = agent_os.get_app()
-
-if __name__ == "__main__":
-    agent_os.serve(app="agno_agent:app", reload=True)
 ```
 
-Run this and connect to [os.agno.com](https://os.agno.com) to chat with your agent:
+One line. Your agent now remembers users, accumulates knowledge, and improves over time.
 
-<Frame>
-  <video autoPlay muted loop controls playsInline style={{ borderRadius: "0.5rem", width: "100%", height: "auto" }}>
-    <source src="/videos/agno-agent-chat.mp4" type="video/mp4" />
-  </video>
-</Frame>
+## Production Stack
+
+Agno provides the complete infrastructure:
+
+| Layer | What it does |
+|-------|--------------|
+| **SDK** | Build agents with learning, tools, knowledge, and guardrails |
+| **Runtime** | Run in production using [AgentOS](/agent-os/introduction) |
+| **Control Plane** | Monitor and manage via the [AgentOS UI](https://os.agno.com) |
 
 ## Next Steps
 
 - [Quickstart](/get-started/quickstart): Build your first agent
 - [Production](/production/overview): Deploy to your cloud
-- [Cookbook](/cookbook/overview): Ready-to-use examples
