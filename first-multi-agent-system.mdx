@@ -12,9 +12,9 @@ A production-ready multi-agent system with three agents:
 
 | Agent | What it does |
 |-------|--------------|
-| **Pal** | AI-powered second brain. Captures notes, bookmarks, people, meetings, and research |
+| **Pal** | AI-powered second brain. Captures notes, bookmarks, people, meetings, and research. |
 | **Knowledge Agent** | Answers questions from a knowledge base (Agentic RAG). |
-| **MCP Agent** | Connect to external services via Model Context Protocol |
+| **MCP Agent** | Connects to external services via Model Context Protocol. |
 
 You'll run it locally with Docker, then deploy to Railway.
 
@@ -60,25 +60,28 @@ Your multi-agent system is now running:
 
 Pal is your AI-powered second brain. It captures, organizes, and retrieves your personal knowledge.
 
-**Capture information:**
+**Capture:**
 ```
 Note: decided to use Postgres for the new project - better JSON support
 Bookmark https://www.ashpreetbedi.com/articles/lm-technical-design - great intro
 ```
 
-**Research and save:**
+**Research:**
 ```
 Research event sourcing patterns and save the key findings
 ```
 
-**Retrieve knowledge:**
+**Retrieve:**
 ```
 What notes do I have?
 What do I know about event sourcing?
-Prepare me for a meeting with Sarah
 ```
 
-Pal stores your data in DuckDB and remembers schemas, research findings, and error patterns in the learning system. **Pal is a work in progress. It's not perfect, but it's a great starting point.**
+Pal stores your data in DuckDB and uses the learning system to remember schemas, research findings, and error patterns.
+
+<Note>
+Pal is a work in progress. It's a starting point for building your own personal agent.
+</Note>
 
 ## Deploy to Production
 
@@ -107,7 +110,7 @@ Pal stores your data in DuckDB and remembers schemas, research findings, and err
   </Step>
 </Steps>
 
-Your multi-agent system is now live in production.
+Your multi-agent system is now live.
 
 ## Manage Your Deployment
 ```bash
